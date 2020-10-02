@@ -1,0 +1,406 @@
+'// 1 column                    controls:         - call buttons;
+'// 2 elevators                 - columns;        - doors;
+'// 10 floors                   - elevators;      - floor request buttons.
+
+
+
+'// scenario 1 | userFloor === elevFloor && requestUp
+IF
+  userFloor equals elevFloor and requestUp;
+
+    THEN
+        SET elevStatus to active;
+      openDoor;
+        SET floor request button value to requestedFloor;
+      closeDoor;
+      MOVE UP TO requestedFloor;
+      openDoor;
+        closeDoor;
+        SET elevStatus to idle;
+END IF
+
+
+'// scenario 2 | userFloor === elevFloor && requestDown
+IF
+  userFloor equals elevFloor and requestDown;
+
+    THEN
+        SET elevStatus to active;
+      openDoor;
+        SET floor request button value to requestedFloor;
+      closeDoor;
+      MOVE DOWN TO requestedFloor;
+      openDoor;
+      closeDoor;
+        SET elevStatus to idle;
+END IF
+
+
+'// scenario 3 | userFloor < elevFloor && requestUp
+IF
+  userFloor is smaller than elevFloor and requestUp;
+
+    THEN
+        SET elevStatus to active;
+      elevator MOVE DOWN to userFloor;
+      openDoor;
+        SET floor request button value to requestedFloor;
+      closeDoor;
+      elevator MOVE UP to requestedFloor;
+      openDoor;
+      closeDoor;
+        SET elevStatus to idle;
+END IF
+
+
+'// scenario 4 | userFloor < elevFloor && requestDown
+IF
+  userFloor is smaller than elevFloor and requestDown;
+
+    THEN
+        SET elevStatus to active;
+      elevator MOVE DOWN to userFloor;
+      openDoor;
+        SET floor request button value to requestedFloor;
+      closeDoor;
+      elevator MOVE DOWN to requestedFloor;
+      openDoor;
+      closeDoor;
+        SET elevStatus to idle;
+END IF
+
+
+'// scenario 5 | userFloor > elevFloor && requestUp
+IF
+  userFloor is greater than elevFloor and requestUp;
+
+    THEN 
+        SET elevStatus to active;
+      elevator MOVE UP to userFloor;
+      openDoor;
+        SET floor request button value to requestedFloor;
+      closeDoor;
+      elevator MOVE UP to requestedFloor;
+      openDoor;
+      closeDoor;
+        SET elevStatus to idle;
+END IF
+
+
+'// scenario 6 | userFloor > elevFloor && requestDown
+IF
+  userFloor is greater than elevFloor and requestDown;
+
+    THEN
+        SET elevStatus to active;
+      elevator MOVE UP to userFloor;
+      openDoor;
+        SET floor request button value to requestedFloor;
+      closeDoor;
+      elevator MOVE DOWN to requestedFloor;
+      openDoor;
+      closeDoor;
+        SET elevStatus to idle;
+END IF
+
+
+
+
+'///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+'//   code                                                                                                                                                                    //
+'///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+'// building info
+SET colNum: 1;                  '// 1 column
+SET floorNum: 10;               '// 10 floors
+SET baseNum;                    '// 0 basements
+SET totalElevNum: 2;            '// 2 elevs
+
+SET callButtonsNum: 18;         '// 18 call buttons
+SET elevButtonsNum: 100;        '// 100 inside buttons
+
+'// userFloor & requestedFloor
+SET userFloor;
+SET requestedFloor;
+SET doNothing;
+
+
+'// floors
+DEFINE floors USING floorNum =
+
+  floorNum: 10;
+
+  FOR EACH floor
+    assign a value from 1 to floorNum;
+
+  END FOR
+
+END DEFINE
+
+
+'// call buttons
+(DEFINE callButton USING up AND down =
+
+  up: false,
+  down: false
+
+END DEFINE) * 9 '// 10 floors
+
+
+'// doors
+DEFINE doors USING open AND close =
+
+  open: false,
+  close: true
+
+END DEFINE
+
+
+
+'// column status
+SEQUENCE columnStatus
+
+  WHILE all elev status are NOT "idle"
+    SET column.status to "active";
+
+  END WHILE
+
+END SEQUENCE
+
+
+'// pick elevator if going up
+SEQUENCE pickElevUp
+
+  SET userFloor to currentFloor_value;
+
+  REPEAT
+
+    IF userFloor === elev.floor AND elev.status is "goingUp"
+        pick this elevator;
+
+
+    ELSE IF userFloor > elev.floor AND elev.status is "goingUp" AND userFloor is closest to elev.floor THEN 
+        pick this elevator;
+
+        REPEAT 
+            move up 1 floor;
+            add 1 to elev.floor;
+            
+        UNTIL
+            userFloor === elev.floor;
+
+        SET elev.floor to userFloor;
+
+
+    ELSE IF userFloor === elev.floor AND elev.status is "idle"
+        pick this elevator;
+        SET elev.status to "goingUp";
+
+
+    ELSE IF userFloor > elev.floor AND elev.status is "idle" AND userFloor is closest to elev.floor THEN 
+        pick this elevator;
+        SET elev.status to "goingUp";
+
+        REPEAT 
+            move up 1 floor;
+            add 1 to elev.floor;
+            
+        UNTIL
+            userFloor === elev.floor;
+
+        SET elev.floor to userFloor;
+
+
+    ELSE IF userFloor < elev.floor AND elev.status is "idle" AND userFloor is closest to elev.floor THEN
+        pick this elevator;
+        SET elev.status to "goingUp";
+
+        REPEAT 
+            move down 1 floor;
+            remove 1 from elev.floor;
+            
+        UNTIL
+            userFloor === elev.floor;
+
+        SET elev.floor to userFloor;
+
+
+    END IF
+
+  UNTIL 
+    an elevator is picked;
+
+END SEQUENCE
+
+
+'// pick elevator if going down
+SEQUENCE pickElevDown
+
+  SET userFloor to currentFloor_value;
+
+  REPEAT
+  
+    IF userFloor === elev.floor AND elev.status is "goingDown"
+        pick this elevator;
+
+
+    ELSE IF userFloor < elev.floor AND elev.status is "goingDown" AND userFloor is closest to elev.floor THEN 
+        pick this elevator;
+
+        REPEAT 
+            move down 1 floor;
+            remove 1 from elev.floor;
+            
+        UNTIL
+            userFloor === elev.floor;
+
+        SET elev.floor to userFloor;
+
+
+    ELSE IF userFloor === elev.floor AND elev.status is "idle" 
+        pick this elevator;
+        SET elev.status to "goingDown";
+
+
+    ELSE IF userFloor < elev.floor AND elev.status is "idle" AND userFloor is closest to elev.floor THEN 
+        pick this elevator;
+        SET elev.status to "goingDown";
+
+        REPEAT 
+            move down 1 floor;
+            remove 1 from elev.floor;
+            
+        UNTIL
+            userFloor === elev.floor;
+
+        SET elev.floor to userFloor;
+
+
+    ELSE IF userFloor > elev.floor AND elev.status is "idle" AND userFloor is closest to elev.floor THEN 
+        pick this elevator;
+        SET elev.status to "goingDown";
+
+        REPEAT 
+            move up 1 floor;
+            add 1 to elev.floor;
+            
+        UNTIL
+            userFloor === elev.floor;
+
+        SET elev.floor to userFloor;
+
+
+    END IF
+
+  UNTIL 
+    an elevator is picked;
+
+END SEQUENCE
+
+
+'// going up
+SEQUENCE goUp 
+
+  CALL pickElevUp;
+
+  SET door.close to false;
+  SET door.open to true; '// open
+  SET requestedFloor = floorRequestButton_value;
+  SET door.open to false;
+  SET door.close to true; '// close
+  SET callButton.up to false;
+
+  REPEAT 
+    move up 1 floor;
+    add 1 to elev.floor;
+    
+  UNTIL
+    elev.floor === requestedFloor;
+
+  SET door.close to false;
+  SET door.open to true; '// open
+  SET elev.floor to requestedFloor;
+  SET door.open to false;
+  SET door.close to true; '// close
+
+  SET elev.status to "idle";
+
+END SEQUENCE
+
+
+'// going down
+SEQUENCE goDown 
+
+  CALL pickElevDown;
+
+  SET door.close to false;
+  SET door.open to true; '// open
+  SET requestedFloor = floorRequestButton_value;
+  SET door.open to false;
+  SET door.close to true; '// close
+  SET callButton.down to false;
+
+  REPEAT 
+    move down 1 floor;
+    remove 1 from elev.floor;
+
+  UNTIL
+    elev.floor === requestedFloor;
+
+  SET door.close to false;
+  SET door.open to true; '// open
+  SET elev.floor to requestedFloor;
+  SET door.open to false;
+  SET door.close to true; '// close
+
+  SET elev.status to "idle";
+
+END SEQUENCE
+
+
+'// when call button is pressed
+SEQUENCE request 
+
+  IF someone requests going up THEN 
+    SET callButton.up to true;
+    CALL goUp;
+  
+  ELSE IF someone requests going down THEN 
+    SET callButton.down to true;
+    CALL goDown;
+
+  ELSE
+    doNothing;
+
+  END IF
+
+END SEQUENCE
+
+
+'// elevators
+(DEFINE elev USING status AND floor =
+
+  status: "idle",
+  floor: 1
+
+  REPEAT
+    CALL request;
+
+END DEFINE) * 2
+
+
+'// column
+DEFINE col USING id AND status =
+
+  id: "column",
+  status: "idle",
+  floors: 1 to 10;
+  elevNum: 2; '// 2 elevs
+  SET idElev: ["elev1", "elev2"]
+
+    REPEAT 
+      CALL columnStatus;
+
+END DEFINE
+
