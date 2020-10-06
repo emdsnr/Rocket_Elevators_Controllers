@@ -71,38 +71,6 @@ namespace Controller
             maxFloor = elevMaxFloor;    // excluding ground floor
             door = elevDoor;
             floorDisplay = elevFloor;
-
-            if (floor == 0)
-            {
-                floorDisplay = -1;
-
-
-            } else if (floor == -1)
-            {
-                floorDisplay = -2;
-
-
-            } else if (floor == -2)
-            {
-                floorDisplay = -3;
-
-                
-            } else if (floor == -3)
-            {
-                floorDisplay = -4;
-
-                
-            } else if (floor == -4)
-            {
-                floorDisplay = -5;
-
-            
-            } else if (floor == -5)
-            {
-                floorDisplay = -6;
-
-                
-            };
         }
 
         static void Main(string[] args)
@@ -114,7 +82,7 @@ namespace Controller
             Column c = new Column("c", "idle", 21, 40, 5);
             Column d = new Column("d", "idle", 41, 60, 5);
 
-            Elevator a1 = new Elevator("a1", -5, "idle", -5, 1, "closed");
+            Elevator a1 = new Elevator("a1", -5, "goingUp", -5, 1, "closed");
             Elevator a2 = new Elevator("a2", 1, "idle", -5, 1, "closed");
             Elevator a3 = new Elevator("a3", 1, "idle", -5, 1, "closed");
             Elevator a4 = new Elevator("a4", 1, "idle", -5, 1, "closed");
@@ -137,7 +105,188 @@ namespace Controller
             Elevator d3 = new Elevator("d3", 1, "idle", 41, 60, "closed");
             Elevator d4 = new Elevator("d4", 1, "idle", 41, 60, "closed");
             Elevator d5 = new Elevator("d5", 1, "idle", 41, 60, "closed");
-            
+
+            void floorDisplayA1()
+            {
+                if (a1.floor == 1)
+                {
+                    a1.floorDisplay = 1;
+
+
+                } else if (a1.floor == 0)
+                {
+                    a1.floorDisplay = -1;
+
+
+                } else if (a1.floor == -1)
+                {
+                    a1.floorDisplay = -2;
+
+
+                } else if (a1.floor == -2)
+                {
+                    a1.floorDisplay = -3;
+
+                    
+                } else if (a1.floor == -3)
+                {
+                    a1.floorDisplay = -4;
+
+                    
+                } else if (a1.floor == -4)
+                {
+                    a1.floorDisplay = -5;
+
+                
+                } else if (a1.floor == -5)
+                {
+                    a1.floorDisplay = -6;
+
+                    
+                };
+            }
+
+            void floorDisplayA2()
+            {
+                if (a2.floor == 0)
+                {
+                    a2.floorDisplay = -1;
+
+
+                } else if (a2.floor == -1)
+                {
+                    a2.floorDisplay = -2;
+
+
+                } else if (a2.floor == -2)
+                {
+                    a2.floorDisplay = -3;
+
+                    
+                } else if (a2.floor == -3)
+                {
+                    a2.floorDisplay = -4;
+
+                    
+                } else if (a2.floor == -4)
+                {
+                    a2.floorDisplay = -5;
+
+                
+                } else if (a2.floor == -5)
+                {
+                    a2.floorDisplay = -6;
+
+                    
+                };
+            }
+
+            void floorDisplayA3()
+            {
+                if (a3.floor == 0)
+                {
+                    a3.floorDisplay = -1;
+
+
+                } else if (a3.floor == -1)
+                {
+                    a3.floorDisplay = -2;
+
+
+                } else if (a3.floor == -2)
+                {
+                    a3.floorDisplay = -3;
+
+                    
+                } else if (a3.floor == -3)
+                {
+                    a3.floorDisplay = -4;
+
+                    
+                } else if (a3.floor == -4)
+                {
+                    a3.floorDisplay = -5;
+
+                
+                } else if (a3.floor == -5)
+                {
+                    a3.floorDisplay = -6;
+
+                    
+                };
+            }
+
+            void floorDisplayA4()
+            {
+                if (a4.floor == 0)
+                {
+                    a4.floorDisplay = -1;
+
+
+                } else if (a4.floor == -1)
+                {
+                    a4.floorDisplay = -2;
+
+
+                } else if (a4.floor == -2)
+                {
+                    a4.floorDisplay = -3;
+
+                    
+                } else if (a4.floor == -3)
+                {
+                    a4.floorDisplay = -4;
+
+                    
+                } else if (a4.floor == -4)
+                {
+                    a4.floorDisplay = -5;
+
+                
+                } else if (a4.floor == -5)
+                {
+                    a4.floorDisplay = -6;
+
+                    
+                };
+            }
+
+            void floorDisplayA5()
+            {
+                if (a5.floor == 0)
+                {
+                    a5.floorDisplay = -1;
+
+
+                } else if (a5.floor == -1)
+                {
+                    a5.floorDisplay = -2;
+
+
+                } else if (a5.floor == -2)
+                {
+                    a5.floorDisplay = -3;
+
+                    
+                } else if (a5.floor == -3)
+                {
+                    a5.floorDisplay = -4;
+
+                    
+                } else if (a5.floor == -4)
+                {
+                    a5.floorDisplay = -5;
+
+                
+                } else if (a5.floor == -5)
+                {
+                    a5.floorDisplay = -6;
+
+                    
+                };
+            }
+
+
             void status()
             {
 
@@ -175,45 +324,70 @@ namespace Controller
 
             }
 
+            status();
+
 
             void requestElev(int userFloor, string direction)
             {
                 if (direction == "up") {
 
-                    if (userFloor == b1.floor && b1.status == "goingUp") {
+                    if (userFloor == a1.floor && a1.status == "goingUp") {
 
-                        Console.WriteLine("elevator b1");
-                        b1.door = "opened";
+                        Console.WriteLine("elevator a1");
+                        a1.door = "opened";
                         System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                        Console.WriteLine("door: " + b1.door);
-                        b1.door = "closed";
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(3));
-                        Console.WriteLine("door: " + b1.door);
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                        Console.WriteLine($"floor display: {b1.floorDisplay}");
-
-                        while (b1.floor < 5) {
-                            b1.floor++;
-                            b1.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"floor display: {b1.floorDisplay}");
-                        };
-
-                        b1.door = "opened";
+                        Console.WriteLine("door: " + a1.door);
+                        a1.door = "closed";
                         System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine("door: " + b1.door);
-                        b1.door = "closed";
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(3));
-                        Console.WriteLine("door: " + b1.door);
-                        b1.status = "idle";
-                        status();
+                        Console.WriteLine("door: " + a1.door);
+                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
+                        floorDisplayA1();
+                        Console.WriteLine($"floor display: {a1.floorDisplay}");
+                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
+                        Console.WriteLine("which floor would u like to go to?");
+
+                        bool invalid = true;
+                        while (invalid) {
+                            var request = Console.ReadLine();
+                            var requestedFloor = Convert.ToInt32(request);
+
+                            if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor) 
+                            {
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
+                                Console.WriteLine("please select a valid floor");
+
+                            } else {
+                                
+                                invalid = false;
+
+                                while (a1.floor < requestedFloor) 
+                                {
+                                a1.floor++;
+                                a1.floorDisplay++;
+                                floorDisplayA1();
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine($"floor display: {a1.floorDisplay}");
+                                };
+
+                                a1.door = "opened";
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
+                                Console.WriteLine("door: " + a1.door);
+                                a1.door = "closed";
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine("door: " + a1.door);
+                                a1.status = "idle";
+                                status();
+                                Console.WriteLine(a.status);
+                            
+                            }
+                        }
 
                     }
 
                 }
             }
 
-            requestElev(1, "up");
+            requestElev(-5, "up");
             status();
             // Console.WriteLine(c.minFloor);
             // Console.WriteLine(a1.floorDisplay);
