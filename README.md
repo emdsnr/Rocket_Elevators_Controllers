@@ -5,7 +5,7 @@ contains the algorithm files for the elevator controllers for the new rocket ele
 
 
 ## pseudocode
-rocket_elevators_controllers/ <br />
+rocket_elevators_controllers/pseudocode <br />
 - [residential_controller.algo](https://github.com/emdsnr/Rocket_Elevators_Controllers/blob/master/residential_controller.algo) <br />
 - [commercial_controller.algo](https://github.com/emdsnr/Rocket_Elevators_Controllers/blob/master/commercial_controller.algo)
 <br /><br />
