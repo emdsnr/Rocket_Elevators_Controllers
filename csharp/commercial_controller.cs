@@ -6973,7 +6973,65 @@ namespace Controller
                             };
                         };
                     
+                    // userFloor = elevFloor && status == idle
+                    } else if (userFloor == a1.floor && a1.status == "idle") 
+                    {
+                        Console.WriteLine("elevator a1");
+                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
+                        Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
+                   
+                        while (a1.floor < userFloor) 
+                        {
+                        a1.floor++;
+                        a1.floorDisplay++;
+                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                        Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
+                        };
+
+                        a1.door = "opened";
+                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
+                        Console.WriteLine("door: " + a1.door);
+                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
+                        Console.WriteLine("which floor would u like to go to?");
                         
+                        bool input = true;
+                        while (input) 
+                        {
+                            int requestedFloor;
+                            bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
+
+                            if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false)  
+                            {
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
+                                Console.WriteLine("please select a valid floor");
+
+                            } else {
+                                
+                                input = false;
+
+                                a1.door = "closed";
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine("door: " + a1.door);
+
+                                while (a1.floor < requestedFloor) 
+                                {
+                                a1.floor++;
+                                a1.floorDisplay++;
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine($"floor display: {a1.floorDisplay}");
+                                };
+
+                                a1.door = "opened";
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
+                                Console.WriteLine("door: " + a1.door);
+                                a1.door = "closed";
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine("door: " + a1.door);
+                                a1.status = "idle";
+                                status();
+                            
+                            };
+                        };
                     }
 
                 }
