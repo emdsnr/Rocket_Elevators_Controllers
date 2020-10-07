@@ -537,4968 +537,562 @@ namespace Controller
                         // Console.WriteLine(y);
                         // Console.WriteLine(z);
 
+                        // [1] 4 elevs — v, w, x, y
                         if (v > 0 && w > 0 && x > 0 && y > 0 && z < 0)
                         {
-                            if (v < w && v < x && v < y) 
+                            if (v <= w && v <= x && v <= y) 
                             {
                                 elevA1();
 
-                            } else if (w < v && w < x && w < y) 
+                            } else if (w <= v && w <= x && w <= y) 
                             {
                                 elevA2();
 
-                            } else if (x < v && x < w && x < y)
+                            } else if (x <= v && x <= w && x <= y)
                             {
                                 elevA3();
 
-                            } else if (y < v && y < w && y < x)
+                            } else if (y <= v && y <= w && y <= x)
+                            {
+                                elevA4();
+
+                            } else 
+                            {
+                                elevA1();
+                                
+                            };
+
+                        // [2] 4 elevs — v, w, x, z
+                        } else if (v > 0 && w > 0 && x > 0 && y < 0 && z > 0)
+                        {
+                            if (v <= w && v <= x && v <= z) 
+                            {
+                                elevA1();
+
+                            } else if (w <= v && w <= x && w <= z) 
+                            {
+                                elevA2();
+
+                            } else if (x <= v && x <= w && x <= z)
+                            {
+                                elevA3();
+
+                            } else if (z <= v && z <= w && z <= x)
+                            {
+                                elevA5();
+
+                            } else 
+                            {
+                                elevA1();
+
+                            };
+
+                        // [3] 4 elevs — v, w, y, z
+                        } else if (v > 0 && w > 0 && x < 0 && y > 0 && z > 0)
+                        {
+                            if (v <= w && v <= y && v <= z) 
+                            {
+                                elevA1();
+
+                            } else if (w <= v && w <= y && w <= z) 
+                            {
+                                elevA2();
+
+                            } else if (y <= v && y <= w && y <= z)
+                            {
+                                elevA4();
+
+                            } else if (z <= v && z <= w && z <= y)
+                            {
+                                elevA5();
+
+                            } else 
+                            {
+                                elevA1();
+
+                            };
+
+                        // [4] 4 elevs — v, x, y, z
+                        } else if (v > 0 && w < 0 && x > 0 && y > 0 && z > 0)
+                        {
+                            if (v <= x && v <= y && v <= z) 
+                            {
+                                elevA1();
+
+                            } else if (x <= v && x <= y && x <= z) 
+                            {
+                                elevA3();
+
+                            } else if (y <= v && y <= x && y <= z)
+                            {
+                                elevA4();
+
+                            } else if (z <= v && z <= x && z <= y)
+                            {
+                                elevA5();
+
+                            } else 
+                            {
+                                elevA1();
+
+                            };
+
+                        // [5] 4 elevs — w, x, y, z
+                        } else if (v < 0 && w > 0 && x > 0 && y > 0 && z > 0)
+                        {
+                            if (w <= x && w <= y && w <= z) 
+                            {
+                                elevA2();
+
+                            } else if (x <= w && x <= y && x <= z) 
+                            {
+                                elevA3();
+
+                            } else if (y <= w && y <= x && y <= z)
+                            {
+                                elevA4();
+
+                            } else if (z <= w && z <= x && z <= y)
+                            {
+                                elevA5();
+
+                            } else 
+                            {
+                                elevA2();
+
+                            };
+                        };
+                        
+                    // userFloor > elevFloor && status == goingUp | 3 OPTIONS
+                    } else if (userFloor > a1.floor && a1.status == "goingUp" && userFloor > a2.floor && a2.status == "goingUp" && userFloor > a3.floor && a3.status == "goingUp" || userFloor > a1.floor && a1.status == "goingUp" && userFloor > a2.floor && a2.status == "goingUp" && userFloor > a4.floor && a4.status == "goingUp" || userFloor > a1.floor && a1.status == "goingUp" && userFloor > a2.floor && a2.status == "goingUp" && userFloor > a5.floor && a5.status == "goingUp" || userFloor > a1.floor && a1.status == "goingUp" && userFloor > a3.floor && a3.status == "goingUp" && userFloor > a4.floor && a4.status == "goingUp" || userFloor > a1.floor && a1.status == "goingUp" && userFloor > a3.floor && a3.status == "goingUp" && userFloor > a5.floor && a5.status == "goingUp" || userFloor > a1.floor && a1.status == "goingUp" && userFloor > a4.floor && a4.status == "goingUp" && userFloor > a5.floor && a5.status == "goingUp" || userFloor > a2.floor && a2.status == "goingUp" && userFloor > a3.floor && a3.status == "goingUp" && userFloor > a4.floor && a4.status == "goingUp" || userFloor > a2.floor && a2.status == "goingUp" && userFloor > a3.floor && a3.status == "goingUp" && userFloor > a5.floor && a5.status == "goingUp" || userFloor > a2.floor && a2.status == "goingUp" && userFloor > a4.floor && a4.status == "goingUp" && userFloor > a5.floor && a5.status == "goingUp" || userFloor > a3.floor && a3.status == "goingUp" && userFloor > a4.floor && a4.status == "goingUp" && userFloor > a5.floor && a5.status == "goingUp") 
+                    {
+                        int v = (userFloor - a1.floor);
+                        int w = (userFloor - a2.floor);
+                        int x = (userFloor - a3.floor);
+                        int y = (userFloor - a4.floor);
+                        int z = (userFloor - a5.floor);
+                        // Console.WriteLine(v);
+                        // Console.WriteLine(w);
+                        // Console.WriteLine(x);
+                        // Console.WriteLine(y);
+                        // Console.WriteLine(z);
+
+                        // [1] 3 elevs — v, w, x
+                        if (v > 0 && w > 0 && x > 0 && y < 0 && z < 0)
+                        {
+                            if (v <= w && v <= x)
+                            {
+                                elevA1();
+
+                            } else if (w <= v && w <= x)
+                            {
+                                elevA2();
+
+                            } else if (x <= v && x <= w)
+                            {
+                                elevA3();
+
+                            } else
+                            {
+                                elevA1();
+
+                            };
+
+                        // [2] 3 elevs — v, w, y
+                        } else if (v > 0 && w > 0 && x > 0 && y < 0 && z < 0)
+                        {
+                            if (v <= w && v <= y)
+                            {
+                                elevA1();
+
+                            } else if (w <= v && w <= y)
+                            {
+                                elevA2();
+
+                            } else if (y <= v && y <= w)
+                            {
+                                elevA4();
+
+                            } else
+                            {
+                                elevA1();
+
+                            };
+
+                        // [3] 3 elevs — v, w, z
+                        } else if (v > 0 && w > 0 && x < 0 && y < 0 && z > 0)
+                        {
+                            if (v <= w && v <= z)
+                            {
+                                elevA1();
+
+                            } else if (w <= v && w <= z)
+                            {
+                                elevA2();
+
+                            } else if (z <= v && z <= w)
+                            {
+                                elevA5();
+
+                            } else
+                            {
+                                elevA1();
+
+                            };
+
+                        // [4] 3 elevs — v, x, y
+                        } else if (v > 0 && w < 0 && x > 0 && y > 0 && z < 0)
+                        {
+                            if (v <= x && v <= y)
+                            {
+                                elevA1();
+
+                            } else if (x <= v && x <= y)
+                            {
+                                elevA3();
+
+                            } else if (y <= v && y <= x)
+                            {
+                                elevA4();
+
+                            } else
+                            {
+                                elevA1();
+
+                            };
+
+                        // [5] 3 elevs — v, x, z
+                        } else if (v > 0 && w < 0 && x > 0 && y < 0 && z > 0)
+                        {
+                            if (v <= x && v <= z)
+                            {
+                                elevA1();
+
+                            } else if (x <= v && x <= z)
+                            {
+                                elevA3();
+
+                            } else if (z <= v && z <= x)
+                            {
+                                elevA5();
+
+                            } else
+                            {
+                                elevA1();
+
+                            };
+
+                        // [6] 3 elevs — v, y, z
+                        } else if (v > 0 && w < 0 && x < 0 && y > 0 && z > 0)
+                        {
+                            if (v <= y && v <= z)
+                            {
+                                elevA1();
+
+                            } else if (y <= v && y <= z)
+                            {
+                                elevA4();
+
+                            } else if (z <= v && z <= y)
+                            {
+                                elevA5();
+
+                            } else
+                            {
+                                elevA1();
+
+                            };
+
+                        // [7] 3 elevs — w, x, y
+                        } else if (v < 0 && w > 0 && x > 0 && y > 0 && z < 0)
+                        {
+                            if (w <= x && w <= y)
+                            {
+                                elevA2();
+
+                            } else if (x <= w && x <= y)
+                            {
+                                elevA3();
+
+                            } else if (y <= w && y <= x)
+                            {
+                                elevA4();
+
+                            } else
+                            {
+                                elevA2();
+
+                            };
+
+                        // [8] 3 elevs — w, x, z
+                        } else if (v < 0 && w > 0 && x > 0 && y < 0 && z > 0)
+                        {
+                            if (w <= x && w <= z)
+                            {
+                                elevA2();
+
+                            } else if (x <= w && x <= z)
+                            {
+                                elevA3();
+
+                            } else if (z <= w && z <= x)
+                            {
+                                elevA4();
+
+                            } else
+                            {
+                                elevA2();
+
+                            };
+
+                        // [9] 3 elevs — w, y, z
+                        } else if (v < 0 && w > 0 && x < 0 && y > 0 && z > 0)
+                        {
+                            if (w <= y && w <= z)
+                            {
+                                elevA2();
+
+                            } else if (y <= w && y <= z)
+                            {
+                                elevA4();
+
+                            } else if (z <= w && z <= y)
+                            {
+                                elevA5();
+
+                            } else
+                            {
+                                elevA2();
+
+                            };
+
+                        // [10] 3 elevs — x, y, z
+                        } else if (v < 0 && w < 0 && x > 0 && y > 0 && z > 0)
+                        {
+                            if (x <= y && x <= z)
+                            {
+                                elevA3();
+
+                            } else if (y <= x && y <= z)
+                            {
+                                elevA4();
+
+                            } else if (z <= x && z <= y)
+                            {
+                                elevA5();
+
+                            } else
+                            {
+                                elevA3();
+
+                            };
+                        };
+                    
+                    // userFloor > elevFloor && status == goingUp | 2 OPTIONS
+                    } else if (userFloor > a1.floor && a1.status == "goingUp" && userFloor > a2.floor && a2.status == "goingUp" || userFloor > a1.floor && a1.status == "goingUp" && userFloor > a3.floor && a3.status == "goingUp" || userFloor > a1.floor && a1.status == "goingUp" && userFloor > a4.floor && a4.status == "goingUp" || userFloor > a1.floor && a1.status == "goingUp" && userFloor > a5.floor && a5.status == "goingUp" || userFloor > a2.floor && a2.status == "goingUp" && userFloor > a3.floor && a3.status == "goingUp" || userFloor > a2.floor && a2.status == "goingUp" && userFloor > a4.floor && a4.status == "goingUp" || userFloor > a2.floor && a2.status == "goingUp" && userFloor > a5.floor && a5.status == "goingUp" || userFloor > a3.floor && a3.status == "goingUp" && userFloor > a4.floor && a4.status == "goingUp" || userFloor > a3.floor && a3.status == "goingUp" && userFloor > a5.floor && a5.status == "goingUp" || userFloor > a4.floor && a4.status == "goingUp" && userFloor > a5.floor && a5.status == "goingUp") 
+                    {
+                        int v = (userFloor - a1.floor);
+                        int w = (userFloor - a2.floor);
+                        int x = (userFloor - a3.floor);
+                        int y = (userFloor - a4.floor);
+                        int z = (userFloor - a5.floor);
+                        // Console.WriteLine(v);
+                        // Console.WriteLine(w);
+                        // Console.WriteLine(x);
+                        // Console.WriteLine(y);
+                        // Console.WriteLine(z);
+
+                        // [1] 2 elevs — v, w
+                        if (v > 0 && w > 0 && x < 0 && y < 0 && z < 0)
+                        {
+                            if (v <= w)
+                            {
+                                elevA1();
+
+                            } else if (w <= v)
+                            {
+                                elevA2();
+
+                            } else
+                            {
+                                elevA1();
+
+                            };
+
+                        // [2] 2 elevs — v, x
+                        } else if (v > 0 && w < 0 && x > 0 && y < 0 && z < 0)
+                        {
+                            if (v <= x)
+                            {
+                                elevA1();
+
+                            } else if (x <= v)
+                            {
+                                elevA3();
+
+                            } else
+                            {
+                                elevA1();
+
+                            };
+
+                        // [3] 2 elevs — v, y
+                        } else if (v > 0 && w < 0 && x < 0 && y > 0 && z < 0)
+                        {
+                            if (v <= y)
+                            {
+                                elevA1();
+
+                            } else if (y <= v)
+                            {
+                                elevA4();
+
+                            } else
+                            {
+                                elevA1();
+
+                            };
+
+                        // [4] 2 elevs — v, z
+                        } else if (v > 0 && w < 0 && x < 0 && y < 0 && z > 0)
+                        {
+                            if (v <= z)
+                            {
+                                elevA1();
+
+                            } else if (z <= v)
+                            {
+                                elevA5();
+
+                            } else
+                            {
+                                elevA1();
+
+                            };
+
+                        // [5] 2 elevs — w, x
+                        } else if (v < 0 && w > 0 && x > 0 && y < 0 && z < 0)
+                        {
+                            if (w <= x)
+                            {
+                                elevA2();
+
+                            } else if (x <= w)
+                            {
+                                elevA3();
+
+                            } else
+                            {
+                                elevA2();
+
+                            };
+
+                        // [6] 2 elevs — w, y
+                        } else if (v < 0 && w > 0 && x < 0 && y > 0 && z < 0)
+                        {
+                            if (w <= y)
+                            {
+                                elevA2();
+
+                            } else if (y <= w)
+                            {
+                                elevA4();
+
+                            } else
+                            {
+                                elevA2();
+
+                            };
+
+                        // [7] 2 elevs — w, z
+                        } else if (v < 0 && w > 0 && x < 0 && y < 0 && z > 0)
+                        {
+                            if (w <= z)
+                            {
+                                elevA2();
+
+                            } else if (z <= w)
+                            {
+                                elevA5();
+
+                            } else
+                            {
+                                elevA2();
+
+                            };
+
+                        // [8] 2 elevs — x, y
+                        } else if (v < 0 && w < 0 && x > 0 && y > 0 && z < 0)
+                        {
+                            if (x <= y)
+                            {
+                                elevA3();
+
+                            } else if (y <= x)
+                            {
+                                elevA4();
+
+                            } else
+                            {
+                                elevA3();
+
+                            };
+
+                        // [9] 2 elevs — x, z
+                        } else if (v < 0 && w < 0 && x > 0 && y < 0 && z > 0)
+                        {
+                            if (x <= z)
+                            {
+                                elevA3();
+
+                            } else if (z <= x)
+                            {
+                                elevA5();
+
+                            } else
+                            {
+                                elevA3();
+
+                            };
+
+                        // [10] 2 elevs — y, z
+                        } else if (v < 0 && w < 0 && x < 0 && y > 0 && z > 0)
+                        {
+                            if (y <= z)
+                            {
+                                elevA4();
+
+                            } else if (z <= y)
+                            {
+                                elevA5();
+
+                            } else
                             {
                                 elevA4();
 
                             };
-
-                        } else if (w <= v && w <= x && w <= y && w <= z && w > 0)
-                        {
-                            Console.WriteLine("elevator a2");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                    
-                            while (a2.floor < userFloor) 
-                            {
-                            a2.floor++;
-                            a2.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                            };
-
-                            a2.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a2.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-
-                                    while (a2.floor < requestedFloor) 
-                                    {
-                                    a2.floor++;
-                                    a2.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a2.floorDisplay}");
-                                    };
-
-                                    a2.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (x <= v && x <= w && x <= y && x <= z && x > 0)
-                        {
-                            Console.WriteLine("elevator a3");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                    
-                            while (a3.floor < userFloor) 
-                            {
-                            a3.floor++;
-                            a3.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                            };
-
-                            a3.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a3.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a3.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a3.door);
-
-                                    while (a3.floor < requestedFloor) 
-                                    {
-                                    a3.floor++;
-                                    a3.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a3.floorDisplay}");
-                                    };
-
-                                    a3.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a3.door);
-                                    a3.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a3.door);
-                                    a3.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (y <= v && y <= w && y <= x && y <= z && y > 0)
-                        {
-                            Console.WriteLine("elevator a4");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a4.floorDisplay}");
-                    
-                            while (a4.floor < userFloor) 
-                            {
-                            a4.floor++;
-                            a4.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a4.floorDisplay}");
-                            };
-
-                            a4.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a4.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a4.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a4.door);
-
-                                    while (a4.floor < requestedFloor) 
-                                    {
-                                    a4.floor++;
-                                    a4.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a4.floorDisplay}");
-                                    };
-
-                                    a4.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a4.door);
-                                    a4.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a4.door);
-                                    a4.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (z <= v && z <= w && z <= x && z <= y && z > 0)
-                        {
-                            Console.WriteLine("elevator a5");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a5.floorDisplay}");
-                    
-                            while (a5.floor < userFloor) 
-                            {
-                            a5.floor++;
-                            a5.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a5.floorDisplay}");
-                            };
-
-                            a5.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a5.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a5.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a5.door);
-
-                                    while (a5.floor < requestedFloor) 
-                                    {
-                                    a5.floor++;
-                                    a5.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a5.floorDisplay}");
-                                    };
-
-                                    a5.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a5.door);
-                                    a5.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a5.door);
-                                    a5.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else
-                        {
-                            Console.WriteLine("elevator a1");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                    
-                            while (a1.floor < userFloor) 
-                            {
-                            a1.floor++;
-                            a1.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                            };
-
-                            a1.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a1.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-
-                                    while (a1.floor < requestedFloor) 
-                                    {
-                                    a1.floor++;
-                                    a1.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a1.floorDisplay}");
-                                    };
-
-                                    a1.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        };
-                        
-                    // userFloor > elevFloor && status == goingUp | [1] 3 OPTIONS — a1 & a2 & a3
-                    } else if (userFloor > a1.floor && a1.status == "goingUp" && userFloor > a2.floor && a2.status == "goingUp" && userFloor > a3.floor && a3.status == "goingUp" && userFloor > a4.floor && a4.status == "goingUp") 
-                    {
-                        int v = (userFloor - a1.floor);
-                        int w = (userFloor - a2.floor);
-                        int x = (userFloor - a3.floor);
-                        // Console.WriteLine(v);
-                        // Console.WriteLine(w);
-                        // Console.WriteLine(x);
-
-                        if (v <= w && v <= x)
-                        {
-                            Console.WriteLine("elevator a1");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                    
-                            while (a1.floor < userFloor) 
-                            {
-                            a1.floor++;
-                            a1.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                            };
-
-                            a1.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a1.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-
-                                    while (a1.floor < requestedFloor) 
-                                    {
-                                    a1.floor++;
-                                    a1.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a1.floorDisplay}");
-                                    };
-
-                                    a1.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (w <= v && w <= x)
-                        {
-                            Console.WriteLine("elevator a2");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                    
-                            while (a2.floor < userFloor) 
-                            {
-                            a2.floor++;
-                            a2.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                            };
-
-                            a2.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a2.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-
-                                    while (a2.floor < requestedFloor) 
-                                    {
-                                    a2.floor++;
-                                    a2.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a2.floorDisplay}");
-                                    };
-
-                                    a2.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (x <= v && x <= w)
-                        {
-                            Console.WriteLine("elevator a3");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                    
-                            while (a3.floor < userFloor) 
-                            {
-                            a3.floor++;
-                            a3.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                            };
-
-                            a3.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a3.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a3.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a3.door);
-
-                                    while (a3.floor < requestedFloor) 
-                                    {
-                                    a3.floor++;
-                                    a3.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a3.floorDisplay}");
-                                    };
-
-                                    a3.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a3.door);
-                                    a3.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a3.door);
-                                    a3.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else
-                        {
-                            Console.WriteLine("elevator a1");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                    
-                            while (a1.floor < userFloor) 
-                            {
-                            a1.floor++;
-                            a1.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                            };
-
-                            a1.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a1.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-
-                                    while (a1.floor < requestedFloor) 
-                                    {
-                                    a1.floor++;
-                                    a1.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a1.floorDisplay}");
-                                    };
-
-                                    a1.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        };
-                        
-                    // userFloor > elevFloor && status == goingUp | [2] 3 OPTIONS — a1 & a2 & a4
-                    } else if (userFloor > a1.floor && a1.status == "goingUp" && userFloor > a2.floor && a2.status == "goingUp" && userFloor > a4.floor && a4.status == "goingUp") 
-                    {
-                        int v = (userFloor - a1.floor);
-                        int w = (userFloor - a2.floor);
-                        int y = (userFloor - a4.floor);
-                        // Console.WriteLine(v);
-                        // Console.WriteLine(w);
-                        // Console.WriteLine(y);
-
-                        if (v <= w && v <= y)
-                        {
-                            Console.WriteLine("elevator a1");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                    
-                            while (a1.floor < userFloor) 
-                            {
-                            a1.floor++;
-                            a1.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                            };
-
-                            a1.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a1.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-
-                                    while (a1.floor < requestedFloor) 
-                                    {
-                                    a1.floor++;
-                                    a1.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a1.floorDisplay}");
-                                    };
-
-                                    a1.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (w <= v && w <= y)
-                        {
-                            Console.WriteLine("elevator a2");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                    
-                            while (a2.floor < userFloor) 
-                            {
-                            a2.floor++;
-                            a2.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                            };
-
-                            a2.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a2.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-
-                                    while (a2.floor < requestedFloor) 
-                                    {
-                                    a2.floor++;
-                                    a2.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a2.floorDisplay}");
-                                    };
-
-                                    a2.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (y <= v && y <= w)
-                        {
-                            Console.WriteLine("elevator a4");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a4.floorDisplay}");
-                    
-                            while (a4.floor < userFloor) 
-                            {
-                            a4.floor++;
-                            a4.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a4.floorDisplay}");
-                            };
-
-                            a4.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a4.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a4.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a4.door);
-
-                                    while (a4.floor < requestedFloor) 
-                                    {
-                                    a4.floor++;
-                                    a4.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a4.floorDisplay}");
-                                    };
-
-                                    a4.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a4.door);
-                                    a4.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a4.door);
-                                    a4.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else
-                        {
-                            Console.WriteLine("elevator a1");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                    
-                            while (a1.floor < userFloor) 
-                            {
-                            a1.floor++;
-                            a1.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                            };
-
-                            a1.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a1.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-
-                                    while (a1.floor < requestedFloor) 
-                                    {
-                                    a1.floor++;
-                                    a1.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a1.floorDisplay}");
-                                    };
-
-                                    a1.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        };
-                        
-                    // userFloor > elevFloor && status == goingUp | [3] 3 OPTIONS — a1 & a2 & a5
-                    } else if (userFloor > a1.floor && a1.status == "goingUp" && userFloor > a2.floor && a2.status == "goingUp" && userFloor > a5.floor && a5.status == "goingUp") 
-                    {
-                        int v = (userFloor - a1.floor);
-                        int w = (userFloor - a2.floor);
-                        int z = (userFloor - a5.floor);
-                        // Console.WriteLine(v);
-                        // Console.WriteLine(w);
-                        // Console.WriteLine(z);
-
-                        if (v <= w && v <= z)
-                        {
-                            Console.WriteLine("elevator a1");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                    
-                            while (a1.floor < userFloor) 
-                            {
-                            a1.floor++;
-                            a1.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                            };
-
-                            a1.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a1.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-
-                                    while (a1.floor < requestedFloor) 
-                                    {
-                                    a1.floor++;
-                                    a1.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a1.floorDisplay}");
-                                    };
-
-                                    a1.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (w <= v && w <= z)
-                        {
-                            Console.WriteLine("elevator a2");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                    
-                            while (a2.floor < userFloor) 
-                            {
-                            a2.floor++;
-                            a2.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                            };
-
-                            a2.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a2.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-
-                                    while (a2.floor < requestedFloor) 
-                                    {
-                                    a2.floor++;
-                                    a2.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a2.floorDisplay}");
-                                    };
-
-                                    a2.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (z <= v && z <= w)
-                        {
-                            Console.WriteLine("elevator a5");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a5.floorDisplay}");
-                    
-                            while (a5.floor < userFloor) 
-                            {
-                            a5.floor++;
-                            a5.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a5.floorDisplay}");
-                            };
-
-                            a5.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a5.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a5.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a5.door);
-
-                                    while (a5.floor < requestedFloor) 
-                                    {
-                                    a5.floor++;
-                                    a5.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a5.floorDisplay}");
-                                    };
-
-                                    a5.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a5.door);
-                                    a5.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a5.door);
-                                    a5.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else
-                        {
-                            Console.WriteLine("elevator a1");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                    
-                            while (a1.floor < userFloor) 
-                            {
-                            a1.floor++;
-                            a1.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                            };
-
-                            a1.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a1.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-
-                                    while (a1.floor < requestedFloor) 
-                                    {
-                                    a1.floor++;
-                                    a1.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a1.floorDisplay}");
-                                    };
-
-                                    a1.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        };
-                        
-                    // userFloor > elevFloor && status == goingUp | [4] 3 OPTIONS — a1 & a3 & a4
-                    } else if (userFloor > a1.floor && a1.status == "goingUp" && userFloor > a3.floor && a3.status == "goingUp" && userFloor > a4.floor && a4.status == "goingUp") 
-                    {
-                        int v = (userFloor - a1.floor);
-                        int x = (userFloor - a3.floor);
-                        int y = (userFloor - a4.floor);
-                        // Console.WriteLine(v);
-                        // Console.WriteLine(x);
-                        // Console.WriteLine(y);
-
-                        if (v <= x && v <= y)
-                        {
-                            Console.WriteLine("elevator a1");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                    
-                            while (a1.floor < userFloor) 
-                            {
-                            a1.floor++;
-                            a1.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                            };
-
-                            a1.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a1.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-
-                                    while (a1.floor < requestedFloor) 
-                                    {
-                                    a1.floor++;
-                                    a1.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a1.floorDisplay}");
-                                    };
-
-                                    a1.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (x <= v && x <= y)
-                        {
-                            Console.WriteLine("elevator a3");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                    
-                            while (a3.floor < userFloor) 
-                            {
-                            a3.floor++;
-                            a3.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                            };
-
-                            a3.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a3.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a3.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a3.door);
-
-                                    while (a3.floor < requestedFloor) 
-                                    {
-                                    a3.floor++;
-                                    a3.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a3.floorDisplay}");
-                                    };
-
-                                    a3.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a3.door);
-                                    a3.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a3.door);
-                                    a3.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (y <= v && y <= x)
-                        {
-                            Console.WriteLine("elevator a4");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a4.floorDisplay}");
-                    
-                            while (a4.floor < userFloor) 
-                            {
-                            a4.floor++;
-                            a4.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a4.floorDisplay}");
-                            };
-
-                            a4.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a4.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a4.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a4.door);
-
-                                    while (a4.floor < requestedFloor) 
-                                    {
-                                    a4.floor++;
-                                    a4.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a4.floorDisplay}");
-                                    };
-
-                                    a4.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a4.door);
-                                    a4.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a4.door);
-                                    a4.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else
-                        {
-                            Console.WriteLine("elevator a1");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                    
-                            while (a1.floor < userFloor) 
-                            {
-                            a1.floor++;
-                            a1.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                            };
-
-                            a1.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a1.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-
-                                    while (a1.floor < requestedFloor) 
-                                    {
-                                    a1.floor++;
-                                    a1.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a1.floorDisplay}");
-                                    };
-
-                                    a1.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        };
-                        
-                    // userFloor > elevFloor && status == goingUp | [5] 3 OPTIONS — a1 & a3 & a5
-                    } else if (userFloor > a1.floor && a1.status == "goingUp" && userFloor > a3.floor && a3.status == "goingUp" && userFloor > a5.floor && a5.status == "goingUp") 
-                    {
-                        int v = (userFloor - a1.floor);
-                        int x = (userFloor - a3.floor);
-                        int z = (userFloor - a5.floor);
-                        // Console.WriteLine(v);
-                        // Console.WriteLine(x);
-                        // Console.WriteLine(y);
-
-                        if (v <= x && v <= z)
-                        {
-                            Console.WriteLine("elevator a1");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                    
-                            while (a1.floor < userFloor) 
-                            {
-                            a1.floor++;
-                            a1.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                            };
-
-                            a1.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a1.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-
-                                    while (a1.floor < requestedFloor) 
-                                    {
-                                    a1.floor++;
-                                    a1.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a1.floorDisplay}");
-                                    };
-
-                                    a1.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (x <= v && x <= z)
-                        {
-                            Console.WriteLine("elevator a3");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                    
-                            while (a3.floor < userFloor) 
-                            {
-                            a3.floor++;
-                            a3.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                            };
-
-                            a3.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a3.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a3.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a3.door);
-
-                                    while (a3.floor < requestedFloor) 
-                                    {
-                                    a3.floor++;
-                                    a3.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a3.floorDisplay}");
-                                    };
-
-                                    a3.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a3.door);
-                                    a3.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a3.door);
-                                    a3.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (z <= v && z <= x)
-                        {
-                            Console.WriteLine("elevator a5");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a5.floorDisplay}");
-                    
-                            while (a5.floor < userFloor) 
-                            {
-                            a5.floor++;
-                            a5.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a5.floorDisplay}");
-                            };
-
-                            a5.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a5.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a5.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a5.door);
-
-                                    while (a5.floor < requestedFloor) 
-                                    {
-                                    a5.floor++;
-                                    a5.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a5.floorDisplay}");
-                                    };
-
-                                    a5.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a5.door);
-                                    a5.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a5.door);
-                                    a5.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else
-                        {
-                            Console.WriteLine("elevator a1");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                    
-                            while (a1.floor < userFloor) 
-                            {
-                            a1.floor++;
-                            a1.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                            };
-
-                            a1.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a1.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-
-                                    while (a1.floor < requestedFloor) 
-                                    {
-                                    a1.floor++;
-                                    a1.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a1.floorDisplay}");
-                                    };
-
-                                    a1.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        };
-                        
-                    // userFloor > elevFloor && status == goingUp | [6] 3 OPTIONS — a1 & a4 & a5
-                    } else if (userFloor > a1.floor && a1.status == "goingUp" && userFloor > a4.floor && a4.status == "goingUp" && userFloor > a5.floor && a5.status == "goingUp") 
-                    {
-                        int v = (userFloor - a1.floor);
-                        int y = (userFloor - a4.floor);
-                        int z = (userFloor - a5.floor);
-                        // Console.WriteLine(v);
-                        // Console.WriteLine(y);
-                        // Console.WriteLine(y);
-
-                        if (v <= y && v <= z)
-                        {
-                            Console.WriteLine("elevator a1");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                    
-                            while (a1.floor < userFloor) 
-                            {
-                            a1.floor++;
-                            a1.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                            };
-
-                            a1.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a1.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-
-                                    while (a1.floor < requestedFloor) 
-                                    {
-                                    a1.floor++;
-                                    a1.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a1.floorDisplay}");
-                                    };
-
-                                    a1.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (y <= v && y <= z)
-                        {
-                            Console.WriteLine("elevator a4");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a4.floorDisplay}");
-                    
-                            while (a4.floor < userFloor) 
-                            {
-                            a4.floor++;
-                            a4.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a4.floorDisplay}");
-                            };
-
-                            a4.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a4.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a4.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a4.door);
-
-                                    while (a4.floor < requestedFloor) 
-                                    {
-                                    a4.floor++;
-                                    a4.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a4.floorDisplay}");
-                                    };
-
-                                    a4.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a4.door);
-                                    a4.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a4.door);
-                                    a4.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (z <= v && z <= y)
-                        {
-                            Console.WriteLine("elevator a5");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a5.floorDisplay}");
-                    
-                            while (a5.floor < userFloor) 
-                            {
-                            a5.floor++;
-                            a5.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a5.floorDisplay}");
-                            };
-
-                            a5.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a5.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a5.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a5.door);
-
-                                    while (a5.floor < requestedFloor) 
-                                    {
-                                    a5.floor++;
-                                    a5.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a5.floorDisplay}");
-                                    };
-
-                                    a5.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a5.door);
-                                    a5.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a5.door);
-                                    a5.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else
-                        {
-                            Console.WriteLine("elevator a1");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                    
-                            while (a1.floor < userFloor) 
-                            {
-                            a1.floor++;
-                            a1.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                            };
-
-                            a1.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a1.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-
-                                    while (a1.floor < requestedFloor) 
-                                    {
-                                    a1.floor++;
-                                    a1.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a1.floorDisplay}");
-                                    };
-
-                                    a1.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        };
-                        
-                    // userFloor > elevFloor && status == goingUp | [7] 3 OPTIONS — a2 & a3 & a4
-                    } else if (userFloor > a2.floor && a2.status == "goingUp" && userFloor > a3.floor && a3.status == "goingUp" && userFloor > a4.floor && a4.status == "goingUp") 
-                    {
-                        int w = (userFloor - a2.floor);
-                        int x = (userFloor - a3.floor);
-                        int y = (userFloor - a4.floor);
-                        // Console.WriteLine(w);
-                        // Console.WriteLine(x);
-                        // Console.WriteLine(y);
-
-                        if (w <= x && w <= y)
-                        {
-                            Console.WriteLine("elevator a2");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                    
-                            while (a2.floor < userFloor) 
-                            {
-                            a2.floor++;
-                            a2.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                            };
-
-                            a2.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a2.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-
-                                    while (a2.floor < requestedFloor) 
-                                    {
-                                    a2.floor++;
-                                    a2.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a2.floorDisplay}");
-                                    };
-
-                                    a2.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (x <= w && x <= y)
-                        {
-                            Console.WriteLine("elevator a3");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                    
-                            while (a3.floor < userFloor) 
-                            {
-                            a3.floor++;
-                            a3.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                            };
-
-                            a3.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a3.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a3.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a3.door);
-
-                                    while (a3.floor < requestedFloor) 
-                                    {
-                                    a3.floor++;
-                                    a3.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a3.floorDisplay}");
-                                    };
-
-                                    a3.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a3.door);
-                                    a3.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a3.door);
-                                    a3.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (y <= w && y <= x)
-                        {
-                            Console.WriteLine("elevator a4");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a4.floorDisplay}");
-                    
-                            while (a4.floor < userFloor) 
-                            {
-                            a4.floor++;
-                            a4.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a4.floorDisplay}");
-                            };
-
-                            a4.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a4.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a4.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a4.door);
-
-                                    while (a4.floor < requestedFloor) 
-                                    {
-                                    a4.floor++;
-                                    a4.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a4.floorDisplay}");
-                                    };
-
-                                    a4.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a4.door);
-                                    a4.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a4.door);
-                                    a4.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else
-                        {
-                            Console.WriteLine("elevator a2");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                    
-                            while (a2.floor < userFloor) 
-                            {
-                            a2.floor++;
-                            a2.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                            };
-
-                            a2.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a2.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-
-                                    while (a2.floor < requestedFloor) 
-                                    {
-                                    a2.floor++;
-                                    a2.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a2.floorDisplay}");
-                                    };
-
-                                    a2.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        };
-                        
-                    // userFloor > elevFloor && status == goingUp | [8] 3 OPTIONS — a2 & a3 & a5
-                    } else if (userFloor > a2.floor && a2.status == "goingUp" && userFloor > a3.floor && a3.status == "goingUp" && userFloor > a5.floor && a5.status == "goingUp") 
-                    {
-                        int w = (userFloor - a2.floor);
-                        int x = (userFloor - a3.floor);
-                        int z = (userFloor - a5.floor);
-                        // Console.WriteLine(w);
-                        // Console.WriteLine(x);
-                        // Console.WriteLine(y);
-
-                        if (w <= x && w <= z)
-                        {
-                            Console.WriteLine("elevator a2");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                    
-                            while (a2.floor < userFloor) 
-                            {
-                            a2.floor++;
-                            a2.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                            };
-
-                            a2.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a2.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-
-                                    while (a2.floor < requestedFloor) 
-                                    {
-                                    a2.floor++;
-                                    a2.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a2.floorDisplay}");
-                                    };
-
-                                    a2.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (x <= w && x <= z)
-                        {
-                            Console.WriteLine("elevator a3");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                    
-                            while (a3.floor < userFloor) 
-                            {
-                            a3.floor++;
-                            a3.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                            };
-
-                            a3.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a3.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a3.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a3.door);
-
-                                    while (a3.floor < requestedFloor) 
-                                    {
-                                    a3.floor++;
-                                    a3.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a3.floorDisplay}");
-                                    };
-
-                                    a3.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a3.door);
-                                    a3.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a3.door);
-                                    a3.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (z <= w && z <= x)
-                        {
-                            Console.WriteLine("elevator a5");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a5.floorDisplay}");
-                    
-                            while (a5.floor < userFloor) 
-                            {
-                            a5.floor++;
-                            a5.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a5.floorDisplay}");
-                            };
-
-                            a5.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a5.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a5.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a5.door);
-
-                                    while (a5.floor < requestedFloor) 
-                                    {
-                                    a5.floor++;
-                                    a5.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a5.floorDisplay}");
-                                    };
-
-                                    a5.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a5.door);
-                                    a5.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a5.door);
-                                    a5.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else
-                        {
-                            Console.WriteLine("elevator a2");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                    
-                            while (a2.floor < userFloor) 
-                            {
-                            a2.floor++;
-                            a2.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                            };
-
-                            a2.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a2.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-
-                                    while (a2.floor < requestedFloor) 
-                                    {
-                                    a2.floor++;
-                                    a2.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a2.floorDisplay}");
-                                    };
-
-                                    a2.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        };
-                        
-                    // userFloor > elevFloor && status == goingUp | [9] 3 OPTIONS — a2 & a4 & a5
-                    } else if (userFloor > a2.floor && a2.status == "goingUp" && userFloor > a4.floor && a4.status == "goingUp" && userFloor > a5.floor && a5.status == "goingUp") 
-                    {
-                        int w = (userFloor - a2.floor);
-                        int y = (userFloor - a4.floor);
-                        int z = (userFloor - a5.floor);
-                        // Console.WriteLine(w);
-                        // Console.WriteLine(y);
-                        // Console.WriteLine(y);
-
-                        if (w <= y && w <= z)
-                        {
-                            Console.WriteLine("elevator a2");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                    
-                            while (a2.floor < userFloor) 
-                            {
-                            a2.floor++;
-                            a2.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                            };
-
-                            a2.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a2.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-
-                                    while (a2.floor < requestedFloor) 
-                                    {
-                                    a2.floor++;
-                                    a2.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a2.floorDisplay}");
-                                    };
-
-                                    a2.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (y <= w && y <= z)
-                        {
-                            Console.WriteLine("elevator a4");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a4.floorDisplay}");
-                    
-                            while (a4.floor < userFloor) 
-                            {
-                            a4.floor++;
-                            a4.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a4.floorDisplay}");
-                            };
-
-                            a4.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a4.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a4.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a4.door);
-
-                                    while (a4.floor < requestedFloor) 
-                                    {
-                                    a4.floor++;
-                                    a4.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a4.floorDisplay}");
-                                    };
-
-                                    a4.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a4.door);
-                                    a4.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a4.door);
-                                    a4.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (z <= w && z <= y)
-                        {
-                            Console.WriteLine("elevator a5");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a5.floorDisplay}");
-                    
-                            while (a5.floor < userFloor) 
-                            {
-                            a5.floor++;
-                            a5.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a5.floorDisplay}");
-                            };
-
-                            a5.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a5.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a5.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a5.door);
-
-                                    while (a5.floor < requestedFloor) 
-                                    {
-                                    a5.floor++;
-                                    a5.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a5.floorDisplay}");
-                                    };
-
-                                    a5.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a5.door);
-                                    a5.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a5.door);
-                                    a5.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else
-                        {
-                            Console.WriteLine("elevator a2");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                    
-                            while (a2.floor < userFloor) 
-                            {
-                            a2.floor++;
-                            a2.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                            };
-
-                            a2.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a2.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-
-                                    while (a2.floor < requestedFloor) 
-                                    {
-                                    a2.floor++;
-                                    a2.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a2.floorDisplay}");
-                                    };
-
-                                    a2.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        };
-                        
-                    // userFloor > elevFloor && status == goingUp | [10] 3 OPTIONS — a3 & a4 & a5
-                    } else if (userFloor > a3.floor && a3.status == "goingUp" && userFloor > a4.floor && a4.status == "goingUp" && userFloor > a5.floor && a5.status == "goingUp") 
-                    {
-                        int v = (userFloor - a3.floor);
-                        int y = (userFloor - a4.floor);
-                        int z = (userFloor - a5.floor);
-                        // Console.WriteLine(v);
-                        // Console.WriteLine(y);
-                        // Console.WriteLine(y);
-
-                        if (v <= y && v <= z)
-                        {
-                            Console.WriteLine("elevator a3");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                    
-                            while (a3.floor < userFloor) 
-                            {
-                            a3.floor++;
-                            a3.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                            };
-
-                            a3.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a3.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a3.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a3.door);
-
-                                    while (a3.floor < requestedFloor) 
-                                    {
-                                    a3.floor++;
-                                    a3.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a3.floorDisplay}");
-                                    };
-
-                                    a3.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a3.door);
-                                    a3.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a3.door);
-                                    a3.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (y <= v && y <= z)
-                        {
-                            Console.WriteLine("elevator a4");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a4.floorDisplay}");
-                    
-                            while (a4.floor < userFloor) 
-                            {
-                            a4.floor++;
-                            a4.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a4.floorDisplay}");
-                            };
-
-                            a4.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a4.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a4.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a4.door);
-
-                                    while (a4.floor < requestedFloor) 
-                                    {
-                                    a4.floor++;
-                                    a4.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a4.floorDisplay}");
-                                    };
-
-                                    a4.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a4.door);
-                                    a4.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a4.door);
-                                    a4.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (z <= v && z <= y)
-                        {
-                            Console.WriteLine("elevator a5");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a5.floorDisplay}");
-                    
-                            while (a5.floor < userFloor) 
-                            {
-                            a5.floor++;
-                            a5.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a5.floorDisplay}");
-                            };
-
-                            a5.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a5.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a5.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a5.door);
-
-                                    while (a5.floor < requestedFloor) 
-                                    {
-                                    a5.floor++;
-                                    a5.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a5.floorDisplay}");
-                                    };
-
-                                    a5.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a5.door);
-                                    a5.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a5.door);
-                                    a5.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else
-                        {
-                            Console.WriteLine("elevator a3");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                    
-                            while (a3.floor < userFloor) 
-                            {
-                            a3.floor++;
-                            a3.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                            };
-
-                            a3.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a3.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a3.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a3.door);
-
-                                    while (a3.floor < requestedFloor) 
-                                    {
-                                    a3.floor++;
-                                    a3.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a3.floorDisplay}");
-                                    };
-
-                                    a3.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a3.door);
-                                    a3.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a3.door);
-                                    a3.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        };
-                    
-                    // userFloor > elevFloor && status == goingUp | [8] 2 OPTIONS — a1 & a2
-                    } else if (userFloor > a1.floor && a1.status == "goingUp" && userFloor > a2.floor && a2.status == "goingUp") 
-                    {
-                        int x = (userFloor - a1.floor);
-                        int y = (userFloor - a2.floor);
-                        // Console.WriteLine(x);
-                        // Console.WriteLine(y);
-
-                        if (x < y)
-                        {
-                            Console.WriteLine("elevator a1");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                    
-                            while (a1.floor < userFloor) 
-                            {
-                            a1.floor++;
-                            a1.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                            };
-
-                            a1.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a1.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-
-                                    while (a1.floor < requestedFloor) 
-                                    {
-                                    a1.floor++;
-                                    a1.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a1.floorDisplay}");
-                                    };
-
-                                    a1.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (x > y)
-                        {
-                            Console.WriteLine("elevator a2");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                    
-                            while (a2.floor < userFloor) 
-                            {
-                            a2.floor++;
-                            a2.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                            };
-
-                            a2.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a2.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-
-                                    while (a2.floor < requestedFloor) 
-                                    {
-                                    a2.floor++;
-                                    a2.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a2.floorDisplay}");
-                                    };
-
-                                    a2.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else
-                        {
-                            Console.WriteLine("elevator a1");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                    
-                            while (a1.floor < userFloor) 
-                            {
-                            a1.floor++;
-                            a1.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                            };
-
-                            a1.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a1.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-
-                                    while (a1.floor < requestedFloor) 
-                                    {
-                                    a1.floor++;
-                                    a1.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a1.floorDisplay}");
-                                    };
-
-                                    a1.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        };
-                        
-                    // userFloor > elevFloor && status == goingUp | [8] 2 OPTIONS — a1 & a3
-                    } else if (userFloor > a1.floor && a1.status == "goingUp" && userFloor > a3.floor && a3.status == "goingUp") 
-                    {
-                        int x = (userFloor - a1.floor);
-                        int y = (userFloor - a3.floor);
-                        // Console.WriteLine(x);
-                        // Console.WriteLine(y);
-
-                        if (x < y)
-                        {
-                            Console.WriteLine("elevator a1");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                    
-                            while (a1.floor < userFloor) 
-                            {
-                            a1.floor++;
-                            a1.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                            };
-
-                            a1.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a1.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-
-                                    while (a1.floor < requestedFloor) 
-                                    {
-                                    a1.floor++;
-                                    a1.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a1.floorDisplay}");
-                                    };
-
-                                    a1.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (x > y)
-                        {
-                            Console.WriteLine("elevator a3");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                    
-                            while (a3.floor < userFloor) 
-                            {
-                            a3.floor++;
-                            a3.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                            };
-
-                            a3.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a3.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a3.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a3.door);
-
-                                    while (a3.floor < requestedFloor) 
-                                    {
-                                    a3.floor++;
-                                    a3.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a3.floorDisplay}");
-                                    };
-
-                                    a3.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a3.door);
-                                    a3.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a3.door);
-                                    a3.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else
-                        {
-                            Console.WriteLine("elevator a1");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                    
-                            while (a1.floor < userFloor) 
-                            {
-                            a1.floor++;
-                            a1.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                            };
-
-                            a1.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a1.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-
-                                    while (a1.floor < requestedFloor) 
-                                    {
-                                    a1.floor++;
-                                    a1.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a1.floorDisplay}");
-                                    };
-
-                                    a1.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        };
-                        
-                    // userFloor > elevFloor && status == goingUp | [8] 2 OPTIONS — a1 & a4
-                    } else if (userFloor > a1.floor && a1.status == "goingUp" && userFloor > a4.floor && a4.status == "goingUp") 
-                    {
-                        int x = (userFloor - a1.floor);
-                        int y = (userFloor - a4.floor);
-                        // Console.WriteLine(x);
-                        // Console.WriteLine(y);
-
-                        if (x < y)
-                        {
-                            Console.WriteLine("elevator a1");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                    
-                            while (a1.floor < userFloor) 
-                            {
-                            a1.floor++;
-                            a1.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                            };
-
-                            a1.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a1.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-
-                                    while (a1.floor < requestedFloor) 
-                                    {
-                                    a1.floor++;
-                                    a1.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a1.floorDisplay}");
-                                    };
-
-                                    a1.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (x > y)
-                        {
-                            Console.WriteLine("elevator a4");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a4.floorDisplay}");
-                    
-                            while (a4.floor < userFloor) 
-                            {
-                            a4.floor++;
-                            a4.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a4.floorDisplay}");
-                            };
-
-                            a4.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a4.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a4.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a4.door);
-
-                                    while (a4.floor < requestedFloor) 
-                                    {
-                                    a4.floor++;
-                                    a4.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a4.floorDisplay}");
-                                    };
-
-                                    a4.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a4.door);
-                                    a4.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a4.door);
-                                    a4.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else
-                        {
-                            Console.WriteLine("elevator a1");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                    
-                            while (a1.floor < userFloor) 
-                            {
-                            a1.floor++;
-                            a1.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                            };
-
-                            a1.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a1.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-
-                                    while (a1.floor < requestedFloor) 
-                                    {
-                                    a1.floor++;
-                                    a1.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a1.floorDisplay}");
-                                    };
-
-                                    a1.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        };
-                        
-                    // userFloor > elevFloor && status == goingUp | [8] 2 OPTIONS — a1 & a5
-                    } else if (userFloor > a1.floor && a1.status == "goingUp" && userFloor > a5.floor && a5.status == "goingUp") 
-                    {
-                        int x = (userFloor - a1.floor);
-                        int y = (userFloor - a5.floor);
-                        // Console.WriteLine(x);
-                        // Console.WriteLine(y);
-
-                        if (x < y)
-                        {
-                            Console.WriteLine("elevator a1");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                    
-                            while (a1.floor < userFloor) 
-                            {
-                            a1.floor++;
-                            a1.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                            };
-
-                            a1.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a1.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-
-                                    while (a1.floor < requestedFloor) 
-                                    {
-                                    a1.floor++;
-                                    a1.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a1.floorDisplay}");
-                                    };
-
-                                    a1.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (x > y)
-                        {
-                            Console.WriteLine("elevator a5");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a5.floorDisplay}");
-                    
-                            while (a5.floor < userFloor) 
-                            {
-                            a5.floor++;
-                            a5.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a5.floorDisplay}");
-                            };
-
-                            a5.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a5.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a5.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a5.door);
-
-                                    while (a5.floor < requestedFloor) 
-                                    {
-                                    a5.floor++;
-                                    a5.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a5.floorDisplay}");
-                                    };
-
-                                    a5.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a5.door);
-                                    a5.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a5.door);
-                                    a5.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else
-                        {
-                            Console.WriteLine("elevator a1");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                    
-                            while (a1.floor < userFloor) 
-                            {
-                            a1.floor++;
-                            a1.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                            };
-
-                            a1.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a1.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-
-                                    while (a1.floor < requestedFloor) 
-                                    {
-                                    a1.floor++;
-                                    a1.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a1.floorDisplay}");
-                                    };
-
-                                    a1.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a1.door);
-                                    a1.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        };
-                        
-                    // userFloor > elevFloor && status == goingUp | [8] 2 OPTIONS — a2 & a3
-                    } else if (userFloor > a2.floor && a2.status == "goingUp" && userFloor > a3.floor && a3.status == "goingUp") 
-                    {
-                        int x = (userFloor - a2.floor);
-                        int y = (userFloor - a3.floor);
-                        // Console.WriteLine(x);
-                        // Console.WriteLine(y);
-
-                        if (x < y)
-                        {
-                            Console.WriteLine("elevator a2");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                    
-                            while (a2.floor < userFloor) 
-                            {
-                            a2.floor++;
-                            a2.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                            };
-
-                            a2.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a2.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-
-                                    while (a2.floor < requestedFloor) 
-                                    {
-                                    a2.floor++;
-                                    a2.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a2.floorDisplay}");
-                                    };
-
-                                    a2.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (x > y)
-                        {
-                            Console.WriteLine("elevator a3");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                    
-                            while (a3.floor < userFloor) 
-                            {
-                            a3.floor++;
-                            a3.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                            };
-
-                            a3.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a3.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a3.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a3.door);
-
-                                    while (a3.floor < requestedFloor) 
-                                    {
-                                    a3.floor++;
-                                    a3.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a3.floorDisplay}");
-                                    };
-
-                                    a3.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a3.door);
-                                    a3.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a3.door);
-                                    a3.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else
-                        {
-                            Console.WriteLine("elevator a2");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                    
-                            while (a2.floor < userFloor) 
-                            {
-                            a2.floor++;
-                            a2.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                            };
-
-                            a2.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a2.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-
-                                    while (a2.floor < requestedFloor) 
-                                    {
-                                    a2.floor++;
-                                    a2.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a2.floorDisplay}");
-                                    };
-
-                                    a2.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        };
-                        
-                    // userFloor > elevFloor && status == goingUp | [8] 2 OPTIONS — a2 & a4
-                    } else if (userFloor > a2.floor && a2.status == "goingUp" && userFloor > a4.floor && a4.status == "goingUp") 
-                    {
-                        int x = (userFloor - a2.floor);
-                        int y = (userFloor - a4.floor);
-                        // Console.WriteLine(x);
-                        // Console.WriteLine(y);
-
-                        if (x < y)
-                        {
-                            Console.WriteLine("elevator a2");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                    
-                            while (a2.floor < userFloor) 
-                            {
-                            a2.floor++;
-                            a2.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                            };
-
-                            a2.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a2.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-
-                                    while (a2.floor < requestedFloor) 
-                                    {
-                                    a2.floor++;
-                                    a2.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a2.floorDisplay}");
-                                    };
-
-                                    a2.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (x > y)
-                        {
-                            Console.WriteLine("elevator a4");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a4.floorDisplay}");
-                    
-                            while (a4.floor < userFloor) 
-                            {
-                            a4.floor++;
-                            a4.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a4.floorDisplay}");
-                            };
-
-                            a4.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a4.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a4.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a4.door);
-
-                                    while (a4.floor < requestedFloor) 
-                                    {
-                                    a4.floor++;
-                                    a4.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a4.floorDisplay}");
-                                    };
-
-                                    a4.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a4.door);
-                                    a4.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a4.door);
-                                    a4.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else
-                        {
-                            Console.WriteLine("elevator a2");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                    
-                            while (a2.floor < userFloor) 
-                            {
-                            a2.floor++;
-                            a2.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                            };
-
-                            a2.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a2.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-
-                                    while (a2.floor < requestedFloor) 
-                                    {
-                                    a2.floor++;
-                                    a2.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a2.floorDisplay}");
-                                    };
-
-                                    a2.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        };
-                        
-                    // userFloor > elevFloor && status == goingUp | [8] 2 OPTIONS — a2 & a5
-                    } else if (userFloor > a2.floor && a2.status == "goingUp" && userFloor > a5.floor && a5.status == "goingUp") 
-                    {
-                        int x = (userFloor - a2.floor);
-                        int y = (userFloor - a5.floor);
-                        // Console.WriteLine(x);
-                        // Console.WriteLine(y);
-
-                        if (x < y)
-                        {
-                            Console.WriteLine("elevator a2");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                    
-                            while (a2.floor < userFloor) 
-                            {
-                            a2.floor++;
-                            a2.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                            };
-
-                            a2.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a2.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-
-                                    while (a2.floor < requestedFloor) 
-                                    {
-                                    a2.floor++;
-                                    a2.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a2.floorDisplay}");
-                                    };
-
-                                    a2.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (x > y)
-                        {
-                            Console.WriteLine("elevator a5");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a5.floorDisplay}");
-                    
-                            while (a5.floor < userFloor) 
-                            {
-                            a5.floor++;
-                            a5.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a5.floorDisplay}");
-                            };
-
-                            a5.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a5.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a5.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a5.door);
-
-                                    while (a5.floor < requestedFloor) 
-                                    {
-                                    a5.floor++;
-                                    a5.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a5.floorDisplay}");
-                                    };
-
-                                    a5.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a5.door);
-                                    a5.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a5.door);
-                                    a5.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else
-                        {
-                            Console.WriteLine("elevator a2");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                    
-                            while (a2.floor < userFloor) 
-                            {
-                            a2.floor++;
-                            a2.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                            };
-
-                            a2.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a2.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-
-                                    while (a2.floor < requestedFloor) 
-                                    {
-                                    a2.floor++;
-                                    a2.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a2.floorDisplay}");
-                                    };
-
-                                    a2.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a2.door);
-                                    a2.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        };
-                        
-                    // userFloor > elevFloor && status == goingUp | [8] 2 OPTIONS — a3 & a4
-                    } else if (userFloor > a3.floor && a3.status == "goingUp" && userFloor > a4.floor && a4.status == "goingUp") 
-                    {
-                        int x = (userFloor - a3.floor);
-                        int y = (userFloor - a4.floor);
-                        // Console.WriteLine(x);
-                        // Console.WriteLine(y);
-
-                        if (x < y)
-                        {
-                            Console.WriteLine("elevator a3");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                    
-                            while (a3.floor < userFloor) 
-                            {
-                            a3.floor++;
-                            a3.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                            };
-
-                            a3.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a3.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a3.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a3.door);
-
-                                    while (a3.floor < requestedFloor) 
-                                    {
-                                    a3.floor++;
-                                    a3.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a3.floorDisplay}");
-                                    };
-
-                                    a3.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a3.door);
-                                    a3.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a3.door);
-                                    a3.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (x > y)
-                        {
-                            Console.WriteLine("elevator a4");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a4.floorDisplay}");
-                    
-                            while (a4.floor < userFloor) 
-                            {
-                            a4.floor++;
-                            a4.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a4.floorDisplay}");
-                            };
-
-                            a4.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a4.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a4.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a4.door);
-
-                                    while (a4.floor < requestedFloor) 
-                                    {
-                                    a4.floor++;
-                                    a4.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a4.floorDisplay}");
-                                    };
-
-                                    a4.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a4.door);
-                                    a4.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a4.door);
-                                    a4.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else
-                        {
-                            Console.WriteLine("elevator a3");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                    
-                            while (a3.floor < userFloor) 
-                            {
-                            a3.floor++;
-                            a3.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                            };
-
-                            a3.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a3.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a3.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a3.door);
-
-                                    while (a3.floor < requestedFloor) 
-                                    {
-                                    a3.floor++;
-                                    a3.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a3.floorDisplay}");
-                                    };
-
-                                    a3.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a3.door);
-                                    a3.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a3.door);
-                                    a3.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        };
-                        
-                    // userFloor > elevFloor && status == goingUp | [9] 2 OPTIONS — a3 & a5
-                    } else if (userFloor > a3.floor && a3.status == "goingUp" && userFloor > a5.floor && a5.status == "goingUp") 
-                    {
-                        int x = (userFloor - a3.floor);
-                        int y = (userFloor - a5.floor);
-                        // Console.WriteLine(x);
-                        // Console.WriteLine(y);
-
-                        if (x < y)
-                        {
-                            Console.WriteLine("elevator a3");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                    
-                            while (a3.floor < userFloor) 
-                            {
-                            a3.floor++;
-                            a3.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                            };
-
-                            a3.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a3.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a3.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a3.door);
-
-                                    while (a3.floor < requestedFloor) 
-                                    {
-                                    a3.floor++;
-                                    a3.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a3.floorDisplay}");
-                                    };
-
-                                    a3.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a3.door);
-                                    a3.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a3.door);
-                                    a3.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (x > y)
-                        {
-                            Console.WriteLine("elevator a5");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a5.floorDisplay}");
-                    
-                            while (a5.floor < userFloor) 
-                            {
-                            a5.floor++;
-                            a5.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a5.floorDisplay}");
-                            };
-
-                            a5.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a5.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a5.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a5.door);
-
-                                    while (a5.floor < requestedFloor) 
-                                    {
-                                    a5.floor++;
-                                    a5.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a5.floorDisplay}");
-                                    };
-
-                                    a5.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a5.door);
-                                    a5.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a5.door);
-                                    a5.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else
-                        {
-                            Console.WriteLine("elevator a3");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                    
-                            while (a3.floor < userFloor) 
-                            {
-                            a3.floor++;
-                            a3.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                            };
-
-                            a3.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a3.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a3.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a3.door);
-
-                                    while (a3.floor < requestedFloor) 
-                                    {
-                                    a3.floor++;
-                                    a3.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a3.floorDisplay}");
-                                    };
-
-                                    a3.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a3.door);
-                                    a3.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a3.door);
-                                    a3.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        };
-                        
-                    // userFloor > elevFloor && status == goingUp | [10] 2 OPTIONS — a4 & a5
-                    } else if (userFloor > a4.floor && a4.status == "goingUp" && userFloor > a5.floor && a5.status == "goingUp") 
-                    {
-                        int x = (userFloor - a4.floor);
-                        int y = (userFloor - a5.floor);
-                        // Console.WriteLine(x);
-                        // Console.WriteLine(y);
-
-                        if (x < y)
-                        {
-                            Console.WriteLine("elevator a4");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a4.floorDisplay}");
-                    
-                            while (a4.floor < userFloor) 
-                            {
-                            a4.floor++;
-                            a4.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a4.floorDisplay}");
-                            };
-
-                            a4.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a4.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a4.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a4.door);
-
-                                    while (a4.floor < requestedFloor) 
-                                    {
-                                    a4.floor++;
-                                    a4.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a4.floorDisplay}");
-                                    };
-
-                                    a4.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a4.door);
-                                    a4.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a4.door);
-                                    a4.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else if (x > y)
-                        {
-                            Console.WriteLine("elevator a5");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a5.floorDisplay}");
-                    
-                            while (a5.floor < userFloor) 
-                            {
-                            a5.floor++;
-                            a5.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a5.floorDisplay}");
-                            };
-
-                            a5.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a5.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a5.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a5.door);
-
-                                    while (a5.floor < requestedFloor) 
-                                    {
-                                    a5.floor++;
-                                    a5.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a5.floorDisplay}");
-                                    };
-
-                                    a5.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a5.door);
-                                    a5.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a5.door);
-                                    a5.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
-                        } else
-                        {
-                            Console.WriteLine("elevator a4");
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine($"elevator's floor: {a4.floorDisplay}");
-                    
-                            while (a4.floor < userFloor) 
-                            {
-                            a4.floor++;
-                            a4.floorDisplay++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"elevator's floor: {a4.floorDisplay}");
-                            };
-
-                            a4.door = "opened";
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("door: " + a4.door);
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                            Console.WriteLine("which floor would u like to go to?");
-                            
-                            bool input = true;
-                            while (input) 
-                            {
-                                int requestedFloor;
-                                bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                                if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false) 
-                                {
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("please select a valid floor");
-
-                                } else {
-                                    
-                                    input = false;
-
-                                    a4.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a4.door);
-
-                                    while (a4.floor < requestedFloor) 
-                                    {
-                                    a4.floor++;
-                                    a4.floorDisplay++;
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine($"floor display: {a4.floorDisplay}");
-                                    };
-
-                                    a4.door = "opened";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                    Console.WriteLine("door: " + a4.door);
-                                    a4.door = "closed";
-                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                    Console.WriteLine("door: " + a4.door);
-                                    a4.status = "idle";
-                                    status();
-                                
-                                };
-                            };
-
                         };
                         
                     // userFloor > elevFloor && status == goingUp | 1 OPTION
                     } else if (userFloor > a1.floor && a1.status == "goingUp") 
                     {
-                        Console.WriteLine("elevator a1");
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                        Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                   
-                        while (a1.floor < userFloor) 
-                        {
-                        a1.floor++;
-                        a1.floorDisplay++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {a1.floorDisplay}");
-                        };
-
-                        a1.door = "opened";
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                        Console.WriteLine("door: " + a1.door);
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                        Console.WriteLine("which floor would u like to go to?");
-                        
-                        bool input = true;
-                        while (input) 
-                        {
-                            int requestedFloor;
-                            bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                            if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false)  
-                            {
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                Console.WriteLine("please select a valid floor");
-
-                            } else {
-                                
-                                input = false;
-
-                                a1.door = "closed";
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine("door: " + a1.door);
-
-                                while (a1.floor < requestedFloor) 
-                                {
-                                a1.floor++;
-                                a1.floorDisplay++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {a1.floorDisplay}");
-                                };
-
-                                a1.door = "opened";
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                Console.WriteLine("door: " + a1.door);
-                                a1.door = "closed";
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine("door: " + a1.door);
-                                a1.status = "idle";
-                                status();
-                            
-                            };
-                        };
+                        elevA1();
                         
                     } else if (userFloor > a2.floor && a2.status == "goingUp") 
                     {
-                        Console.WriteLine("elevator a2");
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                        Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                   
-                        while (a2.floor < userFloor) 
-                        {
-                        a2.floor++;
-                        a2.floorDisplay++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {a2.floorDisplay}");
-                        };
-
-                        a2.door = "opened";
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                        Console.WriteLine("door: " + a2.door);
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                        Console.WriteLine("which floor would u like to go to?");
-                        
-                        bool input = true;
-                        while (input) 
-                        {
-                            int requestedFloor;
-                            bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                            if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false)  
-                            {
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                Console.WriteLine("please select a valid floor");
-
-                            } else {
-                                
-                                input = false;
-
-                                a2.door = "closed";
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine("door: " + a2.door);
-
-                                while (a2.floor < requestedFloor) 
-                                {
-                                a2.floor++;
-                                a2.floorDisplay++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {a2.floorDisplay}");
-                                };
-
-                                a2.door = "opened";
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                Console.WriteLine("door: " + a2.door);
-                                a2.door = "closed";
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine("door: " + a2.door);
-                                a2.status = "idle";
-                                status();
-                            
-                            };
-                        };
+                        elevA2();
                         
                     } else if (userFloor > a3.floor && a3.status == "goingUp") 
                     {
-                        Console.WriteLine("elevator a3");
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                        Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                   
-                        while (a3.floor < userFloor) 
-                        {
-                        a3.floor++;
-                        a3.floorDisplay++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {a3.floorDisplay}");
-                        };
-
-                        a3.door = "opened";
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                        Console.WriteLine("door: " + a3.door);
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                        Console.WriteLine("which floor would u like to go to?");
-                        
-                        bool input = true;
-                        while (input) 
-                        {
-                            int requestedFloor;
-                            bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                            if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false)  
-                            {
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                Console.WriteLine("please select a valid floor");
-
-                            } else {
-                                
-                                input = false;
-
-                                a3.door = "closed";
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine("door: " + a3.door);
-
-                                while (a3.floor < requestedFloor) 
-                                {
-                                a3.floor++;
-                                a3.floorDisplay++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {a3.floorDisplay}");
-                                };
-
-                                a3.door = "opened";
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                Console.WriteLine("door: " + a3.door);
-                                a3.door = "closed";
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine("door: " + a3.door);
-                                a3.status = "idle";
-                                status();
-                            
-                            };
-                        };
+                        elevA3();
                         
                     } else if (userFloor > a4.floor && a4.status == "goingUp") 
                     {
-                        Console.WriteLine("elevator a4");
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                        Console.WriteLine($"elevator's floor: {a4.floorDisplay}");
-                   
-                        while (a4.floor < userFloor) 
-                        {
-                        a4.floor++;
-                        a4.floorDisplay++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {a4.floorDisplay}");
-                        };
-
-                        a4.door = "opened";
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                        Console.WriteLine("door: " + a4.door);
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                        Console.WriteLine("which floor would u like to go to?");
-                        
-                        bool input = true;
-                        while (input) 
-                        {
-                            int requestedFloor;
-                            bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                            if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false)  
-                            {
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                Console.WriteLine("please select a valid floor");
-
-                            } else {
-                                
-                                input = false;
-
-                                a4.door = "closed";
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine("door: " + a4.door);
-
-                                while (a4.floor < requestedFloor) 
-                                {
-                                a4.floor++;
-                                a4.floorDisplay++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {a4.floorDisplay}");
-                                };
-
-                                a4.door = "opened";
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                Console.WriteLine("door: " + a4.door);
-                                a4.door = "closed";
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine("door: " + a4.door);
-                                a4.status = "idle";
-                                status();
-                            
-                            };
-                        };
+                        elevA4();
                         
                     } else if (userFloor > a5.floor && a5.status == "goingUp") 
                     {
-                        Console.WriteLine("elevator a5");
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                        Console.WriteLine($"elevator's floor: {a5.floorDisplay}");
-                   
-                        while (a5.floor < userFloor) 
-                        {
-                        a5.floor++;
-                        a5.floorDisplay++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {a5.floorDisplay}");
-                        };
-
-                        a5.door = "opened";
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                        Console.WriteLine("door: " + a5.door);
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                        Console.WriteLine("which floor would u like to go to?");
-                        
-                        bool input = true;
-                        while (input) 
-                        {
-                            int requestedFloor;
-                            bool valid = int.TryParse(Console.ReadLine(), out requestedFloor);
-
-                            if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor == userFloor || valid == false)  
-                            {
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                Console.WriteLine("please select a valid floor");
-
-                            } else {
-                                
-                                input = false;
-
-                                a5.door = "closed";
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine("door: " + a5.door);
-
-                                while (a5.floor < requestedFloor) 
-                                {
-                                a5.floor++;
-                                a5.floorDisplay++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {a5.floorDisplay}");
-                                };
-
-                                a5.door = "opened";
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(.5));
-                                Console.WriteLine("door: " + a5.door);
-                                a5.door = "closed";
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine("door: " + a5.door);
-                                a5.status = "idle";
-                                status();
-                            
-                            };
-                        };
+                        elevA5();
                     
                     // userFloor = elevFloor && status == idle | a1
                     } else if (userFloor == a1.floor && a1.status == "idle") 
