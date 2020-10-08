@@ -160,7 +160,7 @@ namespace Controller
 
             void requestElevA(int userFloor, string direction)
             {     
-                if (direction == "up") 
+                if (direction == "up" && userFloor >= -5 && userFloor <= 0) 
                 {
                     void elevA1()
                     {
@@ -3091,7 +3091,7 @@ namespace Controller
 
                     };
 
-                } else if (direction == "down") 
+                } else if (direction == "down" && userFloor >= -4 && userFloor <= 1) 
                 {
                     void elevA1()
                     {
@@ -6025,10 +6025,15 @@ namespace Controller
 
                     };
 
+
+                } else 
+                {
+                    Console.WriteLine("please enter valid information");
+
                 };
             }
 
-            requestElevA(-2, "up");
+            requestElevA(4, "down");
             // Console.WriteLine(c.minFloor);
             // Console.WriteLine(a1.floorDisplay);
             // Console.WriteLine(a.status);
