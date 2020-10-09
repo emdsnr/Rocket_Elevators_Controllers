@@ -2240,7 +2240,7 @@ namespace Controller
                     {
                         a5.status = "goingUp";
                         status();
-                        elevA5();
+                        elevA5(); //here
 
 
                     // userFloor < elevFloor && status == idle | 5 OPTIONS
