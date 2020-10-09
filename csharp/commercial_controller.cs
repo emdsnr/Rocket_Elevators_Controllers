@@ -23570,9 +23570,9 @@ namespace Controller
 
                             while (a1.floor < requestedFloor) 
                             {
-                            a1.floor++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"floor display: {a1.floor}");
+                                a1.floor++;
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine($"floor display: {a1.floor}");
                             };
 
                             a1.door = "opened";
@@ -25468,59 +25468,59 @@ namespace Controller
 
 
             /*
-            b1.floor = 20;
-            b1.status = "goingDown";
-            b2.floor = 3;
-            b2.status = "goingUp";
-            b3.floor = 13;
-            b3.status = "goingDown";
-            b4.floor = 15;
-            b4.status = "goingDown";
-            b5.floor = 6;
-            b5.status = "goingDown";
-            requestElevB(1, "up");
+                b1.floor = 20;
+                b1.status = "goingDown";
+                b2.floor = 3;
+                b2.status = "goingUp";
+                b3.floor = 13;
+                b3.status = "goingDown";
+                b4.floor = 15;
+                b4.status = "goingDown";
+                b5.floor = 6;
+                b5.status = "goingDown";
+                requestElevB(1, "up");
             */
 
             /*
-            c1.floor = 1;
-            c1.status = "goingUp";
-            c2.floor = 23;
-            c2.status = "goingUp";
-            c3.floor = 33;
-            c3.status = "goingDown";
-            c4.floor = 40;
-            c4.status = "goingDown";
-            c5.floor = 39;
-            c5.status = "goingDown";
-            requestElevC(1, "up");
+                c1.floor = 1;
+                c1.status = "goingUp";
+                c2.floor = 23;
+                c2.status = "goingUp";
+                c3.floor = 33;
+                c3.status = "goingDown";
+                c4.floor = 40;
+                c4.status = "goingDown";
+                c5.floor = 39;
+                c5.status = "goingDown";
+                requestElevC(1, "up");
             */
 
             /*
-            d1.floor = 58;
-            d1.status = "goingDown";
-            d2.floor = 50;
-            d2.status = "goingUp";
-            d3.floor = 46;
-            d3.status = "goingUp";
-            d4.floor = 1;
-            d4.status = "goingUp";
-            d5.floor = 60;
-            d5.status = "goingDown";
-            requestElevD(54, "down");
+                d1.floor = 58;
+                d1.status = "goingDown";
+                d2.floor = 50;
+                d2.status = "goingUp";
+                d3.floor = 46;
+                d3.status = "goingUp";
+                d4.floor = 1;
+                d4.status = "goingUp";
+                d5.floor = 60;
+                d5.status = "goingDown";
+                requestElevD(54, "down");
             */
 
             /*
-            a1.floor = -3;
-            a1.status = "idle";
-            a2.floor = 1;
-            a2.status = "idle";
-            a3.floor = -2;
-            a3.status = "goingDown";
-            a4.floor = -5;
-            a4.status = "goingUp";
-            a5.floor = 0;
-            a5.status = "goingDown";
-            requestElevA(-2, "up");
+                a1.floor = -3;
+                a1.status = "idle";
+                a2.floor = 1;
+                a2.status = "idle";
+                a3.floor = -2;
+                a3.status = "goingDown";
+                a4.floor = -5;
+                a4.status = "goingUp";
+                a5.floor = 0;
+                a5.status = "goingDown";
+                requestElevA(-2, "up");
             */
 
 
