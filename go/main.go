@@ -1,6 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"bufio"
+	"fmt"
+	_ "fmt"
+	"os"
+	"strconv"
+	"time"
+)
 
 type battery struct {
 	id     string
@@ -146,7 +153,617 @@ func status() {
 
 }
 
-func main() {
 
-	fmt.Println("hello world")
+func elevA1() {
+	fmt.Printf("elevator a1");
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("elevator's floor: %d\n", a1.floor);
+
+	for (a1.floor < userFloor) 
+	{
+	a1.floor++;
+	time.Sleep(time.Second);
+	fmt.Printf("elevator's floor: %d\n", a1.floor);
+	};
+
+	a1.door = "opened";
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("door: " + a1.door);
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("which floor would u like to go to?");
+	
+	
+	for input := true; input == true; {
+
+		scanner.Scan()
+		requestedFloor, _ := strconv.Atoi(scanner.Text())
+
+		if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor <= userFloor) {
+
+			time.Sleep((1/2) * time.Second);
+			fmt.Printf("please select a valid floor");
+
+		} else {
+			
+			input = false;
+
+			a1.door = "closed";
+			time.Sleep(time.Second);
+			fmt.Printf("door: " + a1.door);
+
+			for (; a1.floor < requestedFloor ; a1.floor++) {
+					
+				time.Sleep(time.Second);
+				fmt.Printf("floor display: %d\n", a1.floor);
+	
+				};
+
+			a1.door = "opened";
+			time.Sleep((1/2) * time.Second);
+			fmt.Printf("door: " + a1.door);
+			a1.door = "closed";
+			time.Sleep(time.Second);
+			fmt.Printf("door: " + a1.door);
+			a1.status = "idle";
+			status();
+		
+		};
+	};
+}
+
+func elevA2() {
+	fmt.Printf("elevator a2");
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("elevator's floor: %d\n", a2.floor);
+
+	for (a2.floor < userFloor) 
+	{
+	a2.floor++;
+	time.Sleep(time.Second);
+	fmt.Printf("elevator's floor: %d\n", a2.floor);
+	};
+
+	a2.door = "opened";
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("door: " + a2.door);
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("which floor would u like to go to?");
+	
+	
+	for input := true; input == true; {
+
+		scanner.Scan()
+		requestedFloor, _ := strconv.Atoi(scanner.Text())
+
+		if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor <= userFloor) {
+
+			time.Sleep((1/2) * time.Second);
+			fmt.Printf("please select a valid floor");
+
+		} else {
+			
+			input = false;
+
+			a2.door = "closed";
+			time.Sleep(time.Second);
+			fmt.Printf("door: " + a2.door);
+
+			for (a2.floor < requestedFloor) {
+					
+				a2.floor++;
+				time.Sleep(time.Second);
+				fmt.Printf("floor display: %d\n", a2.floor);
+
+			};
+
+			a2.door = "opened";
+			time.Sleep((1/2) * time.Second);
+			fmt.Printf("door: " + a2.door);
+			a2.door = "closed";
+			time.Sleep(time.Second);
+			fmt.Printf("door: " + a2.door);
+			a2.status = "idle";
+			status();
+		
+		};
+	};
+}
+
+func elevA3() {
+	fmt.Printf("elevator a3");
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("elevator's floor: %d\n", a3.floor);
+
+	for (a3.floor < userFloor) 
+	{
+	a3.floor++;
+	time.Sleep(time.Second);
+	fmt.Printf("elevator's floor: %d\n", a3.floor);
+	};
+
+	a3.door = "opened";
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("door: " + a3.door);
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("which floor would u like to go to?");
+	
+	
+	for input := true; input == true; {
+
+		scanner.Scan()
+		requestedFloor, _ := strconv.Atoi(scanner.Text())
+
+		if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor <= userFloor) {
+
+			time.Sleep((1/2) * time.Second);
+			fmt.Printf("please select a valid floor");
+
+		} else {
+			
+			input = false;
+
+			a3.door = "closed";
+			time.Sleep(time.Second);
+			fmt.Printf("door: " + a3.door);
+
+			for (a3.floor < requestedFloor) {
+					
+				a3.floor++;
+				time.Sleep(time.Second);
+				fmt.Printf("floor display: %d\n", a3.floor);
+
+			};
+
+			a3.door = "opened";
+			time.Sleep((1/2) * time.Second);
+			fmt.Printf("door: " + a3.door);
+			a3.door = "closed";
+			time.Sleep(time.Second);
+			fmt.Printf("door: " + a3.door);
+			a3.status = "idle";
+			status();
+		
+		};
+	};
+}
+
+func elevA4() {
+	fmt.Printf("elevator a4");
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("elevator's floor: %d\n", a4.floor);
+
+	for (a4.floor < userFloor) 
+	{
+	a4.floor++;
+	time.Sleep(time.Second);
+	fmt.Printf("elevator's floor: %d\n", a4.floor);
+	};
+
+	a4.door = "opened";
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("door: " + a4.door);
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("which floor would u like to go to?");
+	
+	
+	for input := true; input == true; {
+
+		scanner.Scan()
+		requestedFloor, _ := strconv.Atoi(scanner.Text())
+
+		if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor <= userFloor) {
+
+			time.Sleep((1/2) * time.Second);
+			fmt.Printf("please select a valid floor");
+
+		} else {
+			
+			input = false;
+
+			a4.door = "closed";
+			time.Sleep(time.Second);
+			fmt.Printf("door: " + a4.door);
+
+			for (a4.floor < requestedFloor) {
+					
+				a4.floor++;
+				time.Sleep(time.Second);
+				fmt.Printf("floor display: %d\n", a4.floor);
+
+			};
+
+			a4.door = "opened";
+			time.Sleep((1/2) * time.Second);
+			fmt.Printf("door: " + a4.door);
+			a4.door = "closed";
+			time.Sleep(time.Second);
+			fmt.Printf("door: " + a4.door);
+			a4.status = "idle";
+			status();
+		
+		};
+	};
+}
+
+func elevA5() {
+	fmt.Printf("elevator a5");
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("elevator's floor: {a5.floor}");
+
+	for (a5.floor < userFloor) 
+	{
+	a5.floor++;
+	time.Sleep(time.Second);
+	fmt.Printf("elevator's floor: {a5.floor}");
+	};
+
+	a5.door = "opened";
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("door: " + a5.door);
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("which floor would u like to go to?");
+	
+	
+	for input := true; input == true; {
+
+		scanner.Scan()
+		requestedFloor, _ := strconv.Atoi(scanner.Text())
+
+		if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor <= userFloor) {
+
+			time.Sleep((1/2) * time.Second);
+			fmt.Printf("please select a valid floor");
+
+		} else {
+			
+			input = false;
+
+			a5.door = "closed";
+			time.Sleep(time.Second);
+			fmt.Printf("door: " + a5.door);
+
+			for (a5.floor < requestedFloor) {
+					
+				a5.floor++;
+				time.Sleep(time.Second);
+				fmt.Printf("floor display: %d\n", a5.floor);
+
+			};
+
+			a5.door = "opened";
+			time.Sleep((1/2) * time.Second);
+			fmt.Printf("door: " + a5.door);
+			a5.door = "closed";
+			time.Sleep(time.Second);
+			fmt.Printf("door: " + a5.door);
+			a5.status = "idle";
+			status();
+		
+		};
+	};
+}
+
+
+func elevA1v2() {
+	fmt.Printf("elevator a1");
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("elevator's floor: %d\n", a1.floor);
+
+	for (a1.floor > userFloor) 
+	{
+	a1.floor--;
+	time.Sleep(time.Second);
+	fmt.Printf("elevator's floor: %d\n", a1.floor);
+	};
+
+	a1.door = "opened";
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("door: " + a1.door);
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("which floor would u like to go to?");
+	
+	
+	for input := true; input == true; {
+
+		scanner.Scan()
+		requestedFloor, _ := strconv.Atoi(scanner.Text())
+
+		if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor <= userFloor) {
+
+			time.Sleep((1/2) * time.Second);
+			fmt.Printf("please select a valid floor");
+
+		} else {
+			
+			input = false;
+
+			a1.door = "closed";
+			time.Sleep(time.Second);
+			fmt.Printf("door: " + a1.door);
+
+			for (a1.floor < requestedFloor) {
+					
+				a1.floor++;
+				time.Sleep(time.Second);
+				fmt.Printf("floor display: %d\n", a1.floor);
+
+			};
+
+			a1.door = "opened";
+			time.Sleep((1/2) * time.Second);
+			fmt.Printf("door: " + a1.door);
+			a1.door = "closed";
+			time.Sleep(time.Second);
+			fmt.Printf("door: " + a1.door);
+			a1.status = "idle";
+			status();
+		
+		};
+	};
+}
+
+func elevA2v2() {
+	fmt.Printf("elevator a2");
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("elevator's floor: %d\n", a2.floor);
+
+	for (a2.floor > userFloor) 
+	{
+	a2.floor--;
+	time.Sleep(time.Second);
+	fmt.Printf("elevator's floor: %d\n", a2.floor);
+	};
+
+	a2.door = "opened";
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("door: " + a2.door);
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("which floor would u like to go to?");
+	
+	
+	for input := true; input == true; {
+
+		scanner.Scan()
+		requestedFloor, _ := strconv.Atoi(scanner.Text())
+
+		if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor <= userFloor) {
+
+			time.Sleep((1/2) * time.Second);
+			fmt.Printf("please select a valid floor");
+
+		} else {
+			
+			input = false;
+
+			a2.door = "closed";
+			time.Sleep(time.Second);
+			fmt.Printf("door: " + a2.door);
+
+			for (a2.floor < requestedFloor) {
+					
+				a2.floor++;
+				time.Sleep(time.Second);
+				fmt.Printf("floor display: %d\n", a2.floor);
+
+			};
+
+			a2.door = "opened";
+			time.Sleep((1/2) * time.Second);
+			fmt.Printf("door: " + a2.door);
+			a2.door = "closed";
+			time.Sleep(time.Second);
+			fmt.Printf("door: " + a2.door);
+			a2.status = "idle";
+			status();
+		
+		};
+	};
+}
+
+func elevA3v2() {
+	fmt.Printf("elevator a3");
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("elevator's floor: %d\n", a3.floor);
+
+	for (a3.floor > userFloor) 
+	{
+	a3.floor--;
+	time.Sleep(time.Second);
+	fmt.Printf("elevator's floor: %d\n", a3.floor);
+	};
+
+	a3.door = "opened";
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("door: " + a3.door);
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("which floor would u like to go to?");
+	
+	
+	for input := true; input == true; {
+
+		scanner.Scan()
+		requestedFloor, _ := strconv.Atoi(scanner.Text())
+
+		if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor <= userFloor) {
+
+			time.Sleep((1/2) * time.Second);
+			fmt.Printf("please select a valid floor");
+
+		} else {
+			
+			input = false;
+
+			a3.door = "closed";
+			time.Sleep(time.Second);
+			fmt.Printf("door: " + a3.door);
+
+			for (a3.floor < requestedFloor) {
+					
+				a3.floor++;
+				time.Sleep(time.Second);
+				fmt.Printf("floor display: %d\n", a3.floor);
+
+			};
+
+			a3.door = "opened";
+			time.Sleep((1/2) * time.Second);
+			fmt.Printf("door: " + a3.door);
+			a3.door = "closed";
+			time.Sleep(time.Second);
+			fmt.Printf("door: " + a3.door);
+			a3.status = "idle";
+			status();
+		
+		};
+	};
+}
+
+func elevA4v2() {
+	fmt.Printf("elevator a4");
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("elevator's floor: %d\n", a4.floor);
+
+	for (a4.floor > userFloor) 
+	{
+	a4.floor--;
+	time.Sleep(time.Second);
+	fmt.Printf("elevator's floor: %d\n", a4.floor);
+	};
+
+	a4.door = "opened";
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("door: " + a4.door);
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("which floor would u like to go to?");
+	
+	
+	for input := true; input == true; {
+
+		scanner.Scan()
+		requestedFloor, _ := strconv.Atoi(scanner.Text())
+
+		if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor <= userFloor) {
+
+			time.Sleep((1/2) * time.Second);
+			fmt.Printf("please select a valid floor");
+
+		} else {
+			
+			input = false;
+
+			a4.door = "closed";
+			time.Sleep(time.Second);
+			fmt.Printf("door: " + a4.door);
+
+			for (a4.floor < requestedFloor) {
+					
+				a4.floor++;
+				time.Sleep(time.Second);
+				fmt.Printf("floor display: %d\n", a4.floor);
+
+			};
+
+			a4.door = "opened";
+			time.Sleep((1/2) * time.Second);
+			fmt.Printf("door: " + a4.door);
+			a4.door = "closed";
+			time.Sleep(time.Second);
+			fmt.Printf("door: " + a4.door);
+			a4.status = "idle";
+			status();
+		
+		};
+	};
+}
+
+func elevA5v2() {
+	fmt.Printf("elevator a5");
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("elevator's floor: {a5.floor}");
+
+	for (a5.floor > userFloor) 
+	{
+	a5.floor--;
+	time.Sleep(time.Second);
+	fmt.Printf("elevator's floor: {a5.floor}");
+	};
+
+	a5.door = "opened";
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("door: " + a5.door);
+	time.Sleep((1/2) * time.Second);
+	fmt.Printf("which floor would u like to go to?");
+	
+	
+	for input := true; input == true; {
+
+		scanner.Scan()
+		requestedFloor, _ := strconv.Atoi(scanner.Text())
+
+		if (requestedFloor <= -5 || requestedFloor > 1 || requestedFloor <= userFloor) {
+
+			time.Sleep((1/2) * time.Second);
+			fmt.Printf("please select a valid floor");
+
+		} else {
+			
+			input = false;
+
+			a5.door = "closed";
+			time.Sleep(time.Second);
+			fmt.Printf("door: " + a5.door);
+
+			for (a5.floor < requestedFloor) {
+					
+				a5.floor++;
+				time.Sleep(time.Second);
+				fmt.Printf("floor display: %d\n", a5.floor);
+
+			};
+
+			a5.door = "opened";
+			time.Sleep((1/2) * time.Second);
+			fmt.Printf("door: " + a5.door);
+			a5.door = "closed";
+			time.Sleep(time.Second);
+			fmt.Printf("door: " + a5.door);
+			a5.status = "idle";
+			status();
+		
+		};
+	};
+}
+
+
+
+func requestElevA(userFloor int, direction string) {
+
+	if direction == "up" && userFloor >= -5 && userFloor < 1 {
+		fmt.Println("hello xd")
+	}
+}
+
+func main() {
+	scanner := bufio.NewScanner(os.Stdin)
+
+	fmt.Printf("which floor would u like to go to? ")
+
+	for input := true; input == true; {
+
+		scanner.Scan()
+		requestedFloor, _ := strconv.Atoi(scanner.Text())
+
+		if requestedFloor <= -5 || requestedFloor <= 5 {
+			time.Sleep((1 / 2) * time.Second)
+			fmt.Printf("please select a valid floor \n")
+
+		} else {
+
+			input = false
+
+			fmt.Printf("door: ")
+
+		}
+	}
+
 }
