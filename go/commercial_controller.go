@@ -21872,7 +21872,7 @@ func main() {
 	b5.floor = 6
 	b5.status = "goingDown"
 	fmt.Printf("-------- scenario #1 --------\n")
-	requestElevB(1, "up")
+	requestElevB(16, "down")
 
 	//    scenario #2
 	c1.floor = 1

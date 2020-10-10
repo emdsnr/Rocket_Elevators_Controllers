@@ -25479,7 +25479,8 @@ namespace Controller
             b4.status = "goingDown";
             b5.floor = 6;
             b5.status = "goingDown";
-            requestElevB(1, "up");
+	        Console.WriteLine("-------- scenario #1 --------");
+            requestElevB(16, "down");
         
 	        //    scenario #2
             c1.floor = 1;
@@ -25492,7 +25493,8 @@ namespace Controller
             c4.status = "goingDown";
             c5.floor = 39;
             c5.status = "goingDown";
-            requestElevC(1, "up");
+	        Console.WriteLine("-------- scenario #2 --------");
+            requestElevC(22, "up");
         
 	        //    scenario #3
             d1.floor = 58;
@@ -25505,6 +25507,7 @@ namespace Controller
             d4.status = "goingUp";
             d5.floor = 60;
             d5.status = "goingDown";
+	        Console.WriteLine("-------- scenario #3 --------");
             requestElevD(54, "down");
         
 	        //    scenario #4
@@ -25518,6 +25521,7 @@ namespace Controller
             a4.status = "goingUp";
             a5.floor = 0;
             a5.status = "goingDown";
+	        Console.WriteLine("-------- scenario #4 --------");
             requestElevA(-2, "up");
         
 
