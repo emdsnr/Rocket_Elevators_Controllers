@@ -35,7 +35,7 @@ rocket_elevators_controllers/csharp <br />
 - [commercial_controller.cs](https://github.com/emdsnr/rocket_elevators_controllers/blob/master/csharp/commercial_controller.cs)
 
 ### test
-\- to test the functions `requestElev();` & `requestFloor();`, type `dotnet run` in the terminal.
+\- to execute the functions `requestElev();` & `requestFloor();`, type `dotnet run` in the terminal.
 <br /><br />
 
 
@@ -44,4 +44,4 @@ rocket_elevators_controllers/golang <br />
 - [commercial_controller.go](https://github.com/emdsnr/rocket_elevators_controllers/blob/master/go/commercial_controller.go)
 
 ### test
-\- to test the functions `requestElev();` & `requestFloor();`, type `go run commercial_controller.go` in the terminal.
+\- to execute the functions `requestElev();` & `requestFloor();`, type `go run commercial_controller.go` in the terminal.
