@@ -25467,103 +25467,100 @@ namespace Controller
 
 
 
-            /*
-                b1.floor = 20;
-                b1.status = "goingDown";
-                b2.floor = 3;
-                b2.status = "goingUp";
-                b3.floor = 13;
-                b3.status = "goingDown";
-                b4.floor = 15;
-                b4.status = "goingDown";
-                b5.floor = 6;
-                b5.status = "goingDown";
-                requestElevB(1, "up");
-            */
 
-            /*
-                c1.floor = 1;
-                c1.status = "goingUp";
-                c2.floor = 23;
-                c2.status = "goingUp";
-                c3.floor = 33;
-                c3.status = "goingDown";
-                c4.floor = 40;
-                c4.status = "goingDown";
-                c5.floor = 39;
-                c5.status = "goingDown";
-                requestElevC(1, "up");
-            */
+	        //    scenario #1
+            b1.floor = 20;
+            b1.status = "goingDown";
+            b2.floor = 3;
+            b2.status = "goingUp";
+            b3.floor = 13;
+            b3.status = "goingDown";
+            b4.floor = 15;
+            b4.status = "goingDown";
+            b5.floor = 6;
+            b5.status = "goingDown";
+            requestElevB(1, "up");
+        
+	        //    scenario #2
+            c1.floor = 1;
+            c1.status = "goingUp";
+            c2.floor = 23;
+            c2.status = "goingUp";
+            c3.floor = 33;
+            c3.status = "goingDown";
+            c4.floor = 40;
+            c4.status = "goingDown";
+            c5.floor = 39;
+            c5.status = "goingDown";
+            requestElevC(1, "up");
+        
+	        //    scenario #3
+            d1.floor = 58;
+            d1.status = "goingDown";
+            d2.floor = 50;
+            d2.status = "goingUp";
+            d3.floor = 46;
+            d3.status = "goingUp";
+            d4.floor = 1;
+            d4.status = "goingUp";
+            d5.floor = 60;
+            d5.status = "goingDown";
+            requestElevD(54, "down");
+        
+	        //    scenario #4
+            a1.floor = -3;
+            a1.status = "idle";
+            a2.floor = 1;
+            a2.status = "idle";
+            a3.floor = -2;
+            a3.status = "goingDown";
+            a4.floor = -5;
+            a4.status = "goingUp";
+            a5.floor = 0;
+            a5.status = "goingDown";
+            requestElevA(-2, "up");
+        
 
-            /*
-                d1.floor = 58;
-                d1.status = "goingDown";
-                d2.floor = 50;
-                d2.status = "goingUp";
-                d3.floor = 46;
-                d3.status = "goingUp";
-                d4.floor = 1;
-                d4.status = "goingUp";
-                d5.floor = 60;
-                d5.status = "goingDown";
-                requestElevD(54, "down");
-            */
-
-            /*
-                a1.floor = -3;
-                a1.status = "idle";
-                a2.floor = 1;
-                a2.status = "idle";
-                a3.floor = -2;
-                a3.status = "goingDown";
-                a4.floor = -5;
-                a4.status = "goingUp";
-                a5.floor = 0;
-                a5.status = "goingDown";
-                requestElevA(-2, "up");
-            */
-
-
-
-            /*
-                //    test #1
-                b1.floor = 7;
-                b2.floor = 19;
-                b3.floor = 12;
-                b4.floor = 3;
-                b5.floor = 9;
-                Console.WriteLine("\\\\\\\\ test #1 \\\\\\\\");
-                userFloor = b3.floor;
-                requestFloorB(3, 5);
-            */
-
-
-            /*
-                //    test #2
-                d1.floor = 43;
-                d2.floor = 58;
-                d3.floor = 47;
-                d4.floor = 1;
-                d5.floor = 51;
-                Console.WriteLine("\\\\\\\\ test #2 \\\\\\\\");
-                userFloor = d4.floor;
-                requestFloorD(4, 41);
-            */
-
-
-            /*
-                //    test #3
-                a1.floor = -5;
-                a2.floor = 0;
-                a3.floor = -3;
-                a4.floor = 1;
-                a5.floor = -2;
-                Console.WriteLine("\\\\\\\\ test #3 \\\\\\\\");
-                userFloor = a1.floor;
-                requestFloorA(1, -3);
-            */
-
-
+            //    test #1
+            b1.floor = 7;
+            b2.floor = 19;
+            b3.floor = 12;
+            b4.floor = 3;
+            b5.floor = 9;
+            Console.WriteLine("\\\\\\\\ test #1 \\\\\\\\");
+            userFloor = b3.floor;
+            requestFloorB(3, 5);
+        
+            //    test #2
+            d1.floor = 43;
+            d2.floor = 58;
+            d3.floor = 47;
+            d4.floor = 1;
+            d5.floor = 51;
+            Console.WriteLine("\\\\\\\\ test #2 \\\\\\\\");
+            userFloor = d4.floor;
+            requestFloorD(4, 41);
+    
+            //    test #3
+            a1.floor = -5;
+            a2.floor = 0;
+            a3.floor = -3;
+            a4.floor = 1;
+            a5.floor = -2;
+            Console.WriteLine("\\\\\\\\ test #3 \\\\\\\\");
+            userFloor = a1.floor;
+            requestFloorA(1, -3);
+        
+            //    test #4
+            c1.floor = 21;
+            c2.floor = 36;
+            c3.floor = 29;
+            c4.floor = 1;
+            c5.floor = 39;
+            Console.WriteLine("\\\\\\\\ test #4 \\\\\\\\");
+            userFloor = c2.floor;
+            requestFloorC(2, 24);
+            
         }
     }
     }

@@ -21860,6 +21860,7 @@ func main() {
 		}
 	}
 
+	//    scenario #1
 	b1.floor = 20
 	b1.status = "goingDown"
 	b2.floor = 3
@@ -21873,6 +21874,7 @@ func main() {
 	fmt.Printf("-------- scenario #1 --------\n")
 	requestElevB(1, "up")
 
+	//    scenario #2
 	c1.floor = 1
 	c1.status = "goingUp"
 	c2.floor = 23
@@ -21886,6 +21888,7 @@ func main() {
 	fmt.Printf("-------- scenario #2 --------\n")
 	requestElevC(1, "up")
 
+	//    scenario #3
 	d1.floor = 58
 	d1.status = "goingDown"
 	d2.floor = 50
@@ -21899,6 +21902,7 @@ func main() {
 	fmt.Printf("-------- scenario #3 --------\n")
 	requestElevD(54, "down")
 
+	//    scenario #4
 	a1.floor = -3
 	a1.status = "idle"
 	a2.floor = 1
@@ -21942,7 +21946,7 @@ func main() {
 	userFloor = a1.floor
 	requestFloorA(1, -3)
 
-	//    test #3
+	//    test #4
 	c1.floor = 21
 	c2.floor = 36
 	c3.floor = 29
