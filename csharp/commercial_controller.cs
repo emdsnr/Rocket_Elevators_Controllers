@@ -171,9 +171,9 @@ namespace Controller
                 
                         while (a1.floor < userFloor) 
                         {
-                        a1.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {a1.floor}");
+                            a1.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {a1.floor}");
                         };
 
                         a1.door = "opened";
@@ -203,9 +203,9 @@ namespace Controller
 
                                 while (a1.floor < requestedFloor) 
                                 {
-                                a1.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {a1.floor}");
+                                    a1.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {a1.floor}");
                                 };
 
                                 a1.door = "opened";
@@ -229,9 +229,9 @@ namespace Controller
                 
                         while (a2.floor < userFloor) 
                         {
-                        a2.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {a2.floor}");
+                            a2.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {a2.floor}");
                         };
 
                         a2.door = "opened";
@@ -261,9 +261,9 @@ namespace Controller
 
                                 while (a2.floor < requestedFloor) 
                                 {
-                                a2.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {a2.floor}");
+                                    a2.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {a2.floor}");
                                 };
 
                                 a2.door = "opened";
@@ -287,9 +287,9 @@ namespace Controller
                 
                         while (a3.floor < userFloor) 
                         {
-                        a3.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {a3.floor}");
+                            a3.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {a3.floor}");
                         };
 
                         a3.door = "opened";
@@ -319,9 +319,9 @@ namespace Controller
 
                                 while (a3.floor < requestedFloor) 
                                 {
-                                a3.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {a3.floor}");
+                                    a3.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {a3.floor}");
                                 };
 
                                 a3.door = "opened";
@@ -345,9 +345,9 @@ namespace Controller
                 
                         while (a4.floor < userFloor) 
                         {
-                        a4.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {a4.floor}");
+                            a4.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {a4.floor}");
                         };
 
                         a4.door = "opened";
@@ -377,9 +377,9 @@ namespace Controller
 
                                 while (a4.floor < requestedFloor) 
                                 {
-                                a4.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {a4.floor}");
+                                    a4.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {a4.floor}");
                                 };
 
                                 a4.door = "opened";
@@ -403,9 +403,9 @@ namespace Controller
                 
                         while (a5.floor < userFloor) 
                         {
-                        a5.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {a5.floor}");
+                            a5.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {a5.floor}");
                         };
 
                         a5.door = "opened";
@@ -435,9 +435,9 @@ namespace Controller
 
                                 while (a5.floor < requestedFloor) 
                                 {
-                                a5.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {a5.floor}");
+                                    a5.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {a5.floor}");
                                 };
 
                                 a5.door = "opened";
@@ -461,9 +461,9 @@ namespace Controller
                 
                         while (a1.floor > userFloor) 
                         {
-                        a1.floor--;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {a1.floor}");
+                            a1.floor--;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {a1.floor}");
                         };
 
                         a1.door = "opened";
@@ -493,9 +493,9 @@ namespace Controller
 
                                 while (a1.floor < requestedFloor) 
                                 {
-                                a1.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {a1.floor}");
+                                    a1.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {a1.floor}");
                                 };
 
                                 a1.door = "opened";
@@ -519,9 +519,9 @@ namespace Controller
                 
                         while (a2.floor > userFloor) 
                         {
-                        a2.floor--;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {a2.floor}");
+                            a2.floor--;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {a2.floor}");
                         };
 
                         a2.door = "opened";
@@ -551,9 +551,9 @@ namespace Controller
 
                                 while (a2.floor < requestedFloor) 
                                 {
-                                a2.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {a2.floor}");
+                                    a2.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {a2.floor}");
                                 };
 
                                 a2.door = "opened";
@@ -577,9 +577,9 @@ namespace Controller
                 
                         while (a3.floor > userFloor) 
                         {
-                        a3.floor--;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {a3.floor}");
+                            a3.floor--;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {a3.floor}");
                         };
 
                         a3.door = "opened";
@@ -609,9 +609,9 @@ namespace Controller
 
                                 while (a3.floor < requestedFloor) 
                                 {
-                                a3.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {a3.floor}");
+                                    a3.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {a3.floor}");
                                 };
 
                                 a3.door = "opened";
@@ -635,9 +635,9 @@ namespace Controller
                 
                         while (a4.floor > userFloor) 
                         {
-                        a4.floor--;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {a4.floor}");
+                            a4.floor--;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {a4.floor}");
                         };
 
                         a4.door = "opened";
@@ -667,9 +667,9 @@ namespace Controller
 
                                 while (a4.floor < requestedFloor) 
                                 {
-                                a4.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {a4.floor}");
+                                    a4.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {a4.floor}");
                                 };
 
                                 a4.door = "opened";
@@ -693,9 +693,9 @@ namespace Controller
                 
                         while (a5.floor > userFloor) 
                         {
-                        a5.floor--;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {a5.floor}");
+                            a5.floor--;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {a5.floor}");
                         };
 
                         a5.door = "opened";
@@ -725,9 +725,9 @@ namespace Controller
 
                                 while (a5.floor < requestedFloor) 
                                 {
-                                a5.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {a5.floor}");
+                                    a5.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {a5.floor}");
                                 };
 
                                 a5.door = "opened";
@@ -3086,9 +3086,9 @@ namespace Controller
                 
                         while (a1.floor > userFloor) 
                         {
-                        a1.floor--;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {a1.floor}");
+                            a1.floor--;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {a1.floor}");
                         };
 
                         a1.door = "opened";
@@ -3118,9 +3118,9 @@ namespace Controller
 
                                 while (a1.floor > requestedFloor) 
                                 {
-                                a1.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {a1.floor}");
+                                    a1.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {a1.floor}");
                                 };
 
                                 a1.door = "opened";
@@ -3144,9 +3144,9 @@ namespace Controller
                 
                         while (a2.floor < userFloor) 
                         {
-                        a2.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {a2.floor}");
+                            a2.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {a2.floor}");
                         };
 
                         a2.door = "opened";
@@ -3176,9 +3176,9 @@ namespace Controller
 
                                 while (a2.floor > requestedFloor) 
                                 {
-                                a2.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {a2.floor}");
+                                    a2.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {a2.floor}");
                                 };
 
                                 a2.door = "opened";
@@ -3202,9 +3202,9 @@ namespace Controller
                 
                         while (a3.floor < userFloor) 
                         {
-                        a3.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {a3.floor}");
+                            a3.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {a3.floor}");
                         };
 
                         a3.door = "opened";
@@ -3234,9 +3234,9 @@ namespace Controller
 
                                 while (a3.floor > requestedFloor) 
                                 {
-                                a3.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {a3.floor}");
+                                    a3.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {a3.floor}");
                                 };
 
                                 a3.door = "opened";
@@ -3260,9 +3260,9 @@ namespace Controller
                 
                         while (a4.floor < userFloor) 
                         {
-                        a4.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {a4.floor}");
+                            a4.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {a4.floor}");
                         };
 
                         a4.door = "opened";
@@ -3292,9 +3292,9 @@ namespace Controller
 
                                 while (a4.floor > requestedFloor) 
                                 {
-                                a4.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {a4.floor}");
+                                    a4.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {a4.floor}");
                                 };
 
                                 a4.door = "opened";
@@ -3318,9 +3318,9 @@ namespace Controller
                 
                         while (a5.floor < userFloor) 
                         {
-                        a5.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {a5.floor}");
+                            a5.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {a5.floor}");
                         };
 
                         a5.door = "opened";
@@ -3350,9 +3350,9 @@ namespace Controller
 
                                 while (a5.floor > requestedFloor) 
                                 {
-                                a5.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {a5.floor}");
+                                    a5.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {a5.floor}");
                                 };
 
                                 a5.door = "opened";
@@ -3376,9 +3376,9 @@ namespace Controller
                 
                         while (a1.floor < userFloor) 
                         {
-                        a1.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {a1.floor}");
+                            a1.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {a1.floor}");
                         };
 
                         a1.door = "opened";
@@ -3408,9 +3408,9 @@ namespace Controller
 
                                 while (a1.floor > requestedFloor) 
                                 {
-                                a1.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {a1.floor}");
+                                    a1.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {a1.floor}");
                                 };
 
                                 a1.door = "opened";
@@ -3434,9 +3434,9 @@ namespace Controller
                 
                         while (a2.floor < userFloor) 
                         {
-                        a2.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {a2.floor}");
+                            a2.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {a2.floor}");
                         };
 
                         a2.door = "opened";
@@ -3466,9 +3466,9 @@ namespace Controller
 
                                 while (a2.floor > requestedFloor) 
                                 {
-                                a2.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {a2.floor}");
+                                    a2.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {a2.floor}");
                                 };
 
                                 a2.door = "opened";
@@ -3492,9 +3492,9 @@ namespace Controller
                 
                         while (a3.floor < userFloor) 
                         {
-                        a3.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {a3.floor}");
+                            a3.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {a3.floor}");
                         };
 
                         a3.door = "opened";
@@ -3524,9 +3524,9 @@ namespace Controller
 
                                 while (a3.floor > requestedFloor) 
                                 {
-                                a3.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {a3.floor}");
+                                    a3.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {a3.floor}");
                                 };
 
                                 a3.door = "opened";
@@ -3550,9 +3550,9 @@ namespace Controller
                 
                         while (a4.floor < userFloor) 
                         {
-                        a4.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {a4.floor}");
+                            a4.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {a4.floor}");
                         };
 
                         a4.door = "opened";
@@ -3582,9 +3582,9 @@ namespace Controller
 
                                 while (a4.floor > requestedFloor) 
                                 {
-                                a4.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {a4.floor}");
+                                    a4.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {a4.floor}");
                                 };
 
                                 a4.door = "opened";
@@ -3608,9 +3608,9 @@ namespace Controller
                 
                         while (a5.floor < userFloor) 
                         {
-                        a5.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {a5.floor}");
+                            a5.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {a5.floor}");
                         };
 
                         a5.door = "opened";
@@ -3640,9 +3640,9 @@ namespace Controller
 
                                 while (a5.floor > requestedFloor) 
                                 {
-                                a5.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {a5.floor}");
+                                    a5.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {a5.floor}");
                                 };
 
                                 a5.door = "opened";
@@ -6015,9 +6015,9 @@ namespace Controller
                 
                         while (b1.floor < userFloor) 
                         {
-                        b1.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {b1.floor}");
+                            b1.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {b1.floor}");
                         };
 
                         b1.door = "opened";
@@ -6047,9 +6047,9 @@ namespace Controller
 
                                 while (b1.floor < requestedFloor) 
                                 {
-                                b1.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {b1.floor}");
+                                    b1.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {b1.floor}");
                                 };
 
                                 b1.door = "opened";
@@ -6073,9 +6073,9 @@ namespace Controller
                 
                         while (b2.floor < userFloor) 
                         {
-                        b2.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {b2.floor}");
+                            b2.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {b2.floor}");
                         };
 
                         b2.door = "opened";
@@ -6105,9 +6105,9 @@ namespace Controller
 
                                 while (b2.floor < requestedFloor) 
                                 {
-                                b2.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {b2.floor}");
+                                    b2.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {b2.floor}");
                                 };
 
                                 b2.door = "opened";
@@ -6131,9 +6131,9 @@ namespace Controller
                 
                         while (b3.floor < userFloor) 
                         {
-                        b3.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {b3.floor}");
+                            b3.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {b3.floor}");
                         };
 
                         b3.door = "opened";
@@ -6163,9 +6163,9 @@ namespace Controller
 
                                 while (b3.floor < requestedFloor) 
                                 {
-                                b3.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {b3.floor}");
+                                    b3.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {b3.floor}");
                                 };
 
                                 b3.door = "opened";
@@ -6189,9 +6189,9 @@ namespace Controller
                 
                         while (b4.floor < userFloor) 
                         {
-                        b4.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {b4.floor}");
+                            b4.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {b4.floor}");
                         };
 
                         b4.door = "opened";
@@ -6221,9 +6221,9 @@ namespace Controller
 
                                 while (b4.floor < requestedFloor) 
                                 {
-                                b4.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {b4.floor}");
+                                    b4.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {b4.floor}");
                                 };
 
                                 b4.door = "opened";
@@ -6247,9 +6247,9 @@ namespace Controller
                 
                         while (b5.floor < userFloor) 
                         {
-                        b5.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {b5.floor}");
+                            b5.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {b5.floor}");
                         };
 
                         b5.door = "opened";
@@ -6279,9 +6279,9 @@ namespace Controller
 
                                 while (b5.floor < requestedFloor) 
                                 {
-                                b5.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {b5.floor}");
+                                    b5.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {b5.floor}");
                                 };
 
                                 b5.door = "opened";
@@ -6305,9 +6305,9 @@ namespace Controller
                 
                         while (b1.floor > userFloor) 
                         {
-                        b1.floor--;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {b1.floor}");
+                            b1.floor--;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {b1.floor}");
                         };
 
                         b1.door = "opened";
@@ -6337,9 +6337,9 @@ namespace Controller
 
                                 while (b1.floor < requestedFloor) 
                                 {
-                                b1.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {b1.floor}");
+                                    b1.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {b1.floor}");
                                 };
 
                                 b1.door = "opened";
@@ -6363,9 +6363,9 @@ namespace Controller
                 
                         while (b2.floor > userFloor) 
                         {
-                        b2.floor--;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {b2.floor}");
+                            b2.floor--;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {b2.floor}");
                         };
 
                         b2.door = "opened";
@@ -6395,9 +6395,9 @@ namespace Controller
 
                                 while (b2.floor < requestedFloor) 
                                 {
-                                b2.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {b2.floor}");
+                                    b2.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {b2.floor}");
                                 };
 
                                 b2.door = "opened";
@@ -6421,9 +6421,9 @@ namespace Controller
                 
                         while (b3.floor > userFloor) 
                         {
-                        b3.floor--;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {b3.floor}");
+                            b3.floor--;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {b3.floor}");
                         };
 
                         b3.door = "opened";
@@ -6453,9 +6453,9 @@ namespace Controller
 
                                 while (b3.floor < requestedFloor) 
                                 {
-                                b3.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {b3.floor}");
+                                    b3.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {b3.floor}");
                                 };
 
                                 b3.door = "opened";
@@ -6479,9 +6479,9 @@ namespace Controller
                 
                         while (b4.floor > userFloor) 
                         {
-                        b4.floor--;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {b4.floor}");
+                            b4.floor--;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {b4.floor}");
                         };
 
                         b4.door = "opened";
@@ -6511,9 +6511,9 @@ namespace Controller
 
                                 while (b4.floor < requestedFloor) 
                                 {
-                                b4.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {b4.floor}");
+                                    b4.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {b4.floor}");
                                 };
 
                                 b4.door = "opened";
@@ -6537,9 +6537,9 @@ namespace Controller
                 
                         while (b5.floor > userFloor) 
                         {
-                        b5.floor--;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {b5.floor}");
+                            b5.floor--;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {b5.floor}");
                         };
 
                         b5.door = "opened";
@@ -6569,9 +6569,9 @@ namespace Controller
 
                                 while (b5.floor < requestedFloor) 
                                 {
-                                b5.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {b5.floor}");
+                                    b5.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {b5.floor}");
                                 };
 
                                 b5.door = "opened";
@@ -8931,9 +8931,9 @@ namespace Controller
                 
                         while (b1.floor > userFloor) 
                         {
-                        b1.floor--;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {b1.floor}");
+                            b1.floor--;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {b1.floor}");
                         };
 
                         b1.door = "opened";
@@ -8963,9 +8963,9 @@ namespace Controller
 
                                 while (b1.floor > requestedFloor) 
                                 {
-                                b1.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {b1.floor}");
+                                    b1.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {b1.floor}");
                                 };
 
                                 b1.door = "opened";
@@ -8989,9 +8989,9 @@ namespace Controller
                 
                         while (b2.floor < userFloor) 
                         {
-                        b2.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {b2.floor}");
+                            b2.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {b2.floor}");
                         };
 
                         b2.door = "opened";
@@ -9021,9 +9021,9 @@ namespace Controller
 
                                 while (b2.floor > requestedFloor) 
                                 {
-                                b2.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {b2.floor}");
+                                    b2.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {b2.floor}");
                                 };
 
                                 b2.door = "opened";
@@ -9047,9 +9047,9 @@ namespace Controller
                 
                         while (b3.floor < userFloor) 
                         {
-                        b3.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {b3.floor}");
+                            b3.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {b3.floor}");
                         };
 
                         b3.door = "opened";
@@ -9079,9 +9079,9 @@ namespace Controller
 
                                 while (b3.floor > requestedFloor) 
                                 {
-                                b3.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {b3.floor}");
+                                    b3.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {b3.floor}");
                                 };
 
                                 b3.door = "opened";
@@ -9105,9 +9105,9 @@ namespace Controller
                 
                         while (b4.floor < userFloor) 
                         {
-                        b4.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {b4.floor}");
+                            b4.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {b4.floor}");
                         };
 
                         b4.door = "opened";
@@ -9137,9 +9137,9 @@ namespace Controller
 
                                 while (b4.floor > requestedFloor) 
                                 {
-                                b4.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {b4.floor}");
+                                    b4.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {b4.floor}");
                                 };
 
                                 b4.door = "opened";
@@ -9163,9 +9163,9 @@ namespace Controller
                 
                         while (b5.floor < userFloor) 
                         {
-                        b5.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {b5.floor}");
+                            b5.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {b5.floor}");
                         };
 
                         b5.door = "opened";
@@ -9195,9 +9195,9 @@ namespace Controller
 
                                 while (b5.floor > requestedFloor) 
                                 {
-                                b5.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {b5.floor}");
+                                    b5.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {b5.floor}");
                                 };
 
                                 b5.door = "opened";
@@ -9221,9 +9221,9 @@ namespace Controller
                 
                         while (b1.floor < userFloor) 
                         {
-                        b1.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {b1.floor}");
+                            b1.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {b1.floor}");
                         };
 
                         b1.door = "opened";
@@ -9253,9 +9253,9 @@ namespace Controller
 
                                 while (b1.floor > requestedFloor) 
                                 {
-                                b1.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {b1.floor}");
+                                    b1.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {b1.floor}");
                                 };
 
                                 b1.door = "opened";
@@ -9279,9 +9279,9 @@ namespace Controller
                 
                         while (b2.floor < userFloor) 
                         {
-                        b2.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {b2.floor}");
+                            b2.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {b2.floor}");
                         };
 
                         b2.door = "opened";
@@ -9311,9 +9311,9 @@ namespace Controller
 
                                 while (b2.floor > requestedFloor) 
                                 {
-                                b2.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {b2.floor}");
+                                    b2.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {b2.floor}");
                                 };
 
                                 b2.door = "opened";
@@ -9337,9 +9337,9 @@ namespace Controller
                 
                         while (b3.floor < userFloor) 
                         {
-                        b3.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {b3.floor}");
+                            b3.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {b3.floor}");
                         };
 
                         b3.door = "opened";
@@ -9369,9 +9369,9 @@ namespace Controller
 
                                 while (b3.floor > requestedFloor) 
                                 {
-                                b3.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {b3.floor}");
+                                    b3.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {b3.floor}");
                                 };
 
                                 b3.door = "opened";
@@ -9395,9 +9395,9 @@ namespace Controller
                 
                         while (b4.floor < userFloor) 
                         {
-                        b4.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {b4.floor}");
+                            b4.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {b4.floor}");
                         };
 
                         b4.door = "opened";
@@ -9427,9 +9427,9 @@ namespace Controller
 
                                 while (b4.floor > requestedFloor) 
                                 {
-                                b4.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {b4.floor}");
+                                    b4.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {b4.floor}");
                                 };
 
                                 b4.door = "opened";
@@ -9453,9 +9453,9 @@ namespace Controller
                 
                         while (b5.floor < userFloor) 
                         {
-                        b5.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {b5.floor}");
+                            b5.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {b5.floor}");
                         };
 
                         b5.door = "opened";
@@ -9485,9 +9485,9 @@ namespace Controller
 
                                 while (b5.floor > requestedFloor) 
                                 {
-                                b5.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {b5.floor}");
+                                    b5.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {b5.floor}");
                                 };
 
                                 b5.door = "opened";
@@ -11860,9 +11860,9 @@ namespace Controller
                 
                         while (c1.floor < userFloor) 
                         {
-                        c1.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {c1.floor}");
+                            c1.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {c1.floor}");
                         };
 
                         c1.door = "opened";
@@ -11892,9 +11892,9 @@ namespace Controller
 
                                 while (c1.floor < requestedFloor) 
                                 {
-                                c1.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {c1.floor}");
+                                    c1.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {c1.floor}");
                                 };
 
                                 c1.door = "opened";
@@ -11918,9 +11918,9 @@ namespace Controller
                 
                         while (c2.floor < userFloor) 
                         {
-                        c2.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {c2.floor}");
+                            c2.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {c2.floor}");
                         };
 
                         c2.door = "opened";
@@ -11950,9 +11950,9 @@ namespace Controller
 
                                 while (c2.floor < requestedFloor) 
                                 {
-                                c2.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {c2.floor}");
+                                    c2.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {c2.floor}");
                                 };
 
                                 c2.door = "opened";
@@ -11976,9 +11976,9 @@ namespace Controller
                 
                         while (c3.floor < userFloor) 
                         {
-                        c3.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {c3.floor}");
+                            c3.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {c3.floor}");
                         };
 
                         c3.door = "opened";
@@ -12008,9 +12008,9 @@ namespace Controller
 
                                 while (c3.floor < requestedFloor) 
                                 {
-                                c3.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {c3.floor}");
+                                    c3.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {c3.floor}");
                                 };
 
                                 c3.door = "opened";
@@ -12034,9 +12034,9 @@ namespace Controller
                 
                         while (c4.floor < userFloor) 
                         {
-                        c4.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {c4.floor}");
+                            c4.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {c4.floor}");
                         };
 
                         c4.door = "opened";
@@ -12066,9 +12066,9 @@ namespace Controller
 
                                 while (c4.floor < requestedFloor) 
                                 {
-                                c4.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {c4.floor}");
+                                    c4.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {c4.floor}");
                                 };
 
                                 c4.door = "opened";
@@ -12092,9 +12092,9 @@ namespace Controller
                 
                         while (c5.floor < userFloor) 
                         {
-                        c5.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {c5.floor}");
+                            c5.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {c5.floor}");
                         };
 
                         c5.door = "opened";
@@ -12124,9 +12124,9 @@ namespace Controller
 
                                 while (c5.floor < requestedFloor) 
                                 {
-                                c5.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {c5.floor}");
+                                    c5.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {c5.floor}");
                                 };
 
                                 c5.door = "opened";
@@ -12150,9 +12150,9 @@ namespace Controller
                 
                         while (c1.floor > userFloor) 
                         {
-                        c1.floor--;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {c1.floor}");
+                            c1.floor--;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {c1.floor}");
                         };
 
                         c1.door = "opened";
@@ -12182,9 +12182,9 @@ namespace Controller
 
                                 while (c1.floor < requestedFloor) 
                                 {
-                                c1.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {c1.floor}");
+                                    c1.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {c1.floor}");
                                 };
 
                                 c1.door = "opened";
@@ -12208,9 +12208,9 @@ namespace Controller
                 
                         while (c2.floor > userFloor) 
                         {
-                        c2.floor--;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {c2.floor}");
+                            c2.floor--;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {c2.floor}");
                         };
 
                         c2.door = "opened";
@@ -12240,9 +12240,9 @@ namespace Controller
 
                                 while (c2.floor < requestedFloor) 
                                 {
-                                c2.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {c2.floor}");
+                                    c2.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {c2.floor}");
                                 };
 
                                 c2.door = "opened";
@@ -12266,9 +12266,9 @@ namespace Controller
                 
                         while (c3.floor > userFloor) 
                         {
-                        c3.floor--;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {c3.floor}");
+                            c3.floor--;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {c3.floor}");
                         };
 
                         c3.door = "opened";
@@ -12298,9 +12298,9 @@ namespace Controller
 
                                 while (c3.floor < requestedFloor) 
                                 {
-                                c3.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {c3.floor}");
+                                    c3.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {c3.floor}");
                                 };
 
                                 c3.door = "opened";
@@ -12324,9 +12324,9 @@ namespace Controller
                 
                         while (c4.floor > userFloor) 
                         {
-                        c4.floor--;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {c4.floor}");
+                            c4.floor--;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {c4.floor}");
                         };
 
                         c4.door = "opened";
@@ -12356,9 +12356,9 @@ namespace Controller
 
                                 while (c4.floor < requestedFloor) 
                                 {
-                                c4.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {c4.floor}");
+                                    c4.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {c4.floor}");
                                 };
 
                                 c4.door = "opened";
@@ -12382,9 +12382,9 @@ namespace Controller
                 
                         while (c5.floor > userFloor) 
                         {
-                        c5.floor--;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {c5.floor}");
+                            c5.floor--;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {c5.floor}");
                         };
 
                         c5.door = "opened";
@@ -12414,9 +12414,9 @@ namespace Controller
 
                                 while (c5.floor < requestedFloor) 
                                 {
-                                c5.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {c5.floor}");
+                                    c5.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {c5.floor}");
                                 };
 
                                 c5.door = "opened";
@@ -14776,9 +14776,9 @@ namespace Controller
                 
                         while (c1.floor > userFloor) 
                         {
-                        c1.floor--;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {c1.floor}");
+                            c1.floor--;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {c1.floor}");
                         };
 
                         c1.door = "opened";
@@ -14808,9 +14808,9 @@ namespace Controller
 
                                 while (c1.floor > requestedFloor) 
                                 {
-                                c1.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {c1.floor}");
+                                    c1.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {c1.floor}");
                                 };
 
                                 c1.door = "opened";
@@ -14834,9 +14834,9 @@ namespace Controller
                 
                         while (c2.floor < userFloor) 
                         {
-                        c2.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {c2.floor}");
+                            c2.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {c2.floor}");
                         };
 
                         c2.door = "opened";
@@ -14866,9 +14866,9 @@ namespace Controller
 
                                 while (c2.floor > requestedFloor) 
                                 {
-                                c2.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {c2.floor}");
+                                    c2.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {c2.floor}");
                                 };
 
                                 c2.door = "opened";
@@ -14892,9 +14892,9 @@ namespace Controller
                 
                         while (c3.floor < userFloor) 
                         {
-                        c3.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {c3.floor}");
+                            c3.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {c3.floor}");
                         };
 
                         c3.door = "opened";
@@ -14924,9 +14924,9 @@ namespace Controller
 
                                 while (c3.floor > requestedFloor) 
                                 {
-                                c3.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {c3.floor}");
+                                    c3.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {c3.floor}");
                                 };
 
                                 c3.door = "opened";
@@ -14950,9 +14950,9 @@ namespace Controller
                 
                         while (c4.floor < userFloor) 
                         {
-                        c4.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {c4.floor}");
+                            c4.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {c4.floor}");
                         };
 
                         c4.door = "opened";
@@ -14982,9 +14982,9 @@ namespace Controller
 
                                 while (c4.floor > requestedFloor) 
                                 {
-                                c4.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {c4.floor}");
+                                    c4.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {c4.floor}");
                                 };
 
                                 c4.door = "opened";
@@ -15008,9 +15008,9 @@ namespace Controller
                 
                         while (c5.floor < userFloor) 
                         {
-                        c5.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {c5.floor}");
+                            c5.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {c5.floor}");
                         };
 
                         c5.door = "opened";
@@ -15040,9 +15040,9 @@ namespace Controller
 
                                 while (c5.floor > requestedFloor) 
                                 {
-                                c5.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {c5.floor}");
+                                    c5.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {c5.floor}");
                                 };
 
                                 c5.door = "opened";
@@ -15066,9 +15066,9 @@ namespace Controller
                 
                         while (c1.floor < userFloor) 
                         {
-                        c1.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {c1.floor}");
+                            c1.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {c1.floor}");
                         };
 
                         c1.door = "opened";
@@ -15098,9 +15098,9 @@ namespace Controller
 
                                 while (c1.floor > requestedFloor) 
                                 {
-                                c1.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {c1.floor}");
+                                    c1.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {c1.floor}");
                                 };
 
                                 c1.door = "opened";
@@ -15124,9 +15124,9 @@ namespace Controller
                 
                         while (c2.floor < userFloor) 
                         {
-                        c2.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {c2.floor}");
+                            c2.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {c2.floor}");
                         };
 
                         c2.door = "opened";
@@ -15156,9 +15156,9 @@ namespace Controller
 
                                 while (c2.floor > requestedFloor) 
                                 {
-                                c2.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {c2.floor}");
+                                    c2.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {c2.floor}");
                                 };
 
                                 c2.door = "opened";
@@ -15182,9 +15182,9 @@ namespace Controller
                 
                         while (c3.floor < userFloor) 
                         {
-                        c3.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {c3.floor}");
+                            c3.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {c3.floor}");
                         };
 
                         c3.door = "opened";
@@ -15214,9 +15214,9 @@ namespace Controller
 
                                 while (c3.floor > requestedFloor) 
                                 {
-                                c3.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {c3.floor}");
+                                    c3.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {c3.floor}");
                                 };
 
                                 c3.door = "opened";
@@ -15240,9 +15240,9 @@ namespace Controller
                 
                         while (c4.floor < userFloor) 
                         {
-                        c4.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {c4.floor}");
+                            c4.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {c4.floor}");
                         };
 
                         c4.door = "opened";
@@ -15272,9 +15272,9 @@ namespace Controller
 
                                 while (c4.floor > requestedFloor) 
                                 {
-                                c4.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {c4.floor}");
+                                    c4.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {c4.floor}");
                                 };
 
                                 c4.door = "opened";
@@ -15298,9 +15298,9 @@ namespace Controller
                 
                         while (c5.floor < userFloor) 
                         {
-                        c5.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {c5.floor}");
+                            c5.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {c5.floor}");
                         };
 
                         c5.door = "opened";
@@ -15330,9 +15330,9 @@ namespace Controller
 
                                 while (c5.floor > requestedFloor) 
                                 {
-                                c5.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {c5.floor}");
+                                    c5.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {c5.floor}");
                                 };
 
                                 c5.door = "opened";
@@ -17706,9 +17706,9 @@ namespace Controller
                 
                         while (d1.floor < userFloor) 
                         {
-                        d1.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {d1.floor}");
+                            d1.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {d1.floor}");
                         };
 
                         d1.door = "opened";
@@ -17738,9 +17738,9 @@ namespace Controller
 
                                 while (d1.floor < requestedFloor) 
                                 {
-                                d1.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {d1.floor}");
+                                    d1.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {d1.floor}");
                                 };
 
                                 d1.door = "opened";
@@ -17764,9 +17764,9 @@ namespace Controller
                 
                         while (d2.floor < userFloor) 
                         {
-                        d2.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {d2.floor}");
+                            d2.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {d2.floor}");
                         };
 
                         d2.door = "opened";
@@ -17796,9 +17796,9 @@ namespace Controller
 
                                 while (d2.floor < requestedFloor) 
                                 {
-                                d2.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {d2.floor}");
+                                    d2.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {d2.floor}");
                                 };
 
                                 d2.door = "opened";
@@ -17822,9 +17822,9 @@ namespace Controller
                 
                         while (d3.floor < userFloor) 
                         {
-                        d3.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {d3.floor}");
+                            d3.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {d3.floor}");
                         };
 
                         d3.door = "opened";
@@ -17854,9 +17854,9 @@ namespace Controller
 
                                 while (d3.floor < requestedFloor) 
                                 {
-                                d3.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {d3.floor}");
+                                    d3.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {d3.floor}");
                                 };
 
                                 d3.door = "opened";
@@ -17880,9 +17880,9 @@ namespace Controller
                 
                         while (d4.floor < userFloor) 
                         {
-                        d4.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {d4.floor}");
+                            d4.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {d4.floor}");
                         };
 
                         d4.door = "opened";
@@ -17912,9 +17912,9 @@ namespace Controller
 
                                 while (d4.floor < requestedFloor) 
                                 {
-                                d4.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {d4.floor}");
+                                    d4.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {d4.floor}");
                                 };
 
                                 d4.door = "opened";
@@ -17938,9 +17938,9 @@ namespace Controller
                 
                         while (d5.floor < userFloor) 
                         {
-                        d5.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {d5.floor}");
+                            d5.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {d5.floor}");
                         };
 
                         d5.door = "opened";
@@ -17970,9 +17970,9 @@ namespace Controller
 
                                 while (d5.floor < requestedFloor) 
                                 {
-                                d5.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {d5.floor}");
+                                    d5.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {d5.floor}");
                                 };
 
                                 d5.door = "opened";
@@ -17996,9 +17996,9 @@ namespace Controller
                 
                         while (d1.floor > userFloor) 
                         {
-                        d1.floor--;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {d1.floor}");
+                            d1.floor--;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {d1.floor}");
                         };
 
                         d1.door = "opened";
@@ -18028,9 +18028,9 @@ namespace Controller
 
                                 while (d1.floor < requestedFloor) 
                                 {
-                                d1.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {d1.floor}");
+                                    d1.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {d1.floor}");
                                 };
 
                                 d1.door = "opened";
@@ -18054,9 +18054,9 @@ namespace Controller
                 
                         while (d2.floor > userFloor) 
                         {
-                        d2.floor--;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {d2.floor}");
+                            d2.floor--;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {d2.floor}");
                         };
 
                         d2.door = "opened";
@@ -18086,9 +18086,9 @@ namespace Controller
 
                                 while (d2.floor < requestedFloor) 
                                 {
-                                d2.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {d2.floor}");
+                                    d2.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {d2.floor}");
                                 };
 
                                 d2.door = "opened";
@@ -18112,9 +18112,9 @@ namespace Controller
                 
                         while (d3.floor > userFloor) 
                         {
-                        d3.floor--;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {d3.floor}");
+                            d3.floor--;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {d3.floor}");
                         };
 
                         d3.door = "opened";
@@ -18144,9 +18144,9 @@ namespace Controller
 
                                 while (d3.floor < requestedFloor) 
                                 {
-                                d3.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {d3.floor}");
+                                    d3.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {d3.floor}");
                                 };
 
                                 d3.door = "opened";
@@ -18170,9 +18170,9 @@ namespace Controller
                 
                         while (d4.floor > userFloor) 
                         {
-                        d4.floor--;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {d4.floor}");
+                            d4.floor--;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {d4.floor}");
                         };
 
                         d4.door = "opened";
@@ -18202,9 +18202,9 @@ namespace Controller
 
                                 while (d4.floor < requestedFloor) 
                                 {
-                                d4.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {d4.floor}");
+                                    d4.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {d4.floor}");
                                 };
 
                                 d4.door = "opened";
@@ -18228,9 +18228,9 @@ namespace Controller
                 
                         while (d5.floor > userFloor) 
                         {
-                        d5.floor--;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {d5.floor}");
+                            d5.floor--;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {d5.floor}");
                         };
 
                         d5.door = "opened";
@@ -18260,9 +18260,9 @@ namespace Controller
 
                                 while (d5.floor < requestedFloor) 
                                 {
-                                d5.floor++;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {d5.floor}");
+                                    d5.floor++;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {d5.floor}");
                                 };
 
                                 d5.door = "opened";
@@ -20622,9 +20622,9 @@ namespace Controller
                 
                         while (d1.floor > userFloor) 
                         {
-                        d1.floor--;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {d1.floor}");
+                            d1.floor--;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {d1.floor}");
                         };
 
                         d1.door = "opened";
@@ -20654,9 +20654,9 @@ namespace Controller
 
                                 while (d1.floor > requestedFloor) 
                                 {
-                                d1.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {d1.floor}");
+                                    d1.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {d1.floor}");
                                 };
 
                                 d1.door = "opened";
@@ -20680,9 +20680,9 @@ namespace Controller
                 
                         while (d2.floor < userFloor) 
                         {
-                        d2.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {d2.floor}");
+                            d2.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {d2.floor}");
                         };
 
                         d2.door = "opened";
@@ -20712,9 +20712,9 @@ namespace Controller
 
                                 while (d2.floor > requestedFloor) 
                                 {
-                                d2.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {d2.floor}");
+                                    d2.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {d2.floor}");
                                 };
 
                                 d2.door = "opened";
@@ -20738,9 +20738,9 @@ namespace Controller
                 
                         while (d3.floor < userFloor) 
                         {
-                        d3.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {d3.floor}");
+                            d3.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {d3.floor}");
                         };
 
                         d3.door = "opened";
@@ -20770,9 +20770,9 @@ namespace Controller
 
                                 while (d3.floor > requestedFloor) 
                                 {
-                                d3.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {d3.floor}");
+                                    d3.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {d3.floor}");
                                 };
 
                                 d3.door = "opened";
@@ -20796,9 +20796,9 @@ namespace Controller
                 
                         while (d4.floor < userFloor) 
                         {
-                        d4.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {d4.floor}");
+                            d4.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {d4.floor}");
                         };
 
                         d4.door = "opened";
@@ -20828,9 +20828,9 @@ namespace Controller
 
                                 while (d4.floor > requestedFloor) 
                                 {
-                                d4.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {d4.floor}");
+                                    d4.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {d4.floor}");
                                 };
 
                                 d4.door = "opened";
@@ -20854,9 +20854,9 @@ namespace Controller
                 
                         while (d5.floor < userFloor) 
                         {
-                        d5.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {d5.floor}");
+                            d5.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {d5.floor}");
                         };
 
                         d5.door = "opened";
@@ -20886,9 +20886,9 @@ namespace Controller
 
                                 while (d5.floor > requestedFloor) 
                                 {
-                                d5.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {d5.floor}");
+                                    d5.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {d5.floor}");
                                 };
 
                                 d5.door = "opened";
@@ -20912,9 +20912,9 @@ namespace Controller
                 
                         while (d1.floor < userFloor) 
                         {
-                        d1.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {d1.floor}");
+                            d1.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {d1.floor}");
                         };
 
                         d1.door = "opened";
@@ -20944,9 +20944,9 @@ namespace Controller
 
                                 while (d1.floor > requestedFloor) 
                                 {
-                                d1.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {d1.floor}");
+                                    d1.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {d1.floor}");
                                 };
 
                                 d1.door = "opened";
@@ -20970,9 +20970,9 @@ namespace Controller
                 
                         while (d2.floor < userFloor) 
                         {
-                        d2.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {d2.floor}");
+                            d2.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {d2.floor}");
                         };
 
                         d2.door = "opened";
@@ -21002,9 +21002,9 @@ namespace Controller
 
                                 while (d2.floor > requestedFloor) 
                                 {
-                                d2.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {d2.floor}");
+                                    d2.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {d2.floor}");
                                 };
 
                                 d2.door = "opened";
@@ -21028,9 +21028,9 @@ namespace Controller
                 
                         while (d3.floor < userFloor) 
                         {
-                        d3.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {d3.floor}");
+                            d3.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {d3.floor}");
                         };
 
                         d3.door = "opened";
@@ -21060,9 +21060,9 @@ namespace Controller
 
                                 while (d3.floor > requestedFloor) 
                                 {
-                                d3.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {d3.floor}");
+                                    d3.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {d3.floor}");
                                 };
 
                                 d3.door = "opened";
@@ -21086,9 +21086,9 @@ namespace Controller
                 
                         while (d4.floor < userFloor) 
                         {
-                        d4.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {d4.floor}");
+                            d4.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {d4.floor}");
                         };
 
                         d4.door = "opened";
@@ -21118,9 +21118,9 @@ namespace Controller
 
                                 while (d4.floor > requestedFloor) 
                                 {
-                                d4.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {d4.floor}");
+                                    d4.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {d4.floor}");
                                 };
 
                                 d4.door = "opened";
@@ -21144,9 +21144,9 @@ namespace Controller
                 
                         while (d5.floor < userFloor) 
                         {
-                        d5.floor++;
-                        System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                        Console.WriteLine($"elevator's floor: {d5.floor}");
+                            d5.floor++;
+                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                            Console.WriteLine($"elevator's floor: {d5.floor}");
                         };
 
                         d5.door = "opened";
@@ -21176,9 +21176,9 @@ namespace Controller
 
                                 while (d5.floor > requestedFloor) 
                                 {
-                                d5.floor--;
-                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                                Console.WriteLine($"floor display: {d5.floor}");
+                                    d5.floor--;
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                    Console.WriteLine($"floor display: {d5.floor}");
                                 };
 
                                 d5.door = "opened";
@@ -23612,9 +23612,9 @@ namespace Controller
 
                             while (a1.floor > requestedFloor) 
                             {
-                            a1.floor--;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"floor display: {a1.floor}");
+                                a1.floor--;
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine($"floor display: {a1.floor}");
                             };
 
                             a1.door = "opened";
@@ -23665,9 +23665,9 @@ namespace Controller
 
                             while (a2.floor < requestedFloor) 
                             {
-                            a2.floor++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"floor display: {a2.floor}");
+                                a2.floor++;
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine($"floor display: {a2.floor}");
                             };
 
                             a2.door = "opened";
@@ -23707,9 +23707,9 @@ namespace Controller
 
                             while (a2.floor > requestedFloor) 
                             {
-                            a2.floor--;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"floor display: {a2.floor}");
+                                a2.floor--;
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine($"floor display: {a2.floor}");
                             };
 
                             a2.door = "opened";
@@ -23760,9 +23760,9 @@ namespace Controller
 
                             while (a3.floor < requestedFloor) 
                             {
-                            a3.floor++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"floor display: {a3.floor}");
+                                a3.floor++;
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine($"floor display: {a3.floor}");
                             };
 
                             a3.door = "opened";
@@ -23802,9 +23802,9 @@ namespace Controller
 
                             while (a3.floor > requestedFloor) 
                             {
-                            a3.floor--;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"floor display: {a3.floor}");
+                                a3.floor--;
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine($"floor display: {a3.floor}");
                             };
 
                             a3.door = "opened";
@@ -23855,9 +23855,9 @@ namespace Controller
 
                             while (a4.floor < requestedFloor) 
                             {
-                            a4.floor++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"floor display: {a4.floor}");
+                                a4.floor++;
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine($"floor display: {a4.floor}");
                             };
 
                             a4.door = "opened";
@@ -23897,9 +23897,9 @@ namespace Controller
 
                             while (a4.floor > requestedFloor) 
                             {
-                            a4.floor--;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"floor display: {a4.floor}");
+                                a4.floor--;
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine($"floor display: {a4.floor}");
                             };
 
                             a4.door = "opened";
@@ -23950,9 +23950,9 @@ namespace Controller
 
                             while (a5.floor < requestedFloor) 
                             {
-                            a5.floor++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"floor display: {a5.floor}");
+                                a5.floor++;
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine($"floor display: {a5.floor}");
                             };
 
                             a5.door = "opened";
@@ -23992,9 +23992,9 @@ namespace Controller
 
                             while (a5.floor > requestedFloor) 
                             {
-                            a5.floor--;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"floor display: {a5.floor}");
+                                a5.floor--;
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine($"floor display: {a5.floor}");
                             };
 
                             a5.door = "opened";
@@ -24051,9 +24051,9 @@ namespace Controller
 
                             while (b1.floor < requestedFloor) 
                             {
-                            b1.floor++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"floor display: {b1.floor}");
+                                b1.floor++;
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine($"floor display: {b1.floor}");
                             };
 
                             b1.door = "opened";
@@ -24146,9 +24146,9 @@ namespace Controller
 
                             while (b2.floor < requestedFloor) 
                             {
-                            b2.floor++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"floor display: {b2.floor}");
+                                b2.floor++;
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine($"floor display: {b2.floor}");
                             };
 
                             b2.door = "opened";
@@ -24241,9 +24241,9 @@ namespace Controller
 
                             while (b3.floor < requestedFloor) 
                             {
-                            b3.floor++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"floor display: {b3.floor}");
+                                b3.floor++;
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine($"floor display: {b3.floor}");
                             };
 
                             b3.door = "opened";
@@ -24336,9 +24336,9 @@ namespace Controller
 
                             while (b4.floor < requestedFloor) 
                             {
-                            b4.floor++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"floor display: {b4.floor}");
+                                b4.floor++;
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine($"floor display: {b4.floor}");
                             };
 
                             b4.door = "opened";
@@ -24431,9 +24431,9 @@ namespace Controller
 
                             while (b5.floor < requestedFloor) 
                             {
-                            b5.floor++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"floor display: {b5.floor}");
+                                b5.floor++;
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine($"floor display: {b5.floor}");
                             };
 
                             b5.door = "opened";
@@ -24532,9 +24532,9 @@ namespace Controller
 
                             while (c1.floor < requestedFloor) 
                             {
-                            c1.floor++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"floor display: {c1.floor}");
+                                c1.floor++;
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine($"floor display: {c1.floor}");
                             };
 
                             c1.door = "opened";
@@ -24627,9 +24627,9 @@ namespace Controller
 
                             while (c2.floor < requestedFloor) 
                             {
-                            c2.floor++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"floor display: {c2.floor}");
+                                c2.floor++;
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine($"floor display: {c2.floor}");
                             };
 
                             c2.door = "opened";
@@ -24722,9 +24722,9 @@ namespace Controller
 
                             while (c3.floor < requestedFloor) 
                             {
-                            c3.floor++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"floor display: {c3.floor}");
+                                c3.floor++;
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine($"floor display: {c3.floor}");
                             };
 
                             c3.door = "opened";
@@ -24817,9 +24817,9 @@ namespace Controller
 
                             while (c4.floor < requestedFloor) 
                             {
-                            c4.floor++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"floor display: {c4.floor}");
+                                c4.floor++;
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine($"floor display: {c4.floor}");
                             };
 
                             c4.door = "opened";
@@ -24912,9 +24912,9 @@ namespace Controller
 
                             while (c5.floor < requestedFloor) 
                             {
-                            c5.floor++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"floor display: {c5.floor}");
+                                c5.floor++;
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine($"floor display: {c5.floor}");
                             };
 
                             c5.door = "opened";
@@ -25013,9 +25013,9 @@ namespace Controller
 
                             while (d1.floor < requestedFloor) 
                             {
-                            d1.floor++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"floor display: {d1.floor}");
+                                d1.floor++;
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine($"floor display: {d1.floor}");
                             };
 
                             d1.door = "opened";
@@ -25108,9 +25108,9 @@ namespace Controller
 
                             while (d2.floor < requestedFloor) 
                             {
-                            d2.floor++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"floor display: {d2.floor}");
+                                d2.floor++;
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine($"floor display: {d2.floor}");
                             };
 
                             d2.door = "opened";
@@ -25203,9 +25203,9 @@ namespace Controller
 
                             while (d3.floor < requestedFloor) 
                             {
-                            d3.floor++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"floor display: {d3.floor}");
+                                d3.floor++;
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine($"floor display: {d3.floor}");
                             };
 
                             d3.door = "opened";
@@ -25298,9 +25298,9 @@ namespace Controller
 
                             while (d4.floor < requestedFloor) 
                             {
-                            d4.floor++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"floor display: {d4.floor}");
+                                d4.floor++;
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine($"floor display: {d4.floor}");
                             };
 
                             d4.door = "opened";
@@ -25393,9 +25393,9 @@ namespace Controller
 
                             while (d5.floor < requestedFloor) 
                             {
-                            d5.floor++;
-                            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-                            Console.WriteLine($"floor display: {d5.floor}");
+                                d5.floor++;
+                                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
+                                Console.WriteLine($"floor display: {d5.floor}");
                             };
 
                             d5.door = "opened";

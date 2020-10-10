@@ -1,3 +1,11 @@
+// 60 floors (including G)
+// 6 basements
+// 4 columns
+// 20 elevators
+
+// 90 call buttons
+// 345 elevator buttons
+
 package main
 
 import (
@@ -156,8 +164,9 @@ func main() {
 		if direction == "up" && userFloor >= -5 && userFloor < 1 {
 
 			elevA1 := func() {
-				fmt.Printf("elevator a1")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator a1\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", a1.floor)
 
 				for a1.floor < userFloor {
@@ -167,10 +176,10 @@ func main() {
 				}
 
 				a1.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + a1.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", a1.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -179,8 +188,8 @@ func main() {
 
 					if requestedFloor <= -5 || requestedFloor > 1 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -188,7 +197,7 @@ func main() {
 
 						a1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a1.door)
+						fmt.Printf("door: %v\n", a1.door)
 
 						for a1.floor < requestedFloor {
 
@@ -199,11 +208,11 @@ func main() {
 						}
 
 						a1.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + a1.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", a1.door)
 						a1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a1.door)
+						fmt.Printf("door: %v\n", a1.door)
 						a1.status = "idle"
 						status()
 
@@ -212,8 +221,9 @@ func main() {
 			}
 
 			elevA2 := func() {
-				fmt.Printf("elevator a2")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator a2\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", a2.floor)
 
 				for a2.floor < userFloor {
@@ -223,10 +233,10 @@ func main() {
 				}
 
 				a2.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + a2.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", a2.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -235,8 +245,8 @@ func main() {
 
 					if requestedFloor <= -5 || requestedFloor > 1 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -244,7 +254,7 @@ func main() {
 
 						a2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a2.door)
+						fmt.Printf("door: %v\n", a2.door)
 
 						for a2.floor < requestedFloor {
 
@@ -255,11 +265,11 @@ func main() {
 						}
 
 						a2.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + a2.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", a2.door)
 						a2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a2.door)
+						fmt.Printf("door: %v\n", a2.door)
 						a2.status = "idle"
 						status()
 
@@ -268,8 +278,9 @@ func main() {
 			}
 
 			elevA3 := func() {
-				fmt.Printf("elevator a3")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator a3\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", a3.floor)
 
 				for a3.floor < userFloor {
@@ -279,10 +290,10 @@ func main() {
 				}
 
 				a3.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + a3.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", a3.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -291,8 +302,8 @@ func main() {
 
 					if requestedFloor <= -5 || requestedFloor > 1 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -300,7 +311,7 @@ func main() {
 
 						a3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a3.door)
+						fmt.Printf("door: %v\n", a3.door)
 
 						for a3.floor < requestedFloor {
 
@@ -311,11 +322,11 @@ func main() {
 						}
 
 						a3.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + a3.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", a3.door)
 						a3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a3.door)
+						fmt.Printf("door: %v\n", a3.door)
 						a3.status = "idle"
 						status()
 
@@ -324,8 +335,9 @@ func main() {
 			}
 
 			elevA4 := func() {
-				fmt.Printf("elevator a4")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator a4\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", a4.floor)
 
 				for a4.floor < userFloor {
@@ -335,10 +347,10 @@ func main() {
 				}
 
 				a4.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + a4.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", a4.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -347,8 +359,8 @@ func main() {
 
 					if requestedFloor <= -5 || requestedFloor > 1 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -356,7 +368,7 @@ func main() {
 
 						a4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a4.door)
+						fmt.Printf("door: %v\n", a4.door)
 
 						for a4.floor < requestedFloor {
 
@@ -367,11 +379,11 @@ func main() {
 						}
 
 						a4.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + a4.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", a4.door)
 						a4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a4.door)
+						fmt.Printf("door: %v\n", a4.door)
 						a4.status = "idle"
 						status()
 
@@ -380,21 +392,22 @@ func main() {
 			}
 
 			elevA5 := func() {
-				fmt.Printf("elevator a5")
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("elevator's floor: {a5.floor}")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator a5\n")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator's floor: %d\n", a5.floor)
 
 				for a5.floor < userFloor {
 					a5.floor++
 					time.Sleep(time.Second)
-					fmt.Printf("elevator's floor: {a5.floor}")
+					fmt.Printf("elevator's floor: %d\n", a5.floor)
 				}
 
 				a5.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + a5.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", a5.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -403,8 +416,8 @@ func main() {
 
 					if requestedFloor <= -5 || requestedFloor > 1 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -412,7 +425,7 @@ func main() {
 
 						a5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a5.door)
+						fmt.Printf("door: %v\n", a5.door)
 
 						for a5.floor < requestedFloor {
 
@@ -423,11 +436,11 @@ func main() {
 						}
 
 						a5.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + a5.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", a5.door)
 						a5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a5.door)
+						fmt.Printf("door: %v\n", a5.door)
 						a5.status = "idle"
 						status()
 
@@ -436,8 +449,9 @@ func main() {
 			}
 
 			elevA1v2 := func() {
-				fmt.Printf("elevator a1")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator a1\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", a1.floor)
 
 				for a1.floor > userFloor {
@@ -447,10 +461,10 @@ func main() {
 				}
 
 				a1.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + a1.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", a1.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -459,8 +473,8 @@ func main() {
 
 					if requestedFloor <= -5 || requestedFloor > 1 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -468,7 +482,7 @@ func main() {
 
 						a1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a1.door)
+						fmt.Printf("door: %v\n", a1.door)
 
 						for a1.floor < requestedFloor {
 
@@ -479,11 +493,11 @@ func main() {
 						}
 
 						a1.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + a1.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", a1.door)
 						a1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a1.door)
+						fmt.Printf("door: %v\n", a1.door)
 						a1.status = "idle"
 						status()
 
@@ -492,8 +506,9 @@ func main() {
 			}
 
 			elevA2v2 := func() {
-				fmt.Printf("elevator a2")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator a2\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", a2.floor)
 
 				for a2.floor > userFloor {
@@ -503,10 +518,10 @@ func main() {
 				}
 
 				a2.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + a2.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", a2.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -515,8 +530,8 @@ func main() {
 
 					if requestedFloor <= -5 || requestedFloor > 1 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -524,7 +539,7 @@ func main() {
 
 						a2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a2.door)
+						fmt.Printf("door: %v\n", a2.door)
 
 						for a2.floor < requestedFloor {
 
@@ -535,11 +550,11 @@ func main() {
 						}
 
 						a2.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + a2.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", a2.door)
 						a2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a2.door)
+						fmt.Printf("door: %v\n", a2.door)
 						a2.status = "idle"
 						status()
 
@@ -548,8 +563,9 @@ func main() {
 			}
 
 			elevA3v2 := func() {
-				fmt.Printf("elevator a3")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator a3\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", a3.floor)
 
 				for a3.floor > userFloor {
@@ -559,10 +575,10 @@ func main() {
 				}
 
 				a3.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + a3.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", a3.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -571,8 +587,8 @@ func main() {
 
 					if requestedFloor <= -5 || requestedFloor > 1 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -580,7 +596,7 @@ func main() {
 
 						a3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a3.door)
+						fmt.Printf("door: %v\n", a3.door)
 
 						for a3.floor < requestedFloor {
 
@@ -591,11 +607,11 @@ func main() {
 						}
 
 						a3.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + a3.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", a3.door)
 						a3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a3.door)
+						fmt.Printf("door: %v\n", a3.door)
 						a3.status = "idle"
 						status()
 
@@ -604,8 +620,9 @@ func main() {
 			}
 
 			elevA4v2 := func() {
-				fmt.Printf("elevator a4")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator a4\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", a4.floor)
 
 				for a4.floor > userFloor {
@@ -615,10 +632,10 @@ func main() {
 				}
 
 				a4.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + a4.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", a4.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -627,8 +644,8 @@ func main() {
 
 					if requestedFloor <= -5 || requestedFloor > 1 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -636,7 +653,7 @@ func main() {
 
 						a4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a4.door)
+						fmt.Printf("door: %v\n", a4.door)
 
 						for a4.floor < requestedFloor {
 
@@ -647,11 +664,11 @@ func main() {
 						}
 
 						a4.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + a4.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", a4.door)
 						a4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a4.door)
+						fmt.Printf("door: %v\n", a4.door)
 						a4.status = "idle"
 						status()
 
@@ -660,21 +677,22 @@ func main() {
 			}
 
 			elevA5v2 := func() {
-				fmt.Printf("elevator a5")
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("elevator's floor: {a5.floor}")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator a5\n")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator's floor: %d\n", a5.floor)
 
 				for a5.floor > userFloor {
 					a5.floor--
 					time.Sleep(time.Second)
-					fmt.Printf("elevator's floor: {a5.floor}")
+					fmt.Printf("elevator's floor: %d\n", a5.floor)
 				}
 
 				a5.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + a5.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", a5.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -683,8 +701,8 @@ func main() {
 
 					if requestedFloor <= -5 || requestedFloor > 1 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -692,7 +710,7 @@ func main() {
 
 						a5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a5.door)
+						fmt.Printf("door: %v\n", a5.door)
 
 						for a5.floor < requestedFloor {
 
@@ -703,11 +721,11 @@ func main() {
 						}
 
 						a5.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + a5.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", a5.door)
 						a5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a5.door)
+						fmt.Printf("door: %v\n", a5.door)
 						a5.status = "idle"
 						status()
 
@@ -2614,7 +2632,9 @@ func main() {
 				elevA5v2()
 
 			} else {
-				fmt.Printf("all elevators are busy, please try again in a few moments")
+
+				time.Sleep(time.Second)
+				fmt.Printf("all elevators are busy, please try again in a few moments\n")
 
 			}
 
@@ -2622,8 +2642,9 @@ func main() {
 
 			elevA1 := func() {
 
-				fmt.Printf("elevator a1")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator a1\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", a1.floor)
 
 				for a1.floor > userFloor {
@@ -2633,10 +2654,10 @@ func main() {
 				}
 
 				a1.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + a1.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", a1.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -2645,8 +2666,8 @@ func main() {
 
 					if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -2654,7 +2675,7 @@ func main() {
 
 						a1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a1.door)
+						fmt.Printf("door: %v\n", a1.door)
 
 						for a1.floor > requestedFloor {
 
@@ -2665,11 +2686,11 @@ func main() {
 						}
 
 						a1.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + a1.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", a1.door)
 						a1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a1.door)
+						fmt.Printf("door: %v\n", a1.door)
 						a1.status = "idle"
 						status()
 
@@ -2679,8 +2700,9 @@ func main() {
 
 			elevA2 := func() {
 
-				fmt.Printf("elevator a2")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator a2\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", a2.floor)
 
 				for a2.floor > userFloor {
@@ -2690,10 +2712,10 @@ func main() {
 				}
 
 				a2.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + a2.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", a2.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -2702,8 +2724,8 @@ func main() {
 
 					if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -2711,7 +2733,7 @@ func main() {
 
 						a2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a2.door)
+						fmt.Printf("door: %v\n", a2.door)
 
 						for a2.floor > requestedFloor {
 
@@ -2722,11 +2744,11 @@ func main() {
 						}
 
 						a2.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + a2.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", a2.door)
 						a2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a2.door)
+						fmt.Printf("door: %v\n", a2.door)
 						a2.status = "idle"
 						status()
 
@@ -2735,8 +2757,9 @@ func main() {
 			}
 
 			elevA3 := func() {
-				fmt.Printf("elevator a3")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator a3\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", a3.floor)
 
 				for a3.floor > userFloor {
@@ -2746,10 +2769,10 @@ func main() {
 				}
 
 				a3.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + a3.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", a3.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -2758,8 +2781,8 @@ func main() {
 
 					if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -2767,7 +2790,7 @@ func main() {
 
 						a3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a3.door)
+						fmt.Printf("door: %v\n", a3.door)
 
 						for a3.floor > requestedFloor {
 
@@ -2778,11 +2801,11 @@ func main() {
 						}
 
 						a3.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + a3.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", a3.door)
 						a3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a3.door)
+						fmt.Printf("door: %v\n", a3.door)
 						a3.status = "idle"
 						status()
 
@@ -2791,8 +2814,9 @@ func main() {
 			}
 
 			elevA4 := func() {
-				fmt.Printf("elevator a4")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator a4\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", a4.floor)
 
 				for a4.floor > userFloor {
@@ -2802,10 +2826,10 @@ func main() {
 				}
 
 				a4.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + a4.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", a4.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -2814,8 +2838,8 @@ func main() {
 
 					if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -2823,7 +2847,7 @@ func main() {
 
 						a4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a4.door)
+						fmt.Printf("door: %v\n", a4.door)
 
 						for a4.floor > requestedFloor {
 
@@ -2834,11 +2858,11 @@ func main() {
 						}
 
 						a4.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + a4.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", a4.door)
 						a4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a4.door)
+						fmt.Printf("door: %v\n", a4.door)
 						a4.status = "idle"
 						status()
 
@@ -2847,21 +2871,22 @@ func main() {
 			}
 
 			elevA5 := func() {
-				fmt.Printf("elevator a5")
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("elevator's floor: {a5.floor}")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator a5\n")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator's floor: %d\n", a5.floor)
 
 				for a5.floor > userFloor {
 					a5.floor--
 					time.Sleep(time.Second)
-					fmt.Printf("elevator's floor: {a5.floor}")
+					fmt.Printf("elevator's floor: %d\n", a5.floor)
 				}
 
 				a5.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + a5.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", a5.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -2870,8 +2895,8 @@ func main() {
 
 					if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -2879,7 +2904,7 @@ func main() {
 
 						a5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a5.door)
+						fmt.Printf("door: %v\n", a5.door)
 
 						for a5.floor > requestedFloor {
 
@@ -2890,11 +2915,11 @@ func main() {
 						}
 
 						a5.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + a5.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", a5.door)
 						a5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a5.door)
+						fmt.Printf("door: %v\n", a5.door)
 						a5.status = "idle"
 						status()
 
@@ -2903,8 +2928,9 @@ func main() {
 			}
 
 			elevA1v2 := func() {
-				fmt.Printf("elevator a1")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator a1\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", a1.floor)
 
 				for a1.floor < userFloor {
@@ -2914,10 +2940,10 @@ func main() {
 				}
 
 				a1.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + a1.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", a1.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -2926,8 +2952,8 @@ func main() {
 
 					if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -2935,7 +2961,7 @@ func main() {
 
 						a1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a1.door)
+						fmt.Printf("door: %v\n", a1.door)
 
 						for a1.floor > requestedFloor {
 
@@ -2946,11 +2972,11 @@ func main() {
 						}
 
 						a1.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + a1.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", a1.door)
 						a1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a1.door)
+						fmt.Printf("door: %v\n", a1.door)
 						a1.status = "idle"
 						status()
 
@@ -2959,8 +2985,9 @@ func main() {
 			}
 
 			elevA2v2 := func() {
-				fmt.Printf("elevator a2")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator a2\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", a2.floor)
 
 				for a2.floor < userFloor {
@@ -2970,10 +2997,10 @@ func main() {
 				}
 
 				a2.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + a2.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", a2.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -2982,8 +3009,8 @@ func main() {
 
 					if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -2991,7 +3018,7 @@ func main() {
 
 						a2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a2.door)
+						fmt.Printf("door: %v\n", a2.door)
 
 						for a2.floor > requestedFloor {
 
@@ -3002,11 +3029,11 @@ func main() {
 						}
 
 						a2.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + a2.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", a2.door)
 						a2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a2.door)
+						fmt.Printf("door: %v\n", a2.door)
 						a2.status = "idle"
 						status()
 
@@ -3015,8 +3042,9 @@ func main() {
 			}
 
 			elevA3v2 := func() {
-				fmt.Printf("elevator a3")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator a3\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", a3.floor)
 
 				for a3.floor < userFloor {
@@ -3026,10 +3054,10 @@ func main() {
 				}
 
 				a3.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + a3.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", a3.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -3038,8 +3066,8 @@ func main() {
 
 					if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -3047,7 +3075,7 @@ func main() {
 
 						a3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a3.door)
+						fmt.Printf("door: %v\n", a3.door)
 
 						for a3.floor > requestedFloor {
 
@@ -3058,11 +3086,11 @@ func main() {
 						}
 
 						a3.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + a3.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", a3.door)
 						a3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a3.door)
+						fmt.Printf("door: %v\n", a3.door)
 						a3.status = "idle"
 						status()
 
@@ -3071,8 +3099,9 @@ func main() {
 			}
 
 			elevA4v2 := func() {
-				fmt.Printf("elevator a4")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator a4\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", a4.floor)
 
 				for a4.floor < userFloor {
@@ -3082,10 +3111,10 @@ func main() {
 				}
 
 				a4.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + a4.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", a4.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -3094,8 +3123,8 @@ func main() {
 
 					if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -3103,7 +3132,7 @@ func main() {
 
 						a4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a4.door)
+						fmt.Printf("door: %v\n", a4.door)
 
 						for a4.floor > requestedFloor {
 
@@ -3114,11 +3143,11 @@ func main() {
 						}
 
 						a4.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + a4.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", a4.door)
 						a4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a4.door)
+						fmt.Printf("door: %v\n", a4.door)
 						a4.status = "idle"
 						status()
 
@@ -3127,21 +3156,22 @@ func main() {
 			}
 
 			elevA5v2 := func() {
-				fmt.Printf("elevator a5")
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("elevator's floor: {a5.floor}")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator a5\n")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator's floor: %d\n", a5.floor)
 
 				for a5.floor < userFloor {
 					a5.floor++
 					time.Sleep(time.Second)
-					fmt.Printf("elevator's floor: {a5.floor}")
+					fmt.Printf("elevator's floor: %d\n", a5.floor)
 				}
 
 				a5.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + a5.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", a5.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -3150,8 +3180,8 @@ func main() {
 
 					if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -3159,7 +3189,7 @@ func main() {
 
 						a5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a5.door)
+						fmt.Printf("door: %v\n", a5.door)
 
 						for a5.floor > requestedFloor {
 
@@ -3170,11 +3200,11 @@ func main() {
 						}
 
 						a5.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + a5.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", a5.door)
 						a5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + a5.door)
+						fmt.Printf("door: %v\n", a5.door)
 						a5.status = "idle"
 						status()
 
@@ -5081,12 +5111,16 @@ func main() {
 				elevA5v2()
 
 			} else {
-				fmt.Printf("all elevators are busy, please try again in a few moments")
+
+				time.Sleep(time.Second)
+				fmt.Printf("all elevators are busy, please try again in a few moments\n")
 
 			}
 
 		} else {
-			fmt.Printf("please enter valid information")
+
+			time.Sleep(time.Second)
+			fmt.Printf("please enter valid information\n")
 
 		}
 	}
@@ -5097,8 +5131,9 @@ func main() {
 		if direction == "up" && userFloor >= 1 && userFloor < 20 {
 
 			elevB1 := func() {
-				fmt.Printf("elevator b1")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator b1\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", b1.floor)
 
 				for b1.floor < userFloor {
@@ -5108,10 +5143,10 @@ func main() {
 				}
 
 				b1.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + b1.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", b1.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -5120,8 +5155,8 @@ func main() {
 
 					if requestedFloor <= 1 || requestedFloor > 20 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -5129,7 +5164,7 @@ func main() {
 
 						b1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b1.door)
+						fmt.Printf("door: %v\n", b1.door)
 
 						for b1.floor < requestedFloor {
 
@@ -5140,11 +5175,11 @@ func main() {
 						}
 
 						b1.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + b1.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", b1.door)
 						b1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b1.door)
+						fmt.Printf("door: %v\n", b1.door)
 						b1.status = "idle"
 						status()
 
@@ -5153,8 +5188,9 @@ func main() {
 			}
 
 			elevB2 := func() {
-				fmt.Printf("elevator b2")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator b2\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", b2.floor)
 
 				for b2.floor < userFloor {
@@ -5164,10 +5200,10 @@ func main() {
 				}
 
 				b2.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + b2.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", b2.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -5176,8 +5212,8 @@ func main() {
 
 					if requestedFloor <= 1 || requestedFloor > 20 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -5185,7 +5221,7 @@ func main() {
 
 						b2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b2.door)
+						fmt.Printf("door: %v\n", b2.door)
 
 						for b2.floor < requestedFloor {
 
@@ -5196,11 +5232,11 @@ func main() {
 						}
 
 						b2.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + b2.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", b2.door)
 						b2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b2.door)
+						fmt.Printf("door: %v\n", b2.door)
 						b2.status = "idle"
 						status()
 
@@ -5209,8 +5245,9 @@ func main() {
 			}
 
 			elevB3 := func() {
-				fmt.Printf("elevator b3")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator b3\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", b3.floor)
 
 				for b3.floor < userFloor {
@@ -5220,10 +5257,10 @@ func main() {
 				}
 
 				b3.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + b3.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", b3.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -5232,8 +5269,8 @@ func main() {
 
 					if requestedFloor <= 1 || requestedFloor > 20 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -5241,7 +5278,7 @@ func main() {
 
 						b3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b3.door)
+						fmt.Printf("door: %v\n", b3.door)
 
 						for b3.floor < requestedFloor {
 
@@ -5252,11 +5289,11 @@ func main() {
 						}
 
 						b3.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + b3.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", b3.door)
 						b3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b3.door)
+						fmt.Printf("door: %v\n", b3.door)
 						b3.status = "idle"
 						status()
 
@@ -5265,8 +5302,9 @@ func main() {
 			}
 
 			elevB4 := func() {
-				fmt.Printf("elevator b4")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator b4\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", b4.floor)
 
 				for b4.floor < userFloor {
@@ -5276,10 +5314,10 @@ func main() {
 				}
 
 				b4.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + b4.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", b4.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -5288,8 +5326,8 @@ func main() {
 
 					if requestedFloor <= 1 || requestedFloor > 20 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -5297,7 +5335,7 @@ func main() {
 
 						b4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b4.door)
+						fmt.Printf("door: %v\n", b4.door)
 
 						for b4.floor < requestedFloor {
 
@@ -5308,11 +5346,11 @@ func main() {
 						}
 
 						b4.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + b4.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", b4.door)
 						b4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b4.door)
+						fmt.Printf("door: %v\n", b4.door)
 						b4.status = "idle"
 						status()
 
@@ -5321,21 +5359,22 @@ func main() {
 			}
 
 			elevB5 := func() {
-				fmt.Printf("elevator b5")
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("elevator's floor: {b5.floor}")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator b5\n")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator's floor: %d\n", b5.floor)
 
 				for b5.floor < userFloor {
 					b5.floor++
 					time.Sleep(time.Second)
-					fmt.Printf("elevator's floor: {b5.floor}")
+					fmt.Printf("elevator's floor: %d\n", b5.floor)
 				}
 
 				b5.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + b5.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", b5.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -5344,8 +5383,8 @@ func main() {
 
 					if requestedFloor <= 1 || requestedFloor > 20 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -5353,7 +5392,7 @@ func main() {
 
 						b5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b5.door)
+						fmt.Printf("door: %v\n", b5.door)
 
 						for b5.floor < requestedFloor {
 
@@ -5364,11 +5403,11 @@ func main() {
 						}
 
 						b5.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + b5.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", b5.door)
 						b5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b5.door)
+						fmt.Printf("door: %v\n", b5.door)
 						b5.status = "idle"
 						status()
 
@@ -5377,8 +5416,9 @@ func main() {
 			}
 
 			elevB1v2 := func() {
-				fmt.Printf("elevator b1")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator b1\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", b1.floor)
 
 				for b1.floor > userFloor {
@@ -5388,10 +5428,10 @@ func main() {
 				}
 
 				b1.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + b1.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", b1.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -5400,8 +5440,8 @@ func main() {
 
 					if requestedFloor <= 1 || requestedFloor > 20 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -5409,7 +5449,7 @@ func main() {
 
 						b1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b1.door)
+						fmt.Printf("door: %v\n", b1.door)
 
 						for b1.floor < requestedFloor {
 
@@ -5420,11 +5460,11 @@ func main() {
 						}
 
 						b1.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + b1.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", b1.door)
 						b1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b1.door)
+						fmt.Printf("door: %v\n", b1.door)
 						b1.status = "idle"
 						status()
 
@@ -5433,8 +5473,9 @@ func main() {
 			}
 
 			elevB2v2 := func() {
-				fmt.Printf("elevator b2")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator b2\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", b2.floor)
 
 				for b2.floor > userFloor {
@@ -5444,10 +5485,10 @@ func main() {
 				}
 
 				b2.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + b2.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", b2.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -5456,8 +5497,8 @@ func main() {
 
 					if requestedFloor <= 1 || requestedFloor > 20 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -5465,7 +5506,7 @@ func main() {
 
 						b2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b2.door)
+						fmt.Printf("door: %v\n", b2.door)
 
 						for b2.floor < requestedFloor {
 
@@ -5476,11 +5517,11 @@ func main() {
 						}
 
 						b2.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + b2.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", b2.door)
 						b2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b2.door)
+						fmt.Printf("door: %v\n", b2.door)
 						b2.status = "idle"
 						status()
 
@@ -5489,8 +5530,9 @@ func main() {
 			}
 
 			elevB3v2 := func() {
-				fmt.Printf("elevator b3")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator b3\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", b3.floor)
 
 				for b3.floor > userFloor {
@@ -5500,10 +5542,10 @@ func main() {
 				}
 
 				b3.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + b3.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", b3.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -5512,8 +5554,8 @@ func main() {
 
 					if requestedFloor <= 1 || requestedFloor > 20 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -5521,7 +5563,7 @@ func main() {
 
 						b3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b3.door)
+						fmt.Printf("door: %v\n", b3.door)
 
 						for b3.floor < requestedFloor {
 
@@ -5532,11 +5574,11 @@ func main() {
 						}
 
 						b3.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + b3.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", b3.door)
 						b3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b3.door)
+						fmt.Printf("door: %v\n", b3.door)
 						b3.status = "idle"
 						status()
 
@@ -5545,8 +5587,9 @@ func main() {
 			}
 
 			elevB4v2 := func() {
-				fmt.Printf("elevator b4")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator b4\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", b4.floor)
 
 				for b4.floor > userFloor {
@@ -5556,10 +5599,10 @@ func main() {
 				}
 
 				b4.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + b4.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", b4.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -5568,8 +5611,8 @@ func main() {
 
 					if requestedFloor <= 1 || requestedFloor > 20 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -5577,7 +5620,7 @@ func main() {
 
 						b4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b4.door)
+						fmt.Printf("door: %v\n", b4.door)
 
 						for b4.floor < requestedFloor {
 
@@ -5588,11 +5631,11 @@ func main() {
 						}
 
 						b4.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + b4.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", b4.door)
 						b4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b4.door)
+						fmt.Printf("door: %v\n", b4.door)
 						b4.status = "idle"
 						status()
 
@@ -5601,21 +5644,22 @@ func main() {
 			}
 
 			elevB5v2 := func() {
-				fmt.Printf("elevator b5")
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("elevator's floor: {b5.floor}")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator b5\n")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator's floor: %d\n", b5.floor)
 
 				for b5.floor > userFloor {
 					b5.floor--
 					time.Sleep(time.Second)
-					fmt.Printf("elevator's floor: {b5.floor}")
+					fmt.Printf("elevator's floor: %d\n", b5.floor)
 				}
 
 				b5.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + b5.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", b5.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -5624,8 +5668,8 @@ func main() {
 
 					if requestedFloor <= 1 || requestedFloor > 20 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -5633,7 +5677,7 @@ func main() {
 
 						b5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b5.door)
+						fmt.Printf("door: %v\n", b5.door)
 
 						for b5.floor < requestedFloor {
 
@@ -5644,11 +5688,11 @@ func main() {
 						}
 
 						b5.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + b5.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", b5.door)
 						b5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b5.door)
+						fmt.Printf("door: %v\n", b5.door)
 						b5.status = "idle"
 						status()
 
@@ -7555,7 +7599,9 @@ func main() {
 				elevB5v2()
 
 			} else {
-				fmt.Printf("all elevators are busy, please try again in a few moments")
+
+				time.Sleep(time.Second)
+				fmt.Printf("all elevators are busy, please try again in a few moments\n")
 
 			}
 
@@ -7563,8 +7609,9 @@ func main() {
 
 			elevB1 := func() {
 
-				fmt.Printf("elevator b1")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator b1\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", b1.floor)
 
 				for b1.floor > userFloor {
@@ -7574,10 +7621,10 @@ func main() {
 				}
 
 				b1.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + b1.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", b1.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -7586,8 +7633,8 @@ func main() {
 
 					if requestedFloor < 1 || requestedFloor >= 20 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -7595,7 +7642,7 @@ func main() {
 
 						b1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b1.door)
+						fmt.Printf("door: %v\n", b1.door)
 
 						for b1.floor > requestedFloor {
 
@@ -7606,11 +7653,11 @@ func main() {
 						}
 
 						b1.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + b1.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", b1.door)
 						b1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b1.door)
+						fmt.Printf("door: %v\n", b1.door)
 						b1.status = "idle"
 						status()
 
@@ -7620,8 +7667,9 @@ func main() {
 
 			elevB2 := func() {
 
-				fmt.Printf("elevator b2")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator b2\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", b2.floor)
 
 				for b2.floor > userFloor {
@@ -7631,10 +7679,10 @@ func main() {
 				}
 
 				b2.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + b2.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", b2.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -7643,8 +7691,8 @@ func main() {
 
 					if requestedFloor < 1 || requestedFloor >= 20 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -7652,7 +7700,7 @@ func main() {
 
 						b2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b2.door)
+						fmt.Printf("door: %v\n", b2.door)
 
 						for b2.floor > requestedFloor {
 
@@ -7663,11 +7711,11 @@ func main() {
 						}
 
 						b2.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + b2.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", b2.door)
 						b2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b2.door)
+						fmt.Printf("door: %v\n", b2.door)
 						b2.status = "idle"
 						status()
 
@@ -7676,8 +7724,9 @@ func main() {
 			}
 
 			elevB3 := func() {
-				fmt.Printf("elevator b3")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator b3\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", b3.floor)
 
 				for b3.floor > userFloor {
@@ -7687,10 +7736,10 @@ func main() {
 				}
 
 				b3.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + b3.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", b3.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -7699,8 +7748,8 @@ func main() {
 
 					if requestedFloor < 1 || requestedFloor >= 20 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -7708,7 +7757,7 @@ func main() {
 
 						b3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b3.door)
+						fmt.Printf("door: %v\n", b3.door)
 
 						for b3.floor > requestedFloor {
 
@@ -7719,11 +7768,11 @@ func main() {
 						}
 
 						b3.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + b3.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", b3.door)
 						b3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b3.door)
+						fmt.Printf("door: %v\n", b3.door)
 						b3.status = "idle"
 						status()
 
@@ -7732,8 +7781,9 @@ func main() {
 			}
 
 			elevB4 := func() {
-				fmt.Printf("elevator b4")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator b4\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", b4.floor)
 
 				for b4.floor > userFloor {
@@ -7743,10 +7793,10 @@ func main() {
 				}
 
 				b4.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + b4.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", b4.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -7755,8 +7805,8 @@ func main() {
 
 					if requestedFloor < 1 || requestedFloor >= 20 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -7764,7 +7814,7 @@ func main() {
 
 						b4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b4.door)
+						fmt.Printf("door: %v\n", b4.door)
 
 						for b4.floor > requestedFloor {
 
@@ -7775,11 +7825,11 @@ func main() {
 						}
 
 						b4.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + b4.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", b4.door)
 						b4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b4.door)
+						fmt.Printf("door: %v\n", b4.door)
 						b4.status = "idle"
 						status()
 
@@ -7788,21 +7838,22 @@ func main() {
 			}
 
 			elevB5 := func() {
-				fmt.Printf("elevator b5")
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("elevator's floor: {b5.floor}")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator b5\n")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator's floor: %d\n", b5.floor)
 
 				for b5.floor > userFloor {
 					b5.floor--
 					time.Sleep(time.Second)
-					fmt.Printf("elevator's floor: {b5.floor}")
+					fmt.Printf("elevator's floor: %d\n", b5.floor)
 				}
 
 				b5.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + b5.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", b5.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -7811,8 +7862,8 @@ func main() {
 
 					if requestedFloor < 1 || requestedFloor >= 20 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -7820,7 +7871,7 @@ func main() {
 
 						b5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b5.door)
+						fmt.Printf("door: %v\n", b5.door)
 
 						for b5.floor > requestedFloor {
 
@@ -7831,11 +7882,11 @@ func main() {
 						}
 
 						b5.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + b5.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", b5.door)
 						b5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b5.door)
+						fmt.Printf("door: %v\n", b5.door)
 						b5.status = "idle"
 						status()
 
@@ -7844,8 +7895,9 @@ func main() {
 			}
 
 			elevB1v2 := func() {
-				fmt.Printf("elevator b1")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator b1\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", b1.floor)
 
 				for b1.floor < userFloor {
@@ -7855,10 +7907,10 @@ func main() {
 				}
 
 				b1.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + b1.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", b1.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -7867,8 +7919,8 @@ func main() {
 
 					if requestedFloor < 1 || requestedFloor >= 20 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -7876,7 +7928,7 @@ func main() {
 
 						b1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b1.door)
+						fmt.Printf("door: %v\n", b1.door)
 
 						for b1.floor > requestedFloor {
 
@@ -7887,11 +7939,11 @@ func main() {
 						}
 
 						b1.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + b1.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", b1.door)
 						b1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b1.door)
+						fmt.Printf("door: %v\n", b1.door)
 						b1.status = "idle"
 						status()
 
@@ -7900,8 +7952,9 @@ func main() {
 			}
 
 			elevB2v2 := func() {
-				fmt.Printf("elevator b2")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator b2\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", b2.floor)
 
 				for b2.floor < userFloor {
@@ -7911,10 +7964,10 @@ func main() {
 				}
 
 				b2.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + b2.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", b2.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -7923,8 +7976,8 @@ func main() {
 
 					if requestedFloor < 1 || requestedFloor >= 20 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -7932,7 +7985,7 @@ func main() {
 
 						b2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b2.door)
+						fmt.Printf("door: %v\n", b2.door)
 
 						for b2.floor > requestedFloor {
 
@@ -7943,11 +7996,11 @@ func main() {
 						}
 
 						b2.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + b2.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", b2.door)
 						b2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b2.door)
+						fmt.Printf("door: %v\n", b2.door)
 						b2.status = "idle"
 						status()
 
@@ -7956,8 +8009,9 @@ func main() {
 			}
 
 			elevB3v2 := func() {
-				fmt.Printf("elevator b3")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator b3\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", b3.floor)
 
 				for b3.floor < userFloor {
@@ -7967,10 +8021,10 @@ func main() {
 				}
 
 				b3.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + b3.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", b3.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -7979,8 +8033,8 @@ func main() {
 
 					if requestedFloor < 1 || requestedFloor >= 20 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -7988,7 +8042,7 @@ func main() {
 
 						b3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b3.door)
+						fmt.Printf("door: %v\n", b3.door)
 
 						for b3.floor > requestedFloor {
 
@@ -7999,11 +8053,11 @@ func main() {
 						}
 
 						b3.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + b3.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", b3.door)
 						b3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b3.door)
+						fmt.Printf("door: %v\n", b3.door)
 						b3.status = "idle"
 						status()
 
@@ -8012,8 +8066,9 @@ func main() {
 			}
 
 			elevB4v2 := func() {
-				fmt.Printf("elevator b4")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator b4\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", b4.floor)
 
 				for b4.floor < userFloor {
@@ -8023,10 +8078,10 @@ func main() {
 				}
 
 				b4.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + b4.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", b4.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -8035,8 +8090,8 @@ func main() {
 
 					if requestedFloor < 1 || requestedFloor >= 20 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -8044,7 +8099,7 @@ func main() {
 
 						b4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b4.door)
+						fmt.Printf("door: %v\n", b4.door)
 
 						for b4.floor > requestedFloor {
 
@@ -8055,11 +8110,11 @@ func main() {
 						}
 
 						b4.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + b4.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", b4.door)
 						b4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b4.door)
+						fmt.Printf("door: %v\n", b4.door)
 						b4.status = "idle"
 						status()
 
@@ -8068,21 +8123,22 @@ func main() {
 			}
 
 			elevB5v2 := func() {
-				fmt.Printf("elevator b5")
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("elevator's floor: {b5.floor}")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator b5\n")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator's floor: %d\n", b5.floor)
 
 				for b5.floor < userFloor {
 					b5.floor++
 					time.Sleep(time.Second)
-					fmt.Printf("elevator's floor: {b5.floor}")
+					fmt.Printf("elevator's floor: %d\n", b5.floor)
 				}
 
 				b5.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + b5.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", b5.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -8091,8 +8147,8 @@ func main() {
 
 					if requestedFloor < 1 || requestedFloor >= 20 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -8100,7 +8156,7 @@ func main() {
 
 						b5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b5.door)
+						fmt.Printf("door: %v\n", b5.door)
 
 						for b5.floor > requestedFloor {
 
@@ -8111,11 +8167,11 @@ func main() {
 						}
 
 						b5.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + b5.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", b5.door)
 						b5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + b5.door)
+						fmt.Printf("door: %v\n", b5.door)
 						b5.status = "idle"
 						status()
 
@@ -10022,12 +10078,16 @@ func main() {
 				elevB5v2()
 
 			} else {
-				fmt.Printf("all elevators are busy, please try again in a few moments")
+
+				time.Sleep(time.Second)
+				fmt.Printf("all elevators are busy, please try again in a few moments\n")
 
 			}
 
 		} else {
-			fmt.Printf("please enter valid information")
+
+			time.Sleep(time.Second)
+			fmt.Printf("please enter valid information\n")
 
 		}
 	}
@@ -10038,8 +10098,9 @@ func main() {
 		if direction == "up" && userFloor >= 1 && userFloor < 40 || direction == "up" && userFloor == 1 {
 
 			elevC1 := func() {
-				fmt.Printf("elevator c1")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator c1\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", c1.floor)
 
 				for c1.floor < userFloor {
@@ -10049,10 +10110,10 @@ func main() {
 				}
 
 				c1.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + c1.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", c1.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -10061,8 +10122,8 @@ func main() {
 
 					if 1 <= requestedFloor && requestedFloor < 21 || requestedFloor > 40 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -10070,7 +10131,7 @@ func main() {
 
 						c1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c1.door)
+						fmt.Printf("door: %v\n", c1.door)
 
 						for c1.floor < requestedFloor {
 
@@ -10081,11 +10142,11 @@ func main() {
 						}
 
 						c1.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + c1.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", c1.door)
 						c1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c1.door)
+						fmt.Printf("door: %v\n", c1.door)
 						c1.status = "idle"
 						status()
 
@@ -10094,8 +10155,9 @@ func main() {
 			}
 
 			elevC2 := func() {
-				fmt.Printf("elevator c2")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator c2\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", c2.floor)
 
 				for c2.floor < userFloor {
@@ -10105,10 +10167,10 @@ func main() {
 				}
 
 				c2.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + c2.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", c2.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -10117,8 +10179,8 @@ func main() {
 
 					if 1 <= requestedFloor && requestedFloor < 21 || requestedFloor > 40 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -10126,7 +10188,7 @@ func main() {
 
 						c2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c2.door)
+						fmt.Printf("door: %v\n", c2.door)
 
 						for c2.floor < requestedFloor {
 
@@ -10137,11 +10199,11 @@ func main() {
 						}
 
 						c2.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + c2.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", c2.door)
 						c2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c2.door)
+						fmt.Printf("door: %v\n", c2.door)
 						c2.status = "idle"
 						status()
 
@@ -10150,8 +10212,9 @@ func main() {
 			}
 
 			elevC3 := func() {
-				fmt.Printf("elevator c3")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator c3\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", c3.floor)
 
 				for c3.floor < userFloor {
@@ -10161,10 +10224,10 @@ func main() {
 				}
 
 				c3.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + c3.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", c3.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -10173,8 +10236,8 @@ func main() {
 
 					if 1 <= requestedFloor && requestedFloor < 21 || requestedFloor > 40 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -10182,7 +10245,7 @@ func main() {
 
 						c3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c3.door)
+						fmt.Printf("door: %v\n", c3.door)
 
 						for c3.floor < requestedFloor {
 
@@ -10193,11 +10256,11 @@ func main() {
 						}
 
 						c3.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + c3.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", c3.door)
 						c3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c3.door)
+						fmt.Printf("door: %v\n", c3.door)
 						c3.status = "idle"
 						status()
 
@@ -10206,8 +10269,9 @@ func main() {
 			}
 
 			elevC4 := func() {
-				fmt.Printf("elevator c4")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator c4\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", c4.floor)
 
 				for c4.floor < userFloor {
@@ -10217,10 +10281,10 @@ func main() {
 				}
 
 				c4.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + c4.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", c4.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -10229,8 +10293,8 @@ func main() {
 
 					if 1 <= requestedFloor && requestedFloor < 21 || requestedFloor > 40 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -10238,7 +10302,7 @@ func main() {
 
 						c4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c4.door)
+						fmt.Printf("door: %v\n", c4.door)
 
 						for c4.floor < requestedFloor {
 
@@ -10249,11 +10313,11 @@ func main() {
 						}
 
 						c4.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + c4.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", c4.door)
 						c4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c4.door)
+						fmt.Printf("door: %v\n", c4.door)
 						c4.status = "idle"
 						status()
 
@@ -10262,21 +10326,22 @@ func main() {
 			}
 
 			elevC5 := func() {
-				fmt.Printf("elevator c5")
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("elevator's floor: {c5.floor}")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator c5\n")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator's floor: %d\n", c5.floor)
 
 				for c5.floor < userFloor {
 					c5.floor++
 					time.Sleep(time.Second)
-					fmt.Printf("elevator's floor: {c5.floor}")
+					fmt.Printf("elevator's floor: %d\n", c5.floor)
 				}
 
 				c5.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + c5.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", c5.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -10285,8 +10350,8 @@ func main() {
 
 					if 1 <= requestedFloor && requestedFloor < 21 || requestedFloor > 40 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -10294,7 +10359,7 @@ func main() {
 
 						c5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c5.door)
+						fmt.Printf("door: %v\n", c5.door)
 
 						for c5.floor < requestedFloor {
 
@@ -10305,11 +10370,11 @@ func main() {
 						}
 
 						c5.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + c5.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", c5.door)
 						c5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c5.door)
+						fmt.Printf("door: %v\n", c5.door)
 						c5.status = "idle"
 						status()
 
@@ -10318,8 +10383,9 @@ func main() {
 			}
 
 			elevC1v2 := func() {
-				fmt.Printf("elevator c1")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator c1\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", c1.floor)
 
 				for c1.floor > userFloor {
@@ -10329,10 +10395,10 @@ func main() {
 				}
 
 				c1.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + c1.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", c1.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -10341,8 +10407,8 @@ func main() {
 
 					if 1 <= requestedFloor && requestedFloor < 21 || requestedFloor > 40 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -10350,7 +10416,7 @@ func main() {
 
 						c1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c1.door)
+						fmt.Printf("door: %v\n", c1.door)
 
 						for c1.floor < requestedFloor {
 
@@ -10361,11 +10427,11 @@ func main() {
 						}
 
 						c1.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + c1.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", c1.door)
 						c1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c1.door)
+						fmt.Printf("door: %v\n", c1.door)
 						c1.status = "idle"
 						status()
 
@@ -10374,8 +10440,9 @@ func main() {
 			}
 
 			elevC2v2 := func() {
-				fmt.Printf("elevator c2")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator c2\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", c2.floor)
 
 				for c2.floor > userFloor {
@@ -10385,10 +10452,10 @@ func main() {
 				}
 
 				c2.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + c2.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", c2.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -10397,8 +10464,8 @@ func main() {
 
 					if 1 <= requestedFloor && requestedFloor < 21 || requestedFloor > 40 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -10406,7 +10473,7 @@ func main() {
 
 						c2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c2.door)
+						fmt.Printf("door: %v\n", c2.door)
 
 						for c2.floor < requestedFloor {
 
@@ -10417,11 +10484,11 @@ func main() {
 						}
 
 						c2.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + c2.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", c2.door)
 						c2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c2.door)
+						fmt.Printf("door: %v\n", c2.door)
 						c2.status = "idle"
 						status()
 
@@ -10430,8 +10497,9 @@ func main() {
 			}
 
 			elevC3v2 := func() {
-				fmt.Printf("elevator c3")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator c3\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", c3.floor)
 
 				for c3.floor > userFloor {
@@ -10441,10 +10509,10 @@ func main() {
 				}
 
 				c3.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + c3.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", c3.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -10453,8 +10521,8 @@ func main() {
 
 					if 1 <= requestedFloor && requestedFloor < 21 || requestedFloor > 40 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -10462,7 +10530,7 @@ func main() {
 
 						c3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c3.door)
+						fmt.Printf("door: %v\n", c3.door)
 
 						for c3.floor < requestedFloor {
 
@@ -10473,11 +10541,11 @@ func main() {
 						}
 
 						c3.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + c3.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", c3.door)
 						c3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c3.door)
+						fmt.Printf("door: %v\n", c3.door)
 						c3.status = "idle"
 						status()
 
@@ -10486,8 +10554,9 @@ func main() {
 			}
 
 			elevC4v2 := func() {
-				fmt.Printf("elevator c4")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator c4\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", c4.floor)
 
 				for c4.floor > userFloor {
@@ -10497,10 +10566,10 @@ func main() {
 				}
 
 				c4.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + c4.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", c4.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -10509,8 +10578,8 @@ func main() {
 
 					if 1 <= requestedFloor && requestedFloor < 21 || requestedFloor > 40 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -10518,7 +10587,7 @@ func main() {
 
 						c4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c4.door)
+						fmt.Printf("door: %v\n", c4.door)
 
 						for c4.floor < requestedFloor {
 
@@ -10529,11 +10598,11 @@ func main() {
 						}
 
 						c4.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + c4.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", c4.door)
 						c4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c4.door)
+						fmt.Printf("door: %v\n", c4.door)
 						c4.status = "idle"
 						status()
 
@@ -10542,21 +10611,22 @@ func main() {
 			}
 
 			elevC5v2 := func() {
-				fmt.Printf("elevator c5")
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("elevator's floor: {c5.floor}")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator c5\n")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator's floor: %d\n", c5.floor)
 
 				for c5.floor > userFloor {
 					c5.floor--
 					time.Sleep(time.Second)
-					fmt.Printf("elevator's floor: {c5.floor}")
+					fmt.Printf("elevator's floor: %d\n", c5.floor)
 				}
 
 				c5.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + c5.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", c5.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -10565,8 +10635,8 @@ func main() {
 
 					if 1 <= requestedFloor && requestedFloor < 21 || requestedFloor > 40 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -10574,7 +10644,7 @@ func main() {
 
 						c5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c5.door)
+						fmt.Printf("door: %v\n", c5.door)
 
 						for c5.floor < requestedFloor {
 
@@ -10585,11 +10655,11 @@ func main() {
 						}
 
 						c5.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + c5.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", c5.door)
 						c5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c5.door)
+						fmt.Printf("door: %v\n", c5.door)
 						c5.status = "idle"
 						status()
 
@@ -12496,7 +12566,9 @@ func main() {
 				elevC5v2()
 
 			} else {
-				fmt.Printf("all elevators are busy, please try again in a few moments")
+
+				time.Sleep(time.Second)
+				fmt.Printf("all elevators are busy, please try again in a few moments\n")
 
 			}
 
@@ -12504,8 +12576,9 @@ func main() {
 
 			elevC1 := func() {
 
-				fmt.Printf("elevator c1")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator c1\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", c1.floor)
 
 				for c1.floor > userFloor {
@@ -12515,10 +12588,10 @@ func main() {
 				}
 
 				c1.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + c1.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", c1.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -12527,8 +12600,8 @@ func main() {
 
 					if requestedFloor < 1 || requestedFloor >= 20 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -12536,7 +12609,7 @@ func main() {
 
 						c1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c1.door)
+						fmt.Printf("door: %v\n", c1.door)
 
 						for c1.floor > requestedFloor {
 
@@ -12547,11 +12620,11 @@ func main() {
 						}
 
 						c1.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + c1.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", c1.door)
 						c1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c1.door)
+						fmt.Printf("door: %v\n", c1.door)
 						c1.status = "idle"
 						status()
 
@@ -12561,8 +12634,9 @@ func main() {
 
 			elevC2 := func() {
 
-				fmt.Printf("elevator c2")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator c2\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", c2.floor)
 
 				for c2.floor > userFloor {
@@ -12572,10 +12646,10 @@ func main() {
 				}
 
 				c2.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + c2.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", c2.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -12584,8 +12658,8 @@ func main() {
 
 					if requestedFloor < 1 || requestedFloor >= 20 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -12593,7 +12667,7 @@ func main() {
 
 						c2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c2.door)
+						fmt.Printf("door: %v\n", c2.door)
 
 						for c2.floor > requestedFloor {
 
@@ -12604,11 +12678,11 @@ func main() {
 						}
 
 						c2.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + c2.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", c2.door)
 						c2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c2.door)
+						fmt.Printf("door: %v\n", c2.door)
 						c2.status = "idle"
 						status()
 
@@ -12617,8 +12691,9 @@ func main() {
 			}
 
 			elevC3 := func() {
-				fmt.Printf("elevator c3")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator c3\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", c3.floor)
 
 				for c3.floor > userFloor {
@@ -12628,10 +12703,10 @@ func main() {
 				}
 
 				c3.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + c3.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", c3.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -12640,8 +12715,8 @@ func main() {
 
 					if requestedFloor < 1 || requestedFloor >= 20 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -12649,7 +12724,7 @@ func main() {
 
 						c3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c3.door)
+						fmt.Printf("door: %v\n", c3.door)
 
 						for c3.floor > requestedFloor {
 
@@ -12660,11 +12735,11 @@ func main() {
 						}
 
 						c3.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + c3.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", c3.door)
 						c3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c3.door)
+						fmt.Printf("door: %v\n", c3.door)
 						c3.status = "idle"
 						status()
 
@@ -12673,8 +12748,9 @@ func main() {
 			}
 
 			elevC4 := func() {
-				fmt.Printf("elevator c4")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator c4\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", c4.floor)
 
 				for c4.floor > userFloor {
@@ -12684,10 +12760,10 @@ func main() {
 				}
 
 				c4.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + c4.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", c4.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -12696,8 +12772,8 @@ func main() {
 
 					if requestedFloor < 1 || requestedFloor >= 20 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -12705,7 +12781,7 @@ func main() {
 
 						c4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c4.door)
+						fmt.Printf("door: %v\n", c4.door)
 
 						for c4.floor > requestedFloor {
 
@@ -12716,11 +12792,11 @@ func main() {
 						}
 
 						c4.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + c4.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", c4.door)
 						c4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c4.door)
+						fmt.Printf("door: %v\n", c4.door)
 						c4.status = "idle"
 						status()
 
@@ -12729,21 +12805,22 @@ func main() {
 			}
 
 			elevC5 := func() {
-				fmt.Printf("elevator c5")
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("elevator's floor: {c5.floor}")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator c5\n")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator's floor: %d\n", c5.floor)
 
 				for c5.floor > userFloor {
 					c5.floor--
 					time.Sleep(time.Second)
-					fmt.Printf("elevator's floor: {c5.floor}")
+					fmt.Printf("elevator's floor: %d\n", c5.floor)
 				}
 
 				c5.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + c5.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", c5.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -12752,8 +12829,8 @@ func main() {
 
 					if requestedFloor < 1 || requestedFloor >= 20 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -12761,7 +12838,7 @@ func main() {
 
 						c5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c5.door)
+						fmt.Printf("door: %v\n", c5.door)
 
 						for c5.floor > requestedFloor {
 
@@ -12772,11 +12849,11 @@ func main() {
 						}
 
 						c5.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + c5.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", c5.door)
 						c5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c5.door)
+						fmt.Printf("door: %v\n", c5.door)
 						c5.status = "idle"
 						status()
 
@@ -12785,8 +12862,9 @@ func main() {
 			}
 
 			elevC1v2 := func() {
-				fmt.Printf("elevator c1")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator c1\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", c1.floor)
 
 				for c1.floor < userFloor {
@@ -12796,10 +12874,10 @@ func main() {
 				}
 
 				c1.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + c1.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", c1.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -12808,8 +12886,8 @@ func main() {
 
 					if requestedFloor < 1 || requestedFloor >= 20 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -12817,7 +12895,7 @@ func main() {
 
 						c1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c1.door)
+						fmt.Printf("door: %v\n", c1.door)
 
 						for c1.floor > requestedFloor {
 
@@ -12828,11 +12906,11 @@ func main() {
 						}
 
 						c1.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + c1.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", c1.door)
 						c1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c1.door)
+						fmt.Printf("door: %v\n", c1.door)
 						c1.status = "idle"
 						status()
 
@@ -12841,8 +12919,9 @@ func main() {
 			}
 
 			elevC2v2 := func() {
-				fmt.Printf("elevator c2")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator c2\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", c2.floor)
 
 				for c2.floor < userFloor {
@@ -12852,10 +12931,10 @@ func main() {
 				}
 
 				c2.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + c2.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", c2.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -12864,8 +12943,8 @@ func main() {
 
 					if requestedFloor < 1 || requestedFloor >= 20 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -12873,7 +12952,7 @@ func main() {
 
 						c2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c2.door)
+						fmt.Printf("door: %v\n", c2.door)
 
 						for c2.floor > requestedFloor {
 
@@ -12884,11 +12963,11 @@ func main() {
 						}
 
 						c2.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + c2.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", c2.door)
 						c2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c2.door)
+						fmt.Printf("door: %v\n", c2.door)
 						c2.status = "idle"
 						status()
 
@@ -12897,8 +12976,9 @@ func main() {
 			}
 
 			elevC3v2 := func() {
-				fmt.Printf("elevator c3")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator c3\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", c3.floor)
 
 				for c3.floor < userFloor {
@@ -12908,10 +12988,10 @@ func main() {
 				}
 
 				c3.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + c3.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", c3.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -12920,8 +13000,8 @@ func main() {
 
 					if requestedFloor < 1 || requestedFloor >= 20 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -12929,7 +13009,7 @@ func main() {
 
 						c3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c3.door)
+						fmt.Printf("door: %v\n", c3.door)
 
 						for c3.floor > requestedFloor {
 
@@ -12940,11 +13020,11 @@ func main() {
 						}
 
 						c3.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + c3.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", c3.door)
 						c3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c3.door)
+						fmt.Printf("door: %v\n", c3.door)
 						c3.status = "idle"
 						status()
 
@@ -12953,8 +13033,9 @@ func main() {
 			}
 
 			elevC4v2 := func() {
-				fmt.Printf("elevator c4")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator c4\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", c4.floor)
 
 				for c4.floor < userFloor {
@@ -12964,10 +13045,10 @@ func main() {
 				}
 
 				c4.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + c4.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", c4.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -12976,8 +13057,8 @@ func main() {
 
 					if requestedFloor < 1 || requestedFloor >= 20 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -12985,7 +13066,7 @@ func main() {
 
 						c4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c4.door)
+						fmt.Printf("door: %v\n", c4.door)
 
 						for c4.floor > requestedFloor {
 
@@ -12996,11 +13077,11 @@ func main() {
 						}
 
 						c4.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + c4.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", c4.door)
 						c4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c4.door)
+						fmt.Printf("door: %v\n", c4.door)
 						c4.status = "idle"
 						status()
 
@@ -13009,21 +13090,22 @@ func main() {
 			}
 
 			elevC5v2 := func() {
-				fmt.Printf("elevator c5")
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("elevator's floor: {c5.floor}")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator c5\n")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator's floor: %d\n", c5.floor)
 
 				for c5.floor < userFloor {
 					c5.floor++
 					time.Sleep(time.Second)
-					fmt.Printf("elevator's floor: {c5.floor}")
+					fmt.Printf("elevator's floor: %d\n", c5.floor)
 				}
 
 				c5.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + c5.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", c5.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -13032,8 +13114,8 @@ func main() {
 
 					if requestedFloor < 1 || requestedFloor >= 20 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -13041,7 +13123,7 @@ func main() {
 
 						c5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c5.door)
+						fmt.Printf("door: %v\n", c5.door)
 
 						for c5.floor > requestedFloor {
 
@@ -13052,11 +13134,11 @@ func main() {
 						}
 
 						c5.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + c5.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", c5.door)
 						c5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + c5.door)
+						fmt.Printf("door: %v\n", c5.door)
 						c5.status = "idle"
 						status()
 
@@ -14963,12 +15045,16 @@ func main() {
 				elevC5v2()
 
 			} else {
-				fmt.Printf("all elevators are busy, please try again in a few moments")
+
+				time.Sleep(time.Second)
+				fmt.Printf("all elevators are busy, please try again in a few moments\n")
 
 			}
 
 		} else {
-			fmt.Printf("please enter valid information")
+
+			time.Sleep(time.Second)
+			fmt.Printf("please enter valid information\n")
 
 		}
 	}
@@ -14979,8 +15065,9 @@ func main() {
 		if direction == "up" && userFloor >= 41 && userFloor < 60 || direction == "up" && userFloor == 1 {
 
 			elevD1 := func() {
-				fmt.Printf("elevator d1")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator d1\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", d1.floor)
 
 				for d1.floor < userFloor {
@@ -14990,10 +15077,10 @@ func main() {
 				}
 
 				d1.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + d1.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", d1.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -15002,8 +15089,8 @@ func main() {
 
 					if 1 <= requestedFloor && requestedFloor < 41 || requestedFloor > 60 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -15011,7 +15098,7 @@ func main() {
 
 						d1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d1.door)
+						fmt.Printf("door: %v\n", d1.door)
 
 						for d1.floor < requestedFloor {
 
@@ -15022,11 +15109,11 @@ func main() {
 						}
 
 						d1.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + d1.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", d1.door)
 						d1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d1.door)
+						fmt.Printf("door: %v\n", d1.door)
 						d1.status = "idle"
 						status()
 
@@ -15035,8 +15122,9 @@ func main() {
 			}
 
 			elevD2 := func() {
-				fmt.Printf("elevator d2")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator d2\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", d2.floor)
 
 				for d2.floor < userFloor {
@@ -15046,10 +15134,10 @@ func main() {
 				}
 
 				d2.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + d2.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", d2.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -15058,8 +15146,8 @@ func main() {
 
 					if 1 <= requestedFloor && requestedFloor < 41 || requestedFloor > 60 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -15067,7 +15155,7 @@ func main() {
 
 						d2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d2.door)
+						fmt.Printf("door: %v\n", d2.door)
 
 						for d2.floor < requestedFloor {
 
@@ -15078,11 +15166,11 @@ func main() {
 						}
 
 						d2.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + d2.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", d2.door)
 						d2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d2.door)
+						fmt.Printf("door: %v\n", d2.door)
 						d2.status = "idle"
 						status()
 
@@ -15091,8 +15179,9 @@ func main() {
 			}
 
 			elevD3 := func() {
-				fmt.Printf("elevator d3")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator d3\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", d3.floor)
 
 				for d3.floor < userFloor {
@@ -15102,10 +15191,10 @@ func main() {
 				}
 
 				d3.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + d3.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", d3.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -15114,8 +15203,8 @@ func main() {
 
 					if 1 <= requestedFloor && requestedFloor < 41 || requestedFloor > 60 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -15123,7 +15212,7 @@ func main() {
 
 						d3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d3.door)
+						fmt.Printf("door: %v\n", d3.door)
 
 						for d3.floor < requestedFloor {
 
@@ -15134,11 +15223,11 @@ func main() {
 						}
 
 						d3.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + d3.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", d3.door)
 						d3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d3.door)
+						fmt.Printf("door: %v\n", d3.door)
 						d3.status = "idle"
 						status()
 
@@ -15147,8 +15236,9 @@ func main() {
 			}
 
 			elevD4 := func() {
-				fmt.Printf("elevator d4")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator d4\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", d4.floor)
 
 				for d4.floor < userFloor {
@@ -15158,10 +15248,10 @@ func main() {
 				}
 
 				d4.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + d4.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", d4.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -15170,8 +15260,8 @@ func main() {
 
 					if 1 <= requestedFloor && requestedFloor < 41 || requestedFloor > 60 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -15179,7 +15269,7 @@ func main() {
 
 						d4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d4.door)
+						fmt.Printf("door: %v\n", d4.door)
 
 						for d4.floor < requestedFloor {
 
@@ -15190,11 +15280,11 @@ func main() {
 						}
 
 						d4.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + d4.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", d4.door)
 						d4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d4.door)
+						fmt.Printf("door: %v\n", d4.door)
 						d4.status = "idle"
 						status()
 
@@ -15203,21 +15293,22 @@ func main() {
 			}
 
 			elevD5 := func() {
-				fmt.Printf("elevator d5")
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("elevator's floor: {d5.floor}")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator d5\n")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator's floor: %d\n", d5.floor)
 
 				for d5.floor < userFloor {
 					d5.floor++
 					time.Sleep(time.Second)
-					fmt.Printf("elevator's floor: {d5.floor}")
+					fmt.Printf("elevator's floor: %d\n", d5.floor)
 				}
 
 				d5.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + d5.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", d5.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -15226,8 +15317,8 @@ func main() {
 
 					if 1 <= requestedFloor && requestedFloor < 41 || requestedFloor > 60 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -15235,7 +15326,7 @@ func main() {
 
 						d5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d5.door)
+						fmt.Printf("door: %v\n", d5.door)
 
 						for d5.floor < requestedFloor {
 
@@ -15246,11 +15337,11 @@ func main() {
 						}
 
 						d5.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + d5.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", d5.door)
 						d5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d5.door)
+						fmt.Printf("door: %v\n", d5.door)
 						d5.status = "idle"
 						status()
 
@@ -15259,8 +15350,9 @@ func main() {
 			}
 
 			elevD1v2 := func() {
-				fmt.Printf("elevator d1")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator d1\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", d1.floor)
 
 				for d1.floor > userFloor {
@@ -15270,10 +15362,10 @@ func main() {
 				}
 
 				d1.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + d1.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", d1.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -15282,8 +15374,8 @@ func main() {
 
 					if 1 <= requestedFloor && requestedFloor < 41 || requestedFloor > 60 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -15291,7 +15383,7 @@ func main() {
 
 						d1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d1.door)
+						fmt.Printf("door: %v\n", d1.door)
 
 						for d1.floor < requestedFloor {
 
@@ -15302,11 +15394,11 @@ func main() {
 						}
 
 						d1.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + d1.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", d1.door)
 						d1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d1.door)
+						fmt.Printf("door: %v\n", d1.door)
 						d1.status = "idle"
 						status()
 
@@ -15315,8 +15407,9 @@ func main() {
 			}
 
 			elevD2v2 := func() {
-				fmt.Printf("elevator d2")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator d2\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", d2.floor)
 
 				for d2.floor > userFloor {
@@ -15326,10 +15419,10 @@ func main() {
 				}
 
 				d2.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + d2.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", d2.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -15338,8 +15431,8 @@ func main() {
 
 					if 1 <= requestedFloor && requestedFloor < 41 || requestedFloor > 60 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -15347,7 +15440,7 @@ func main() {
 
 						d2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d2.door)
+						fmt.Printf("door: %v\n", d2.door)
 
 						for d2.floor < requestedFloor {
 
@@ -15358,11 +15451,11 @@ func main() {
 						}
 
 						d2.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + d2.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", d2.door)
 						d2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d2.door)
+						fmt.Printf("door: %v\n", d2.door)
 						d2.status = "idle"
 						status()
 
@@ -15371,8 +15464,9 @@ func main() {
 			}
 
 			elevD3v2 := func() {
-				fmt.Printf("elevator d3")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator d3\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", d3.floor)
 
 				for d3.floor > userFloor {
@@ -15382,10 +15476,10 @@ func main() {
 				}
 
 				d3.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + d3.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", d3.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -15394,8 +15488,8 @@ func main() {
 
 					if 1 <= requestedFloor && requestedFloor < 41 || requestedFloor > 60 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -15403,7 +15497,7 @@ func main() {
 
 						d3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d3.door)
+						fmt.Printf("door: %v\n", d3.door)
 
 						for d3.floor < requestedFloor {
 
@@ -15414,11 +15508,11 @@ func main() {
 						}
 
 						d3.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + d3.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", d3.door)
 						d3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d3.door)
+						fmt.Printf("door: %v\n", d3.door)
 						d3.status = "idle"
 						status()
 
@@ -15427,8 +15521,9 @@ func main() {
 			}
 
 			elevD4v2 := func() {
-				fmt.Printf("elevator d4")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator d4\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", d4.floor)
 
 				for d4.floor > userFloor {
@@ -15438,10 +15533,10 @@ func main() {
 				}
 
 				d4.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + d4.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", d4.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -15450,8 +15545,8 @@ func main() {
 
 					if 1 <= requestedFloor && requestedFloor < 41 || requestedFloor > 60 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -15459,7 +15554,7 @@ func main() {
 
 						d4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d4.door)
+						fmt.Printf("door: %v\n", d4.door)
 
 						for d4.floor < requestedFloor {
 
@@ -15470,11 +15565,11 @@ func main() {
 						}
 
 						d4.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + d4.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", d4.door)
 						d4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d4.door)
+						fmt.Printf("door: %v\n", d4.door)
 						d4.status = "idle"
 						status()
 
@@ -15483,21 +15578,22 @@ func main() {
 			}
 
 			elevD5v2 := func() {
-				fmt.Printf("elevator d5")
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("elevator's floor: {d5.floor}")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator d5\n")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator's floor: %d\n", d5.floor)
 
 				for d5.floor > userFloor {
 					d5.floor--
 					time.Sleep(time.Second)
-					fmt.Printf("elevator's floor: {d5.floor}")
+					fmt.Printf("elevator's floor: %d\n", d5.floor)
 				}
 
 				d5.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + d5.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", d5.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -15506,8 +15602,8 @@ func main() {
 
 					if 1 <= requestedFloor && requestedFloor < 41 || requestedFloor > 60 || requestedFloor <= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -15515,7 +15611,7 @@ func main() {
 
 						d5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d5.door)
+						fmt.Printf("door: %v\n", d5.door)
 
 						for d5.floor < requestedFloor {
 
@@ -15526,11 +15622,11 @@ func main() {
 						}
 
 						d5.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + d5.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", d5.door)
 						d5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d5.door)
+						fmt.Printf("door: %v\n", d5.door)
 						d5.status = "idle"
 						status()
 
@@ -17437,7 +17533,9 @@ func main() {
 				elevD5v2()
 
 			} else {
-				fmt.Printf("all elevators are busy, please try again in a few moments")
+
+				time.Sleep(time.Second)
+				fmt.Printf("all elevators are busy, please try again in a few moments\n")
 
 			}
 
@@ -17445,8 +17543,9 @@ func main() {
 
 			elevD1 := func() {
 
-				fmt.Printf("elevator d1")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator d1\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", d1.floor)
 
 				for d1.floor > userFloor {
@@ -17456,10 +17555,10 @@ func main() {
 				}
 
 				d1.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + d1.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", d1.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -17468,8 +17567,8 @@ func main() {
 
 					if 1 < requestedFloor && requestedFloor < 41 || requestedFloor < 1 || requestedFloor >= 60 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -17477,7 +17576,7 @@ func main() {
 
 						d1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d1.door)
+						fmt.Printf("door: %v\n", d1.door)
 
 						for d1.floor > requestedFloor {
 
@@ -17488,11 +17587,11 @@ func main() {
 						}
 
 						d1.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + d1.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", d1.door)
 						d1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d1.door)
+						fmt.Printf("door: %v\n", d1.door)
 						d1.status = "idle"
 						status()
 
@@ -17502,8 +17601,9 @@ func main() {
 
 			elevD2 := func() {
 
-				fmt.Printf("elevator d2")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator d2\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", d2.floor)
 
 				for d2.floor > userFloor {
@@ -17513,10 +17613,10 @@ func main() {
 				}
 
 				d2.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + d2.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", d2.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -17525,8 +17625,8 @@ func main() {
 
 					if 1 < requestedFloor && requestedFloor < 41 || requestedFloor < 1 || requestedFloor >= 60 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -17534,7 +17634,7 @@ func main() {
 
 						d2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d2.door)
+						fmt.Printf("door: %v\n", d2.door)
 
 						for d2.floor > requestedFloor {
 
@@ -17545,11 +17645,11 @@ func main() {
 						}
 
 						d2.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + d2.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", d2.door)
 						d2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d2.door)
+						fmt.Printf("door: %v\n", d2.door)
 						d2.status = "idle"
 						status()
 
@@ -17558,8 +17658,9 @@ func main() {
 			}
 
 			elevD3 := func() {
-				fmt.Printf("elevator d3")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator d3\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", d3.floor)
 
 				for d3.floor > userFloor {
@@ -17569,10 +17670,10 @@ func main() {
 				}
 
 				d3.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + d3.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", d3.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -17581,8 +17682,8 @@ func main() {
 
 					if 1 < requestedFloor && requestedFloor < 41 || requestedFloor < 1 || requestedFloor >= 60 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -17590,7 +17691,7 @@ func main() {
 
 						d3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d3.door)
+						fmt.Printf("door: %v\n", d3.door)
 
 						for d3.floor > requestedFloor {
 
@@ -17601,11 +17702,11 @@ func main() {
 						}
 
 						d3.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + d3.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", d3.door)
 						d3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d3.door)
+						fmt.Printf("door: %v\n", d3.door)
 						d3.status = "idle"
 						status()
 
@@ -17614,8 +17715,9 @@ func main() {
 			}
 
 			elevD4 := func() {
-				fmt.Printf("elevator d4")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator d4\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", d4.floor)
 
 				for d4.floor > userFloor {
@@ -17625,10 +17727,10 @@ func main() {
 				}
 
 				d4.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + d4.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", d4.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -17637,8 +17739,8 @@ func main() {
 
 					if 1 < requestedFloor && requestedFloor < 41 || requestedFloor < 1 || requestedFloor >= 60 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -17646,7 +17748,7 @@ func main() {
 
 						d4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d4.door)
+						fmt.Printf("door: %v\n", d4.door)
 
 						for d4.floor > requestedFloor {
 
@@ -17657,11 +17759,11 @@ func main() {
 						}
 
 						d4.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + d4.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", d4.door)
 						d4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d4.door)
+						fmt.Printf("door: %v\n", d4.door)
 						d4.status = "idle"
 						status()
 
@@ -17670,21 +17772,22 @@ func main() {
 			}
 
 			elevD5 := func() {
-				fmt.Printf("elevator d5")
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("elevator's floor: {d5.floor}")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator d5\n")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator's floor: %d\n", d5.floor)
 
 				for d5.floor > userFloor {
 					d5.floor--
 					time.Sleep(time.Second)
-					fmt.Printf("elevator's floor: {d5.floor}")
+					fmt.Printf("elevator's floor: %d\n", d5.floor)
 				}
 
 				d5.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + d5.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", d5.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -17693,8 +17796,8 @@ func main() {
 
 					if 1 < requestedFloor && requestedFloor < 41 || requestedFloor < 1 || requestedFloor >= 60 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -17702,7 +17805,7 @@ func main() {
 
 						d5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d5.door)
+						fmt.Printf("door: %v\n", d5.door)
 
 						for d5.floor > requestedFloor {
 
@@ -17713,11 +17816,11 @@ func main() {
 						}
 
 						d5.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + d5.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", d5.door)
 						d5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d5.door)
+						fmt.Printf("door: %v\n", d5.door)
 						d5.status = "idle"
 						status()
 
@@ -17726,8 +17829,9 @@ func main() {
 			}
 
 			elevD1v2 := func() {
-				fmt.Printf("elevator d1")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator d1\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", d1.floor)
 
 				for d1.floor < userFloor {
@@ -17737,10 +17841,10 @@ func main() {
 				}
 
 				d1.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + d1.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", d1.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -17749,8 +17853,8 @@ func main() {
 
 					if 1 < requestedFloor && requestedFloor < 41 || requestedFloor < 1 || requestedFloor >= 60 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -17758,7 +17862,7 @@ func main() {
 
 						d1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d1.door)
+						fmt.Printf("door: %v\n", d1.door)
 
 						for d1.floor > requestedFloor {
 
@@ -17769,11 +17873,11 @@ func main() {
 						}
 
 						d1.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + d1.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", d1.door)
 						d1.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d1.door)
+						fmt.Printf("door: %v\n", d1.door)
 						d1.status = "idle"
 						status()
 
@@ -17782,8 +17886,9 @@ func main() {
 			}
 
 			elevD2v2 := func() {
-				fmt.Printf("elevator d2")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator d2\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", d2.floor)
 
 				for d2.floor < userFloor {
@@ -17793,10 +17898,10 @@ func main() {
 				}
 
 				d2.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + d2.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", d2.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -17805,8 +17910,8 @@ func main() {
 
 					if 1 < requestedFloor && requestedFloor < 41 || requestedFloor < 1 || requestedFloor >= 60 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -17814,7 +17919,7 @@ func main() {
 
 						d2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d2.door)
+						fmt.Printf("door: %v\n", d2.door)
 
 						for d2.floor > requestedFloor {
 
@@ -17825,11 +17930,11 @@ func main() {
 						}
 
 						d2.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + d2.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", d2.door)
 						d2.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d2.door)
+						fmt.Printf("door: %v\n", d2.door)
 						d2.status = "idle"
 						status()
 
@@ -17838,8 +17943,9 @@ func main() {
 			}
 
 			elevD3v2 := func() {
-				fmt.Printf("elevator d3")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator d3\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", d3.floor)
 
 				for d3.floor < userFloor {
@@ -17849,10 +17955,10 @@ func main() {
 				}
 
 				d3.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + d3.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", d3.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -17861,8 +17967,8 @@ func main() {
 
 					if 1 < requestedFloor && requestedFloor < 41 || requestedFloor < 1 || requestedFloor >= 60 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -17870,7 +17976,7 @@ func main() {
 
 						d3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d3.door)
+						fmt.Printf("door: %v\n", d3.door)
 
 						for d3.floor > requestedFloor {
 
@@ -17881,11 +17987,11 @@ func main() {
 						}
 
 						d3.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + d3.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", d3.door)
 						d3.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d3.door)
+						fmt.Printf("door: %v\n", d3.door)
 						d3.status = "idle"
 						status()
 
@@ -17894,8 +18000,9 @@ func main() {
 			}
 
 			elevD4v2 := func() {
-				fmt.Printf("elevator d4")
-				time.Sleep((1 / 2) * time.Second)
+				time.Sleep(time.Second)
+				fmt.Printf("elevator d4\n")
+				time.Sleep(time.Second)
 				fmt.Printf("elevator's floor: %d\n", d4.floor)
 
 				for d4.floor < userFloor {
@@ -17905,10 +18012,10 @@ func main() {
 				}
 
 				d4.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + d4.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", d4.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -17917,8 +18024,8 @@ func main() {
 
 					if 1 < requestedFloor && requestedFloor < 41 || requestedFloor < 1 || requestedFloor >= 60 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -17926,7 +18033,7 @@ func main() {
 
 						d4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d4.door)
+						fmt.Printf("door: %v\n", d4.door)
 
 						for d4.floor > requestedFloor {
 
@@ -17937,11 +18044,11 @@ func main() {
 						}
 
 						d4.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + d4.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", d4.door)
 						d4.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d4.door)
+						fmt.Printf("door: %v\n", d4.door)
 						d4.status = "idle"
 						status()
 
@@ -17950,21 +18057,22 @@ func main() {
 			}
 
 			elevD5v2 := func() {
-				fmt.Printf("elevator d5")
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("elevator's floor: {d5.floor}")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator d5\n")
+				time.Sleep(time.Second)
+				fmt.Printf("elevator's floor: %d\n", d5.floor)
 
 				for d5.floor < userFloor {
 					d5.floor++
 					time.Sleep(time.Second)
-					fmt.Printf("elevator's floor: {d5.floor}")
+					fmt.Printf("elevator's floor: %d\n", d5.floor)
 				}
 
 				d5.door = "opened"
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("door: " + d5.door)
-				time.Sleep((1 / 2) * time.Second)
-				fmt.Printf("which floor would u like to go to?")
+				time.Sleep(time.Second)
+				fmt.Printf("door: %v\n", d5.door)
+				time.Sleep(time.Second)
+				fmt.Printf("which floor would u like to go to?\n")
 
 				for input := true; input == true; {
 
@@ -17973,8 +18081,8 @@ func main() {
 
 					if 1 < requestedFloor && requestedFloor < 41 || requestedFloor < 1 || requestedFloor >= 60 || requestedFloor >= userFloor {
 
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("please select a valid floor")
+						time.Sleep(time.Second)
+						fmt.Printf("please select a valid floor\n")
 
 					} else {
 
@@ -17982,7 +18090,7 @@ func main() {
 
 						d5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d5.door)
+						fmt.Printf("door: %v\n", d5.door)
 
 						for d5.floor > requestedFloor {
 
@@ -17993,11 +18101,11 @@ func main() {
 						}
 
 						d5.door = "opened"
-						time.Sleep((1 / 2) * time.Second)
-						fmt.Printf("door: " + d5.door)
+						time.Sleep(time.Second)
+						fmt.Printf("door: %v\n", d5.door)
 						d5.door = "closed"
 						time.Sleep(time.Second)
-						fmt.Printf("door: " + d5.door)
+						fmt.Printf("door: %v\n", d5.door)
 						d5.status = "idle"
 						status()
 
@@ -19904,16 +20012,19 @@ func main() {
 				elevD5v2()
 
 			} else {
-				fmt.Printf("all elevators are busy, please try again in a few moments")
+
+				time.Sleep(time.Second)
+				fmt.Printf("all elevators are busy, please try again in a few moments\n")
 
 			}
 
 		} else {
-			fmt.Printf("please enter valid information")
+
+			time.Sleep(time.Second)
+			fmt.Printf("please enter valid information\n")
 
 		}
 	}
-
 
 	var userFloor int
 
@@ -19925,21 +20036,23 @@ func main() {
 
 				if requestedFloor <= -5 || requestedFloor > 1 || requestedFloor <= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator a1")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator a1\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", a1.floor)
 
 					a1.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + a1.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", a1.door)
+					time.Sleep(time.Second)
 					a1.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + a1.door)
+					fmt.Printf("door: %v\n", a1.door)
 
 					for a1.floor < requestedFloor {
 
@@ -19950,11 +20063,11 @@ func main() {
 					}
 
 					a1.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + a1.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", a1.door)
 					a1.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + a1.door)
+					fmt.Printf("door: %v\n", a1.door)
 					a1.status = "idle"
 					status()
 
@@ -19964,21 +20077,23 @@ func main() {
 
 				if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator a1")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator a1\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", a1.floor)
 
 					a1.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + a1.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", a1.door)
+					time.Sleep(time.Second)
 					a1.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + a1.door)
+					fmt.Printf("door: %v\n", a1.door)
 
 					for a1.floor > requestedFloor {
 
@@ -19989,11 +20104,11 @@ func main() {
 					}
 
 					a1.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + a1.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", a1.door)
 					a1.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + a1.door)
+					fmt.Printf("door: %v\n", a1.door)
 					a1.status = "idle"
 					status()
 
@@ -20001,7 +20116,8 @@ func main() {
 
 			} else {
 
-				fmt.Printf("please enter valid information")
+				time.Sleep(time.Second)
+				fmt.Printf("please enter valid information\n")
 
 			}
 
@@ -20011,21 +20127,23 @@ func main() {
 
 				if requestedFloor <= -5 || requestedFloor > 1 || requestedFloor <= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator a2")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator a2\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", a2.floor)
 
 					a2.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + a2.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", a2.door)
+					time.Sleep(time.Second)
 					a2.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + a2.door)
+					fmt.Printf("door: %v\n", a2.door)
 
 					for a2.floor < requestedFloor {
 
@@ -20036,11 +20154,11 @@ func main() {
 					}
 
 					a2.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + a2.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", a2.door)
 					a2.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + a2.door)
+					fmt.Printf("door: %v\n", a2.door)
 					a2.status = "idle"
 					status()
 
@@ -20050,21 +20168,23 @@ func main() {
 
 				if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator a2")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator a2\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", a2.floor)
 
 					a2.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + a2.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", a2.door)
+					time.Sleep(time.Second)
 					a2.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + a2.door)
+					fmt.Printf("door: %v\n", a2.door)
 
 					for a2.floor > requestedFloor {
 
@@ -20075,11 +20195,11 @@ func main() {
 					}
 
 					a2.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + a2.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", a2.door)
 					a2.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + a2.door)
+					fmt.Printf("door: %v\n", a2.door)
 					a2.status = "idle"
 					status()
 
@@ -20087,7 +20207,8 @@ func main() {
 
 			} else {
 
-				fmt.Printf("please enter valid information")
+				time.Sleep(time.Second)
+				fmt.Printf("please enter valid information\n")
 
 			}
 
@@ -20097,21 +20218,23 @@ func main() {
 
 				if requestedFloor <= -5 || requestedFloor > 1 || requestedFloor <= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator a3")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator a3\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", a3.floor)
 
 					a3.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + a3.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", a3.door)
+					time.Sleep(time.Second)
 					a3.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + a3.door)
+					fmt.Printf("door: %v\n", a3.door)
 
 					for a3.floor < requestedFloor {
 
@@ -20122,11 +20245,11 @@ func main() {
 					}
 
 					a3.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + a3.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", a3.door)
 					a3.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + a3.door)
+					fmt.Printf("door: %v\n", a3.door)
 					a3.status = "idle"
 					status()
 
@@ -20136,21 +20259,23 @@ func main() {
 
 				if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator a3")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator a3\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", a3.floor)
 
 					a3.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + a3.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", a3.door)
+					time.Sleep(time.Second)
 					a3.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + a3.door)
+					fmt.Printf("door: %v\n", a3.door)
 
 					for a3.floor > requestedFloor {
 
@@ -20161,11 +20286,11 @@ func main() {
 					}
 
 					a3.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + a3.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", a3.door)
 					a3.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + a3.door)
+					fmt.Printf("door: %v\n", a3.door)
 					a3.status = "idle"
 					status()
 
@@ -20173,7 +20298,8 @@ func main() {
 
 			} else {
 
-				fmt.Printf("please enter valid information")
+				time.Sleep(time.Second)
+				fmt.Printf("please enter valid information\n")
 
 			}
 
@@ -20183,21 +20309,23 @@ func main() {
 
 				if requestedFloor <= -5 || requestedFloor > 1 || requestedFloor <= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator a4")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator a4\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", a4.floor)
 
 					a4.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + a4.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", a4.door)
+					time.Sleep(time.Second)
 					a4.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + a4.door)
+					fmt.Printf("door: %v\n", a4.door)
 
 					for a4.floor < requestedFloor {
 
@@ -20208,11 +20336,11 @@ func main() {
 					}
 
 					a4.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + a4.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", a4.door)
 					a4.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + a4.door)
+					fmt.Printf("door: %v\n", a4.door)
 					a4.status = "idle"
 					status()
 				}
@@ -20221,21 +20349,23 @@ func main() {
 
 				if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator a4")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator a4\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", a4.floor)
 
 					a4.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + a4.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", a4.door)
+					time.Sleep(time.Second)
 					a4.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + a4.door)
+					fmt.Printf("door: %v\n", a4.door)
 
 					for a4.floor > requestedFloor {
 
@@ -20246,11 +20376,11 @@ func main() {
 					}
 
 					a4.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + a4.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", a4.door)
 					a4.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + a4.door)
+					fmt.Printf("door: %v\n", a4.door)
 					a4.status = "idle"
 					status()
 
@@ -20258,7 +20388,8 @@ func main() {
 
 			} else {
 
-				fmt.Printf("please enter valid information")
+				time.Sleep(time.Second)
+				fmt.Printf("please enter valid information\n")
 
 			}
 
@@ -20268,21 +20399,23 @@ func main() {
 
 				if requestedFloor <= -5 || requestedFloor > 1 || requestedFloor <= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator a5")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator a5\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", a5.floor)
 
 					a5.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + a5.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", a5.door)
+					time.Sleep(time.Second)
 					a5.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + a5.door)
+					fmt.Printf("door: %v\n", a5.door)
 
 					for a5.floor < requestedFloor {
 
@@ -20293,11 +20426,11 @@ func main() {
 					}
 
 					a5.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + a5.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", a5.door)
 					a5.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + a5.door)
+					fmt.Printf("door: %v\n", a5.door)
 					a5.status = "idle"
 					status()
 				}
@@ -20306,21 +20439,23 @@ func main() {
 
 				if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator a5")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator a5\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", a5.floor)
 
 					a5.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + a5.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", a5.door)
+					time.Sleep(time.Second)
 					a5.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + a5.door)
+					fmt.Printf("door: %v\n", a5.door)
 
 					for a5.floor > requestedFloor {
 
@@ -20331,11 +20466,11 @@ func main() {
 					}
 
 					a5.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + a5.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", a5.door)
 					a5.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + a5.door)
+					fmt.Printf("door: %v\n", a5.door)
 					a5.status = "idle"
 					status()
 
@@ -20343,7 +20478,8 @@ func main() {
 
 			} else {
 
-				fmt.Printf("please enter valid information")
+				time.Sleep(time.Second)
+				fmt.Printf("please enter valid information\n")
 
 			}
 
@@ -20358,21 +20494,23 @@ func main() {
 
 				if requestedFloor <= 1 || requestedFloor > 20 || requestedFloor <= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator b1")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator b1\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", b1.floor)
 
 					b1.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + b1.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", b1.door)
+					time.Sleep(time.Second)
 					b1.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + b1.door)
+					fmt.Printf("door: %v\n", b1.door)
 
 					for b1.floor < requestedFloor {
 
@@ -20383,11 +20521,11 @@ func main() {
 					}
 
 					b1.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + b1.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", b1.door)
 					b1.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + b1.door)
+					fmt.Printf("door: %v\n", b1.door)
 					b1.status = "idle"
 					status()
 
@@ -20397,21 +20535,23 @@ func main() {
 
 				if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator b1")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator b1\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", b1.floor)
 
 					b1.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + b1.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", b1.door)
+					time.Sleep(time.Second)
 					b1.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + b1.door)
+					fmt.Printf("door: %v\n", b1.door)
 
 					for b1.floor > requestedFloor {
 
@@ -20422,11 +20562,11 @@ func main() {
 					}
 
 					b1.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + b1.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", b1.door)
 					b1.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + b1.door)
+					fmt.Printf("door: %v\n", b1.door)
 					b1.status = "idle"
 					status()
 
@@ -20434,7 +20574,8 @@ func main() {
 
 			} else {
 
-				fmt.Printf("please enter valid information")
+				time.Sleep(time.Second)
+				fmt.Printf("please enter valid information\n")
 
 			}
 
@@ -20444,21 +20585,23 @@ func main() {
 
 				if requestedFloor <= 1 || requestedFloor > 20 || requestedFloor <= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator b2")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator b2\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", b2.floor)
 
 					b2.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + b2.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", b2.door)
+					time.Sleep(time.Second)
 					b2.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + b2.door)
+					fmt.Printf("door: %v\n", b2.door)
 
 					for b2.floor < requestedFloor {
 
@@ -20469,11 +20612,11 @@ func main() {
 					}
 
 					b2.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + b2.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", b2.door)
 					b2.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + b2.door)
+					fmt.Printf("door: %v\n", b2.door)
 					b2.status = "idle"
 					status()
 
@@ -20483,21 +20626,23 @@ func main() {
 
 				if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator b2")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator b2\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", b2.floor)
 
 					b2.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + b2.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", b2.door)
+					time.Sleep(time.Second)
 					b2.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + b2.door)
+					fmt.Printf("door: %v\n", b2.door)
 
 					for b2.floor > requestedFloor {
 
@@ -20508,11 +20653,11 @@ func main() {
 					}
 
 					b2.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + b2.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", b2.door)
 					b2.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + b2.door)
+					fmt.Printf("door: %v\n", b2.door)
 					b2.status = "idle"
 					status()
 
@@ -20520,7 +20665,8 @@ func main() {
 
 			} else {
 
-				fmt.Printf("please enter valid information")
+				time.Sleep(time.Second)
+				fmt.Printf("please enter valid information\n")
 
 			}
 
@@ -20530,21 +20676,23 @@ func main() {
 
 				if requestedFloor <= 1 || requestedFloor > 20 || requestedFloor <= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator b3")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator b3\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", b3.floor)
 
 					b3.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + b3.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", b3.door)
+					time.Sleep(time.Second)
 					b3.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + b3.door)
+					fmt.Printf("door: %v\n", b3.door)
 
 					for b3.floor < requestedFloor {
 
@@ -20555,11 +20703,11 @@ func main() {
 					}
 
 					b3.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + b3.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", b3.door)
 					b3.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + b3.door)
+					fmt.Printf("door: %v\n", b3.door)
 					b3.status = "idle"
 					status()
 
@@ -20569,21 +20717,23 @@ func main() {
 
 				if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator b3")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator b3\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", b3.floor)
 
 					b3.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + b3.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", b3.door)
+					time.Sleep(time.Second)
 					b3.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + b3.door)
+					fmt.Printf("door: %v\n", b3.door)
 
 					for b3.floor > requestedFloor {
 
@@ -20594,11 +20744,11 @@ func main() {
 					}
 
 					b3.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + b3.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", b3.door)
 					b3.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + b3.door)
+					fmt.Printf("door: %v\n", b3.door)
 					b3.status = "idle"
 					status()
 
@@ -20606,7 +20756,8 @@ func main() {
 
 			} else {
 
-				fmt.Printf("please enter valid information")
+				time.Sleep(time.Second)
+				fmt.Printf("please enter valid information\n")
 
 			}
 
@@ -20616,21 +20767,23 @@ func main() {
 
 				if requestedFloor <= 1 || requestedFloor > 20 || requestedFloor <= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator b4")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator b4\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", b4.floor)
 
 					b4.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + b4.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", b4.door)
+					time.Sleep(time.Second)
 					b4.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + b4.door)
+					fmt.Printf("door: %v\n", b4.door)
 
 					for b4.floor < requestedFloor {
 
@@ -20641,11 +20794,11 @@ func main() {
 					}
 
 					b4.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + b4.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", b4.door)
 					b4.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + b4.door)
+					fmt.Printf("door: %v\n", b4.door)
 					b4.status = "idle"
 					status()
 				}
@@ -20654,21 +20807,23 @@ func main() {
 
 				if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator b4")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator b4\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", b4.floor)
 
 					b4.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + b4.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", b4.door)
+					time.Sleep(time.Second)
 					b4.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + b4.door)
+					fmt.Printf("door: %v\n", b4.door)
 
 					for b4.floor > requestedFloor {
 
@@ -20679,11 +20834,11 @@ func main() {
 					}
 
 					b4.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + b4.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", b4.door)
 					b4.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + b4.door)
+					fmt.Printf("door: %v\n", b4.door)
 					b4.status = "idle"
 					status()
 
@@ -20691,7 +20846,8 @@ func main() {
 
 			} else {
 
-				fmt.Printf("please enter valid information")
+				time.Sleep(time.Second)
+				fmt.Printf("please enter valid information\n")
 
 			}
 
@@ -20701,21 +20857,23 @@ func main() {
 
 				if requestedFloor <= 1 || requestedFloor > 20 || requestedFloor <= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator b5")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator b5\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", b5.floor)
 
 					b5.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + b5.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", b5.door)
+					time.Sleep(time.Second)
 					b5.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + b5.door)
+					fmt.Printf("door: %v\n", b5.door)
 
 					for b5.floor < requestedFloor {
 
@@ -20726,11 +20884,11 @@ func main() {
 					}
 
 					b5.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + b5.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", b5.door)
 					b5.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + b5.door)
+					fmt.Printf("door: %v\n", b5.door)
 					b5.status = "idle"
 					status()
 				}
@@ -20739,21 +20897,23 @@ func main() {
 
 				if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator b5")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator b5\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", b5.floor)
 
 					b5.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + b5.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", b5.door)
+					time.Sleep(time.Second)
 					b5.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + b5.door)
+					fmt.Printf("door: %v\n", b5.door)
 
 					for b5.floor > requestedFloor {
 
@@ -20764,11 +20924,11 @@ func main() {
 					}
 
 					b5.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + b5.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", b5.door)
 					b5.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + b5.door)
+					fmt.Printf("door: %v\n", b5.door)
 					b5.status = "idle"
 					status()
 
@@ -20776,7 +20936,8 @@ func main() {
 
 			} else {
 
-				fmt.Printf("please enter valid information")
+				time.Sleep(time.Second)
+				fmt.Printf("please enter valid information\n")
 
 			}
 
@@ -20791,21 +20952,23 @@ func main() {
 
 				if 1 <= requestedFloor && requestedFloor < 21 || requestedFloor > 40 || requestedFloor <= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator c1")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator c1\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", c1.floor)
 
 					c1.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + c1.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", c1.door)
+					time.Sleep(time.Second)
 					c1.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + c1.door)
+					fmt.Printf("door: %v\n", c1.door)
 
 					for c1.floor < requestedFloor {
 
@@ -20816,11 +20979,11 @@ func main() {
 					}
 
 					c1.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + c1.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", c1.door)
 					c1.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + c1.door)
+					fmt.Printf("door: %v\n", c1.door)
 					c1.status = "idle"
 					status()
 
@@ -20830,21 +20993,23 @@ func main() {
 
 				if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator c1")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator c1\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", c1.floor)
 
 					c1.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + c1.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", c1.door)
+					time.Sleep(time.Second)
 					c1.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + c1.door)
+					fmt.Printf("door: %v\n", c1.door)
 
 					for c1.floor > requestedFloor {
 
@@ -20855,11 +21020,11 @@ func main() {
 					}
 
 					c1.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + c1.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", c1.door)
 					c1.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + c1.door)
+					fmt.Printf("door: %v\n", c1.door)
 					c1.status = "idle"
 					status()
 
@@ -20867,7 +21032,8 @@ func main() {
 
 			} else {
 
-				fmt.Printf("please enter valid information")
+				time.Sleep(time.Second)
+				fmt.Printf("please enter valid information\n")
 
 			}
 
@@ -20877,21 +21043,23 @@ func main() {
 
 				if 1 <= requestedFloor && requestedFloor < 21 || requestedFloor > 40 || requestedFloor <= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator c2")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator c2\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", c2.floor)
 
 					c2.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + c2.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", c2.door)
+					time.Sleep(time.Second)
 					c2.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + c2.door)
+					fmt.Printf("door: %v\n", c2.door)
 
 					for c2.floor < requestedFloor {
 
@@ -20902,11 +21070,11 @@ func main() {
 					}
 
 					c2.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + c2.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", c2.door)
 					c2.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + c2.door)
+					fmt.Printf("door: %v\n", c2.door)
 					c2.status = "idle"
 					status()
 
@@ -20916,21 +21084,23 @@ func main() {
 
 				if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator c2")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator c2\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", c2.floor)
 
 					c2.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + c2.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", c2.door)
+					time.Sleep(time.Second)
 					c2.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + c2.door)
+					fmt.Printf("door: %v\n", c2.door)
 
 					for c2.floor > requestedFloor {
 
@@ -20941,11 +21111,11 @@ func main() {
 					}
 
 					c2.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + c2.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", c2.door)
 					c2.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + c2.door)
+					fmt.Printf("door: %v\n", c2.door)
 					c2.status = "idle"
 					status()
 
@@ -20953,7 +21123,8 @@ func main() {
 
 			} else {
 
-				fmt.Printf("please enter valid information")
+				time.Sleep(time.Second)
+				fmt.Printf("please enter valid information\n")
 
 			}
 
@@ -20963,21 +21134,23 @@ func main() {
 
 				if 1 <= requestedFloor && requestedFloor < 21 || requestedFloor > 40 || requestedFloor <= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator c3")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator c3\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", c3.floor)
 
 					c3.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + c3.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", c3.door)
+					time.Sleep(time.Second)
 					c3.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + c3.door)
+					fmt.Printf("door: %v\n", c3.door)
 
 					for c3.floor < requestedFloor {
 
@@ -20988,11 +21161,11 @@ func main() {
 					}
 
 					c3.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + c3.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", c3.door)
 					c3.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + c3.door)
+					fmt.Printf("door: %v\n", c3.door)
 					c3.status = "idle"
 					status()
 
@@ -21002,21 +21175,23 @@ func main() {
 
 				if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator c3")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator c3\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", c3.floor)
 
 					c3.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + c3.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", c3.door)
+					time.Sleep(time.Second)
 					c3.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + c3.door)
+					fmt.Printf("door: %v\n", c3.door)
 
 					for c3.floor > requestedFloor {
 
@@ -21027,11 +21202,11 @@ func main() {
 					}
 
 					c3.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + c3.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", c3.door)
 					c3.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + c3.door)
+					fmt.Printf("door: %v\n", c3.door)
 					c3.status = "idle"
 					status()
 
@@ -21039,7 +21214,8 @@ func main() {
 
 			} else {
 
-				fmt.Printf("please enter valid information")
+				time.Sleep(time.Second)
+				fmt.Printf("please enter valid information\n")
 
 			}
 
@@ -21049,21 +21225,23 @@ func main() {
 
 				if 1 <= requestedFloor && requestedFloor < 21 || requestedFloor > 40 || requestedFloor <= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator c4")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator c4\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", c4.floor)
 
 					c4.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + c4.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", c4.door)
+					time.Sleep(time.Second)
 					c4.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + c4.door)
+					fmt.Printf("door: %v\n", c4.door)
 
 					for c4.floor < requestedFloor {
 
@@ -21074,11 +21252,11 @@ func main() {
 					}
 
 					c4.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + c4.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", c4.door)
 					c4.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + c4.door)
+					fmt.Printf("door: %v\n", c4.door)
 					c4.status = "idle"
 					status()
 				}
@@ -21087,21 +21265,23 @@ func main() {
 
 				if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator c4")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator c4\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", c4.floor)
 
 					c4.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + c4.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", c4.door)
+					time.Sleep(time.Second)
 					c4.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + c4.door)
+					fmt.Printf("door: %v\n", c4.door)
 
 					for c4.floor > requestedFloor {
 
@@ -21112,11 +21292,11 @@ func main() {
 					}
 
 					c4.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + c4.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", c4.door)
 					c4.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + c4.door)
+					fmt.Printf("door: %v\n", c4.door)
 					c4.status = "idle"
 					status()
 
@@ -21124,7 +21304,8 @@ func main() {
 
 			} else {
 
-				fmt.Printf("please enter valid information")
+				time.Sleep(time.Second)
+				fmt.Printf("please enter valid information\n")
 
 			}
 
@@ -21134,21 +21315,23 @@ func main() {
 
 				if 1 <= requestedFloor && requestedFloor < 21 || requestedFloor > 40 || requestedFloor <= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator c5")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator c5\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", c5.floor)
 
 					c5.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + c5.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", c5.door)
+					time.Sleep(time.Second)
 					c5.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + c5.door)
+					fmt.Printf("door: %v\n", c5.door)
 
 					for c5.floor < requestedFloor {
 
@@ -21159,11 +21342,11 @@ func main() {
 					}
 
 					c5.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + c5.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", c5.door)
 					c5.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + c5.door)
+					fmt.Printf("door: %v\n", c5.door)
 					c5.status = "idle"
 					status()
 				}
@@ -21172,21 +21355,23 @@ func main() {
 
 				if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator c5")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator c5\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", c5.floor)
 
 					c5.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + c5.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", c5.door)
+					time.Sleep(time.Second)
 					c5.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + c5.door)
+					fmt.Printf("door: %v\n", c5.door)
 
 					for c5.floor > requestedFloor {
 
@@ -21197,11 +21382,11 @@ func main() {
 					}
 
 					c5.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + c5.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", c5.door)
 					c5.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + c5.door)
+					fmt.Printf("door: %v\n", c5.door)
 					c5.status = "idle"
 					status()
 
@@ -21209,7 +21394,8 @@ func main() {
 
 			} else {
 
-				fmt.Printf("please enter valid information")
+				time.Sleep(time.Second)
+				fmt.Printf("please enter valid information\n")
 
 			}
 
@@ -21224,21 +21410,23 @@ func main() {
 
 				if 1 <= requestedFloor && requestedFloor < 41 || requestedFloor > 60 || requestedFloor <= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator d1")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator d1\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", d1.floor)
 
 					d1.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + d1.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", d1.door)
+					time.Sleep(time.Second)
 					d1.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + d1.door)
+					fmt.Printf("door: %v\n", d1.door)
 
 					for d1.floor < requestedFloor {
 
@@ -21249,11 +21437,11 @@ func main() {
 					}
 
 					d1.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + d1.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", d1.door)
 					d1.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + d1.door)
+					fmt.Printf("door: %v\n", d1.door)
 					d1.status = "idle"
 					status()
 
@@ -21263,21 +21451,23 @@ func main() {
 
 				if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator d1")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator d1\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", d1.floor)
 
 					d1.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + d1.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", d1.door)
+					time.Sleep(time.Second)
 					d1.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + d1.door)
+					fmt.Printf("door: %v\n", d1.door)
 
 					for d1.floor > requestedFloor {
 
@@ -21288,11 +21478,11 @@ func main() {
 					}
 
 					d1.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + d1.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", d1.door)
 					d1.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + d1.door)
+					fmt.Printf("door: %v\n", d1.door)
 					d1.status = "idle"
 					status()
 
@@ -21300,7 +21490,8 @@ func main() {
 
 			} else {
 
-				fmt.Printf("please enter valid information")
+				time.Sleep(time.Second)
+				fmt.Printf("please enter valid information\n")
 
 			}
 
@@ -21310,21 +21501,23 @@ func main() {
 
 				if 1 <= requestedFloor && requestedFloor < 41 || requestedFloor > 60 || requestedFloor <= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator d2")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator d2\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", d2.floor)
 
 					d2.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + d2.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", d2.door)
+					time.Sleep(time.Second)
 					d2.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + d2.door)
+					fmt.Printf("door: %v\n", d2.door)
 
 					for d2.floor < requestedFloor {
 
@@ -21335,11 +21528,11 @@ func main() {
 					}
 
 					d2.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + d2.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", d2.door)
 					d2.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + d2.door)
+					fmt.Printf("door: %v\n", d2.door)
 					d2.status = "idle"
 					status()
 
@@ -21349,21 +21542,23 @@ func main() {
 
 				if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator d2")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator d2\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", d2.floor)
 
 					d2.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + d2.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", d2.door)
+					time.Sleep(time.Second)
 					d2.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + d2.door)
+					fmt.Printf("door: %v\n", d2.door)
 
 					for d2.floor > requestedFloor {
 
@@ -21374,11 +21569,11 @@ func main() {
 					}
 
 					d2.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + d2.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", d2.door)
 					d2.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + d2.door)
+					fmt.Printf("door: %v\n", d2.door)
 					d2.status = "idle"
 					status()
 
@@ -21386,7 +21581,8 @@ func main() {
 
 			} else {
 
-				fmt.Printf("please enter valid information")
+				time.Sleep(time.Second)
+				fmt.Printf("please enter valid information\n")
 
 			}
 
@@ -21396,21 +21592,23 @@ func main() {
 
 				if 1 <= requestedFloor && requestedFloor < 41 || requestedFloor > 60 || requestedFloor <= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator d3")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator d3\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", d3.floor)
 
 					d3.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + d3.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", d3.door)
+					time.Sleep(time.Second)
 					d3.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + d3.door)
+					fmt.Printf("door: %v\n", d3.door)
 
 					for d3.floor < requestedFloor {
 
@@ -21421,11 +21619,11 @@ func main() {
 					}
 
 					d3.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + d3.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", d3.door)
 					d3.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + d3.door)
+					fmt.Printf("door: %v\n", d3.door)
 					d3.status = "idle"
 					status()
 
@@ -21435,21 +21633,23 @@ func main() {
 
 				if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator d3")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator d3\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", d3.floor)
 
 					d3.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + d3.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", d3.door)
+					time.Sleep(time.Second)
 					d3.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + d3.door)
+					fmt.Printf("door: %v\n", d3.door)
 
 					for d3.floor > requestedFloor {
 
@@ -21460,11 +21660,11 @@ func main() {
 					}
 
 					d3.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + d3.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", d3.door)
 					d3.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + d3.door)
+					fmt.Printf("door: %v\n", d3.door)
 					d3.status = "idle"
 					status()
 
@@ -21472,7 +21672,8 @@ func main() {
 
 			} else {
 
-				fmt.Printf("please enter valid information")
+				time.Sleep(time.Second)
+				fmt.Printf("please enter valid information\n")
 
 			}
 
@@ -21482,21 +21683,23 @@ func main() {
 
 				if 1 <= requestedFloor && requestedFloor < 41 || requestedFloor > 60 || requestedFloor <= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator d4")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator d4\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", d4.floor)
 
 					d4.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + d4.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", d4.door)
+					time.Sleep(time.Second)
 					d4.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + d4.door)
+					fmt.Printf("door: %v\n", d4.door)
 
 					for d4.floor < requestedFloor {
 
@@ -21507,11 +21710,11 @@ func main() {
 					}
 
 					d4.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + d4.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", d4.door)
 					d4.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + d4.door)
+					fmt.Printf("door: %v\n", d4.door)
 					d4.status = "idle"
 					status()
 				}
@@ -21520,21 +21723,23 @@ func main() {
 
 				if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator d4")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator d4\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", d4.floor)
 
 					d4.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + d4.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", d4.door)
+					time.Sleep(time.Second)
 					d4.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + d4.door)
+					fmt.Printf("door: %v\n", d4.door)
 
 					for d4.floor > requestedFloor {
 
@@ -21545,11 +21750,11 @@ func main() {
 					}
 
 					d4.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + d4.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", d4.door)
 					d4.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + d4.door)
+					fmt.Printf("door: %v\n", d4.door)
 					d4.status = "idle"
 					status()
 
@@ -21557,7 +21762,8 @@ func main() {
 
 			} else {
 
-				fmt.Printf("please enter valid information")
+				time.Sleep(time.Second)
+				fmt.Printf("please enter valid information\n")
 
 			}
 
@@ -21567,21 +21773,23 @@ func main() {
 
 				if 1 <= requestedFloor && requestedFloor < 41 || requestedFloor > 60 || requestedFloor <= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator d5")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator d5\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", d5.floor)
 
 					d5.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + d5.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", d5.door)
+					time.Sleep(time.Second)
 					d5.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + d5.door)
+					fmt.Printf("door: %v\n", d5.door)
 
 					for d5.floor < requestedFloor {
 
@@ -21592,11 +21800,11 @@ func main() {
 					}
 
 					d5.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + d5.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", d5.door)
 					d5.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + d5.door)
+					fmt.Printf("door: %v\n", d5.door)
 					d5.status = "idle"
 					status()
 				}
@@ -21605,21 +21813,23 @@ func main() {
 
 				if requestedFloor < -5 || requestedFloor >= 1 || requestedFloor >= userFloor {
 
-					fmt.Printf("please enter valid information")
+					time.Sleep(time.Second)
+					fmt.Printf("please enter valid information\n")
 
 				} else {
 
-					fmt.Printf("elevator d5")
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("elevator d5\n")
+					time.Sleep(time.Second)
 					fmt.Printf("elevator's floor: %d\n", d5.floor)
 
 					d5.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + d5.door)
-					time.Sleep((1 / 2) * time.Second)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", d5.door)
+					time.Sleep(time.Second)
 					d5.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + d5.door)
+					fmt.Printf("door: %v\n", d5.door)
 
 					for d5.floor > requestedFloor {
 
@@ -21630,11 +21840,11 @@ func main() {
 					}
 
 					d5.door = "opened"
-					time.Sleep((1 / 2) * time.Second)
-					fmt.Printf("door: " + d5.door)
+					time.Sleep(time.Second)
+					fmt.Printf("door: %v\n", d5.door)
 					d5.door = "closed"
 					time.Sleep(time.Second)
-					fmt.Printf("door: " + d5.door)
+					fmt.Printf("door: %v\n", d5.door)
 					d5.status = "idle"
 					status()
 
@@ -21642,109 +21852,104 @@ func main() {
 
 			} else {
 
-				fmt.Printf("please enter valid information")
+				time.Sleep(time.Second)
+				fmt.Printf("please enter valid information\n")
 
 			}
 
 		}
 	}
 
+	b1.floor = 20
+	b1.status = "goingDown"
+	b2.floor = 3
+	b2.status = "goingUp"
+	b3.floor = 13
+	b3.status = "goingDown"
+	b4.floor = 15
+	b4.status = "goingDown"
+	b5.floor = 6
+	b5.status = "goingDown"
+	fmt.Printf("-------- scenario #1 --------\n")
+	requestElevB(1, "up")
 
-	
-		b1.floor = 20;
-		b1.status = "goingDown";
-		b2.floor = 3;
-		b2.status = "goingUp";
-		b3.floor = 13;
-		b3.status = "goingDown";
-		b4.floor = 15;
-		b4.status = "goingDown";
-		b5.floor = 6;
-		b5.status = "goingDown";
-		requestElevB(1, "up");
-	
+	c1.floor = 1
+	c1.status = "goingUp"
+	c2.floor = 23
+	c2.status = "goingUp"
+	c3.floor = 33
+	c3.status = "goingDown"
+	c4.floor = 40
+	c4.status = "goingDown"
+	c5.floor = 39
+	c5.status = "goingDown"
+	fmt.Printf("-------- scenario #2 --------\n")
+	requestElevC(1, "up")
 
-	
-		c1.floor = 1;
-		c1.status = "goingUp";
-		c2.floor = 23;
-		c2.status = "goingUp";
-		c3.floor = 33;
-		c3.status = "goingDown";
-		c4.floor = 40;
-		c4.status = "goingDown";
-		c5.floor = 39;
-		c5.status = "goingDown";
-		requestElevC(1, "up");
-	
+	d1.floor = 58
+	d1.status = "goingDown"
+	d2.floor = 50
+	d2.status = "goingUp"
+	d3.floor = 46
+	d3.status = "goingUp"
+	d4.floor = 1
+	d4.status = "goingUp"
+	d5.floor = 60
+	d5.status = "goingDown"
+	fmt.Printf("-------- scenario #3 --------\n")
+	requestElevD(54, "down")
 
-	
-		d1.floor = 58;
-		d1.status = "goingDown";
-		d2.floor = 50;
-		d2.status = "goingUp";
-		d3.floor = 46;
-		d3.status = "goingUp";
-		d4.floor = 1;
-		d4.status = "goingUp";
-		d5.floor = 60;
-		d5.status = "goingDown";
-		fmt.Printf("\\\\\\\\ scenario #4 \\\\\\\\");
-		requestElevD(54, "down");
-	
+	a1.floor = -3
+	a1.status = "idle"
+	a2.floor = 1
+	a2.status = "idle"
+	a3.floor = -2
+	a3.status = "goingDown"
+	a4.floor = -5
+	a4.status = "goingUp"
+	a5.floor = 0
+	a5.status = "goingDown"
+	fmt.Printf("-------- scenario #4 --------\n")
+	requestElevA(-2, "up")
 
-	
-		a1.floor = -3;
-		a1.status = "idle";
-		a2.floor = 1;
-		a2.status = "idle";
-		a3.floor = -2;
-		a3.status = "goingDown";
-		a4.floor = -5;
-		a4.status = "goingUp";
-		a5.floor = 0;
-		a5.status = "goingDown";
-		fmt.Printf("\\\\\\\\ scenario #5 \\\\\\\\");
-		requestElevA(-2, "up");
-	
+	//    test #1
+	b1.floor = 7
+	b2.floor = 19
+	b3.floor = 12
+	b4.floor = 3
+	b5.floor = 9
+	fmt.Printf("-------- test #1 --------\n")
+	userFloor = b3.floor
+	requestFloorB(3, 5)
 
+	//    test #2
+	d1.floor = 43
+	d2.floor = 58
+	d3.floor = 47
+	d4.floor = 1
+	d5.floor = 51
+	fmt.Printf("-------- test #2 --------\n")
+	userFloor = d4.floor
+	requestFloorD(4, 41)
 
+	//    test #3
+	a1.floor = -5
+	a2.floor = 0
+	a3.floor = -3
+	a4.floor = 1
+	a5.floor = -2
+	fmt.Printf("-------- test #3 --------\n")
+	userFloor = a1.floor
+	requestFloorA(1, -3)
 
-	
-		//    test #1
-		b1.floor = 7;
-		b2.floor = 19;
-		b3.floor = 12;
-		b4.floor = 3;
-		b5.floor = 9;
-		fmt.Printf("\\\\\\\\ test #1 \\\\\\\\");
-		userFloor = b3.floor;
-		requestFloorB(3, 5);
-	
+	//    test #3
+	c1.floor = 21
+	c2.floor = 36
+	c3.floor = 29
+	c4.floor = 1
+	c5.floor = 39
+	fmt.Printf("-------- test #4 --------\n")
+	userFloor = c2.floor
+	requestFloorC(2, 24)
 
-
-	
-		//    test #2
-		d1.floor = 43;
-		d2.floor = 58;
-		d3.floor = 47;
-		d4.floor = 1;
-		d5.floor = 51;
-		fmt.Printf("\\\\\\\\ test #2 \\\\\\\\");
-		userFloor = d4.floor;
-		requestFloorD(4, 41);
-	
-
-
-	
-		//    test #3
-		a1.floor = -5;
-		a2.floor = 0;
-		a3.floor = -3;
-		a4.floor = 1;
-		a5.floor = -2;
-		fmt.Printf("\\\\\\\\ test #3 \\\\\\\\");
-		userFloor = a1.floor;
-		requestFloorA(1, -3);
-	
 }
